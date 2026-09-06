@@ -1,0 +1,11 @@
+Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org
+
+PASS: Empty pistol throw damages/stuns civilian
+PASS: Bat incapacitates civilian
+COMBAT TRACE civilian HP=3 ammo=7 aim=(1.0, 0.0) player=(796.3334, 600.0) target=(980.0, 620.0) scale=1.0 recovery=0.0
+ERROR: FAIL: One pistol bullet kills civilian
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] verify (res://tests/acceptance.gd:17)
+       [1] start (res://tests/district_combat.gd:37)
+       [2] sim (res://tests/district_integration.gd:12)

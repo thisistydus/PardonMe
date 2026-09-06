@@ -1,0 +1,46 @@
+Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org
+OpenGL API 4.1 Metal - 89.4 - Compatibility - Using Device: Apple - Apple M2
+
+PASS: Generated sprite loads with actual alpha
+PASS: Generated sprite loads with actual alpha
+PASS: Generated sprite loads with actual alpha
+PASS: Four supplied stations are resource-driven
+PASS: Station 1 has imported song and supplied logo
+PASS: Station 1 has random nonzero start offset
+PASS: Station 2 has imported song and supplied logo
+PASS: Station 2 has random nonzero start offset
+PASS: Station 3 has imported song and supplied logo
+PASS: Station 3 has random nonzero start offset
+PASS: Station 4 has imported song and supplied logo
+PASS: Station 4 has random nonzero start offset
+PASS: On foot: no radio sound or logo
+PASS: Station keys are ignored on foot
+PASS: Entering compact starts Anvil mid-song
+PASS: Station card appears at top only in vehicle
+PASS: Number 1 selects correct station
+PASS: Station 1 shows matching original logo
+PASS: Station 1 playback starts at broadcast position
+PASS: Station 1 produces decoded audible samples
+PASS: Number 2 selects correct station
+PASS: Station 2 shows matching original logo
+PASS: Station 2 playback starts at broadcast position
+PASS: Station 2 produces decoded audible samples
+PASS: Number 3 selects correct station
+PASS: Station 3 shows matching original logo
+PASS: Station 3 playback starts at broadcast position
+PASS: Station 3 produces decoded audible samples
+PASS: Number 4 selects correct station
+PASS: Station 4 shows matching original logo
+PASS: Station 4 playback starts at broadcast position
+PASS: Station 4 produces decoded audible samples
+PASS: Numeric keypad also selects station
+PASS: 5 turns radio off and removes station logo
+PASS: Exiting hides card and stops audio
+PASS: Vehicle remembers Off on re-entry
+PASS: Station timeline continues while on foot
+PASS: Pause freezes radio audio and station timeline
+PASS: Resume restores radio
+PASS: Track loops across end without going silent
+PASS: Explosion/death stops audio and hides logo
+PASS: Restart resets radio ownership and randomizes broadcast starts
+ART RADIO COMPLETE: 42 checks passed

@@ -1,0 +1,8 @@
+Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org
+OpenGL API 4.1 Metal - 89.4 - Compatibility - Using Device: Apple - Apple M2
+
+PASS: Saved 2026-09-06_PardonMe_Bplus_on_foot.png
+PASS: Saved 2026-09-06_PardonMe_Bplus_driving.png
+PASS: Saved 2026-09-06_PardonMe_Bplus_map.png
+PASS: Saved 2026-09-06_PardonMe_Bplus_debug.png
+PERFORMANCE: samples=1201 median_frame_ms=8.33 p95_frame_ms=8.33 fps=120 nodes=212 NPCs=29

@@ -1,0 +1,525 @@
+Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org
+
+PASS: Soak 1 pickup
+PASS: Soak 1 bat hit
+PASS: Soak 1 enter
+PASS: Soak 1 exit
+PASS: Soak 1 death
+SOAK elapsed 6.9s | cycle 1 | nodes 67
+PASS: Soak 2 pickup
+PASS: Soak 2 bat hit
+PASS: Soak 2 enter
+PASS: Soak 2 exit
+PASS: Soak 2 death
+SOAK elapsed 13.8s | cycle 2 | nodes 67
+PASS: Soak 3 pickup
+PASS: Soak 3 bat hit
+PASS: Soak 3 enter
+PASS: Soak 3 exit
+PASS: Soak 3 death
+SOAK elapsed 20.7s | cycle 3 | nodes 67
+PASS: Soak 4 pickup
+PASS: Soak 4 bat hit
+PASS: Soak 4 enter
+PASS: Soak 4 exit
+PASS: Soak 4 death
+SOAK elapsed 27.6s | cycle 4 | nodes 67
+PASS: Soak 5 pickup
+PASS: Soak 5 bat hit
+PASS: Soak 5 enter
+PASS: Soak 5 exit
+PASS: Soak 5 death
+SOAK elapsed 34.5s | cycle 5 | nodes 67
+PASS: Soak 6 pickup
+PASS: Soak 6 bat hit
+PASS: Soak 6 enter
+PASS: Soak 6 exit
+PASS: Soak 6 death
+SOAK elapsed 41.5s | cycle 6 | nodes 67
+PASS: Soak 7 pickup
+PASS: Soak 7 bat hit
+PASS: Soak 7 enter
+PASS: Soak 7 exit
+PASS: Soak 7 death
+SOAK elapsed 48.3s | cycle 7 | nodes 67
+PASS: Soak 8 pickup
+PASS: Soak 8 bat hit
+PASS: Soak 8 enter
+PASS: Soak 8 exit
+PASS: Soak 8 death
+SOAK elapsed 55.2s | cycle 8 | nodes 67
+PASS: Soak 9 pickup
+PASS: Soak 9 bat hit
+PASS: Soak 9 enter
+PASS: Soak 9 exit
+PASS: Soak 9 death
+SOAK elapsed 62.1s | cycle 9 | nodes 67
+PASS: Soak 10 pickup
+PASS: Soak 10 bat hit
+PASS: Soak 10 enter
+PASS: Soak 10 exit
+PASS: Soak 10 death
+SOAK elapsed 69.0s | cycle 10 | nodes 67
+PASS: Soak 11 pickup
+PASS: Soak 11 bat hit
+PASS: Soak 11 enter
+PASS: Soak 11 exit
+PASS: Soak 11 death
+SOAK elapsed 75.9s | cycle 11 | nodes 67
+PASS: Soak 12 pickup
+PASS: Soak 12 bat hit
+PASS: Soak 12 enter
+PASS: Soak 12 exit
+PASS: Soak 12 death
+SOAK elapsed 82.8s | cycle 12 | nodes 67
+PASS: Soak 13 pickup
+PASS: Soak 13 bat hit
+PASS: Soak 13 enter
+PASS: Soak 13 exit
+PASS: Soak 13 death
+SOAK elapsed 89.8s | cycle 13 | nodes 67
+PASS: Soak 14 pickup
+PASS: Soak 14 bat hit
+PASS: Soak 14 enter
+PASS: Soak 14 exit
+PASS: Soak 14 death
+SOAK elapsed 96.7s | cycle 14 | nodes 67
+PASS: Soak 15 pickup
+PASS: Soak 15 bat hit
+PASS: Soak 15 enter
+PASS: Soak 15 exit
+PASS: Soak 15 death
+SOAK elapsed 103.6s | cycle 15 | nodes 67
+PASS: Soak 16 pickup
+PASS: Soak 16 bat hit
+PASS: Soak 16 enter
+PASS: Soak 16 exit
+PASS: Soak 16 death
+SOAK elapsed 110.5s | cycle 16 | nodes 67
+PASS: Soak 17 pickup
+PASS: Soak 17 bat hit
+PASS: Soak 17 enter
+PASS: Soak 17 exit
+PASS: Soak 17 death
+SOAK elapsed 117.4s | cycle 17 | nodes 67
+PASS: Soak 18 pickup
+PASS: Soak 18 bat hit
+PASS: Soak 18 enter
+PASS: Soak 18 exit
+PASS: Soak 18 death
+SOAK elapsed 124.3s | cycle 18 | nodes 67
+PASS: Soak 19 pickup
+PASS: Soak 19 bat hit
+PASS: Soak 19 enter
+PASS: Soak 19 exit
+PASS: Soak 19 death
+SOAK elapsed 131.2s | cycle 19 | nodes 67
+PASS: Soak 20 pickup
+PASS: Soak 20 bat hit
+PASS: Soak 20 enter
+PASS: Soak 20 exit
+PASS: Soak 20 death
+SOAK elapsed 138.1s | cycle 20 | nodes 67
+PASS: Soak 21 pickup
+PASS: Soak 21 bat hit
+PASS: Soak 21 enter
+PASS: Soak 21 exit
+PASS: Soak 21 death
+SOAK elapsed 145.0s | cycle 21 | nodes 67
+PASS: Soak 22 pickup
+PASS: Soak 22 bat hit
+PASS: Soak 22 enter
+PASS: Soak 22 exit
+PASS: Soak 22 death
+SOAK elapsed 151.9s | cycle 22 | nodes 67
+PASS: Soak 23 pickup
+PASS: Soak 23 bat hit
+PASS: Soak 23 enter
+PASS: Soak 23 exit
+PASS: Soak 23 death
+SOAK elapsed 158.8s | cycle 23 | nodes 67
+PASS: Soak 24 pickup
+PASS: Soak 24 bat hit
+PASS: Soak 24 enter
+PASS: Soak 24 exit
+PASS: Soak 24 death
+SOAK elapsed 165.7s | cycle 24 | nodes 67
+PASS: Soak 25 pickup
+PASS: Soak 25 bat hit
+PASS: Soak 25 enter
+PASS: Soak 25 exit
+PASS: Soak 25 death
+SOAK elapsed 172.6s | cycle 25 | nodes 67
+PASS: Soak 26 pickup
+PASS: Soak 26 bat hit
+PASS: Soak 26 enter
+PASS: Soak 26 exit
+PASS: Soak 26 death
+SOAK elapsed 179.4s | cycle 26 | nodes 67
+PASS: Soak 27 pickup
+PASS: Soak 27 bat hit
+PASS: Soak 27 enter
+PASS: Soak 27 exit
+PASS: Soak 27 death
+SOAK elapsed 186.4s | cycle 27 | nodes 67
+PASS: Soak 28 pickup
+PASS: Soak 28 bat hit
+PASS: Soak 28 enter
+PASS: Soak 28 exit
+PASS: Soak 28 death
+SOAK elapsed 193.2s | cycle 28 | nodes 67
+PASS: Soak 29 pickup
+PASS: Soak 29 bat hit
+PASS: Soak 29 enter
+PASS: Soak 29 exit
+PASS: Soak 29 death
+SOAK elapsed 200.1s | cycle 29 | nodes 67
+PASS: Soak 30 pickup
+PASS: Soak 30 bat hit
+PASS: Soak 30 enter
+PASS: Soak 30 exit
+PASS: Soak 30 death
+SOAK elapsed 207.0s | cycle 30 | nodes 67
+PASS: Soak 31 pickup
+PASS: Soak 31 bat hit
+PASS: Soak 31 enter
+PASS: Soak 31 exit
+PASS: Soak 31 death
+SOAK elapsed 213.9s | cycle 31 | nodes 67
+PASS: Soak 32 pickup
+PASS: Soak 32 bat hit
+PASS: Soak 32 enter
+PASS: Soak 32 exit
+PASS: Soak 32 death
+SOAK elapsed 220.8s | cycle 32 | nodes 67
+PASS: Soak 33 pickup
+PASS: Soak 33 bat hit
+PASS: Soak 33 enter
+PASS: Soak 33 exit
+PASS: Soak 33 death
+SOAK elapsed 227.7s | cycle 33 | nodes 67
+PASS: Soak 34 pickup
+PASS: Soak 34 bat hit
+PASS: Soak 34 enter
+PASS: Soak 34 exit
+PASS: Soak 34 death
+SOAK elapsed 234.6s | cycle 34 | nodes 67
+PASS: Soak 35 pickup
+PASS: Soak 35 bat hit
+PASS: Soak 35 enter
+PASS: Soak 35 exit
+PASS: Soak 35 death
+SOAK elapsed 241.5s | cycle 35 | nodes 67
+PASS: Soak 36 pickup
+PASS: Soak 36 bat hit
+PASS: Soak 36 enter
+PASS: Soak 36 exit
+PASS: Soak 36 death
+SOAK elapsed 248.3s | cycle 36 | nodes 67
+PASS: Soak 37 pickup
+PASS: Soak 37 bat hit
+PASS: Soak 37 enter
+PASS: Soak 37 exit
+PASS: Soak 37 death
+SOAK elapsed 255.2s | cycle 37 | nodes 67
+PASS: Soak 38 pickup
+PASS: Soak 38 bat hit
+PASS: Soak 38 enter
+PASS: Soak 38 exit
+PASS: Soak 38 death
+SOAK elapsed 262.1s | cycle 38 | nodes 67
+PASS: Soak 39 pickup
+PASS: Soak 39 bat hit
+PASS: Soak 39 enter
+PASS: Soak 39 exit
+PASS: Soak 39 death
+SOAK elapsed 269.0s | cycle 39 | nodes 67
+PASS: Soak 40 pickup
+PASS: Soak 40 bat hit
+PASS: Soak 40 enter
+PASS: Soak 40 exit
+PASS: Soak 40 death
+SOAK elapsed 275.9s | cycle 40 | nodes 67
+PASS: Soak 41 pickup
+PASS: Soak 41 bat hit
+PASS: Soak 41 enter
+PASS: Soak 41 exit
+PASS: Soak 41 death
+SOAK elapsed 282.8s | cycle 41 | nodes 67
+PASS: Soak 42 pickup
+PASS: Soak 42 bat hit
+PASS: Soak 42 enter
+PASS: Soak 42 exit
+PASS: Soak 42 death
+SOAK elapsed 289.7s | cycle 42 | nodes 67
+PASS: Soak 43 pickup
+PASS: Soak 43 bat hit
+PASS: Soak 43 enter
+PASS: Soak 43 exit
+PASS: Soak 43 death
+SOAK elapsed 296.6s | cycle 43 | nodes 67
+PASS: Soak 44 pickup
+PASS: Soak 44 bat hit
+PASS: Soak 44 enter
+PASS: Soak 44 exit
+PASS: Soak 44 death
+SOAK elapsed 303.5s | cycle 44 | nodes 67
+PASS: Soak 45 pickup
+PASS: Soak 45 bat hit
+PASS: Soak 45 enter
+PASS: Soak 45 exit
+PASS: Soak 45 death
+SOAK elapsed 310.4s | cycle 45 | nodes 67
+PASS: Soak 46 pickup
+PASS: Soak 46 bat hit
+PASS: Soak 46 enter
+PASS: Soak 46 exit
+PASS: Soak 46 death
+SOAK elapsed 317.3s | cycle 46 | nodes 67
+PASS: Soak 47 pickup
+PASS: Soak 47 bat hit
+PASS: Soak 47 enter
+PASS: Soak 47 exit
+PASS: Soak 47 death
+SOAK elapsed 324.2s | cycle 47 | nodes 67
+PASS: Soak 48 pickup
+PASS: Soak 48 bat hit
+PASS: Soak 48 enter
+PASS: Soak 48 exit
+PASS: Soak 48 death
+SOAK elapsed 331.1s | cycle 48 | nodes 67
+PASS: Soak 49 pickup
+PASS: Soak 49 bat hit
+PASS: Soak 49 enter
+PASS: Soak 49 exit
+PASS: Soak 49 death
+SOAK elapsed 337.9s | cycle 49 | nodes 67
+PASS: Soak 50 pickup
+PASS: Soak 50 bat hit
+PASS: Soak 50 enter
+PASS: Soak 50 exit
+PASS: Soak 50 death
+SOAK elapsed 344.8s | cycle 50 | nodes 67
+PASS: Soak 51 pickup
+PASS: Soak 51 bat hit
+PASS: Soak 51 enter
+PASS: Soak 51 exit
+PASS: Soak 51 death
+SOAK elapsed 351.8s | cycle 51 | nodes 67
+PASS: Soak 52 pickup
+PASS: Soak 52 bat hit
+PASS: Soak 52 enter
+PASS: Soak 52 exit
+PASS: Soak 52 death
+SOAK elapsed 358.6s | cycle 52 | nodes 67
+PASS: Soak 53 pickup
+PASS: Soak 53 bat hit
+PASS: Soak 53 enter
+PASS: Soak 53 exit
+PASS: Soak 53 death
+SOAK elapsed 365.5s | cycle 53 | nodes 67
+PASS: Soak 54 pickup
+PASS: Soak 54 bat hit
+PASS: Soak 54 enter
+PASS: Soak 54 exit
+PASS: Soak 54 death
+SOAK elapsed 372.4s | cycle 54 | nodes 67
+PASS: Soak 55 pickup
+PASS: Soak 55 bat hit
+PASS: Soak 55 enter
+PASS: Soak 55 exit
+PASS: Soak 55 death
+SOAK elapsed 379.3s | cycle 55 | nodes 67
+PASS: Soak 56 pickup
+PASS: Soak 56 bat hit
+PASS: Soak 56 enter
+PASS: Soak 56 exit
+PASS: Soak 56 death
+SOAK elapsed 386.2s | cycle 56 | nodes 67
+PASS: Soak 57 pickup
+PASS: Soak 57 bat hit
+PASS: Soak 57 enter
+PASS: Soak 57 exit
+PASS: Soak 57 death
+SOAK elapsed 393.1s | cycle 57 | nodes 67
+PASS: Soak 58 pickup
+PASS: Soak 58 bat hit
+PASS: Soak 58 enter
+PASS: Soak 58 exit
+PASS: Soak 58 death
+SOAK elapsed 400.0s | cycle 58 | nodes 67
+PASS: Soak 59 pickup
+PASS: Soak 59 bat hit
+PASS: Soak 59 enter
+PASS: Soak 59 exit
+PASS: Soak 59 death
+SOAK elapsed 406.9s | cycle 59 | nodes 67
+PASS: Soak 60 pickup
+PASS: Soak 60 bat hit
+PASS: Soak 60 enter
+PASS: Soak 60 exit
+PASS: Soak 60 death
+SOAK elapsed 413.8s | cycle 60 | nodes 67
+PASS: Soak 61 pickup
+PASS: Soak 61 bat hit
+PASS: Soak 61 enter
+PASS: Soak 61 exit
+PASS: Soak 61 death
+SOAK elapsed 420.7s | cycle 61 | nodes 67
+PASS: Soak 62 pickup
+PASS: Soak 62 bat hit
+PASS: Soak 62 enter
+PASS: Soak 62 exit
+PASS: Soak 62 death
+SOAK elapsed 427.6s | cycle 62 | nodes 67
+PASS: Soak 63 pickup
+PASS: Soak 63 bat hit
+PASS: Soak 63 enter
+PASS: Soak 63 exit
+PASS: Soak 63 death
+SOAK elapsed 434.5s | cycle 63 | nodes 67
+PASS: Soak 64 pickup
+PASS: Soak 64 bat hit
+PASS: Soak 64 enter
+PASS: Soak 64 exit
+PASS: Soak 64 death
+SOAK elapsed 441.5s | cycle 64 | nodes 67
+PASS: Soak 65 pickup
+PASS: Soak 65 bat hit
+PASS: Soak 65 enter
+PASS: Soak 65 exit
+PASS: Soak 65 death
+SOAK elapsed 448.3s | cycle 65 | nodes 67
+PASS: Soak 66 pickup
+PASS: Soak 66 bat hit
+PASS: Soak 66 enter
+PASS: Soak 66 exit
+PASS: Soak 66 death
+SOAK elapsed 455.2s | cycle 66 | nodes 67
+PASS: Soak 67 pickup
+PASS: Soak 67 bat hit
+PASS: Soak 67 enter
+PASS: Soak 67 exit
+PASS: Soak 67 death
+SOAK elapsed 462.1s | cycle 67 | nodes 67
+PASS: Soak 68 pickup
+PASS: Soak 68 bat hit
+PASS: Soak 68 enter
+PASS: Soak 68 exit
+PASS: Soak 68 death
+SOAK elapsed 469.0s | cycle 68 | nodes 67
+PASS: Soak 69 pickup
+PASS: Soak 69 bat hit
+PASS: Soak 69 enter
+PASS: Soak 69 exit
+PASS: Soak 69 death
+SOAK elapsed 475.9s | cycle 69 | nodes 67
+PASS: Soak 70 pickup
+PASS: Soak 70 bat hit
+PASS: Soak 70 enter
+PASS: Soak 70 exit
+PASS: Soak 70 death
+SOAK elapsed 482.8s | cycle 70 | nodes 67
+PASS: Soak 71 pickup
+PASS: Soak 71 bat hit
+PASS: Soak 71 enter
+PASS: Soak 71 exit
+PASS: Soak 71 death
+SOAK elapsed 489.7s | cycle 71 | nodes 67
+PASS: Soak 72 pickup
+PASS: Soak 72 bat hit
+PASS: Soak 72 enter
+PASS: Soak 72 exit
+PASS: Soak 72 death
+SOAK elapsed 496.6s | cycle 72 | nodes 67
+PASS: Soak 73 pickup
+PASS: Soak 73 bat hit
+PASS: Soak 73 enter
+PASS: Soak 73 exit
+PASS: Soak 73 death
+SOAK elapsed 503.5s | cycle 73 | nodes 67
+PASS: Soak 74 pickup
+PASS: Soak 74 bat hit
+PASS: Soak 74 enter
+PASS: Soak 74 exit
+PASS: Soak 74 death
+SOAK elapsed 510.4s | cycle 74 | nodes 67
+PASS: Soak 75 pickup
+PASS: Soak 75 bat hit
+PASS: Soak 75 enter
+PASS: Soak 75 exit
+PASS: Soak 75 death
+SOAK elapsed 517.3s | cycle 75 | nodes 67
+PASS: Soak 76 pickup
+PASS: Soak 76 bat hit
+PASS: Soak 76 enter
+PASS: Soak 76 exit
+PASS: Soak 76 death
+SOAK elapsed 524.2s | cycle 76 | nodes 67
+PASS: Soak 77 pickup
+PASS: Soak 77 bat hit
+PASS: Soak 77 enter
+PASS: Soak 77 exit
+PASS: Soak 77 death
+SOAK elapsed 531.0s | cycle 77 | nodes 67
+PASS: Soak 78 pickup
+PASS: Soak 78 bat hit
+PASS: Soak 78 enter
+PASS: Soak 78 exit
+PASS: Soak 78 death
+SOAK elapsed 538.0s | cycle 78 | nodes 67
+PASS: Soak 79 pickup
+PASS: Soak 79 bat hit
+PASS: Soak 79 enter
+PASS: Soak 79 exit
+PASS: Soak 79 death
+SOAK elapsed 544.9s | cycle 79 | nodes 67
+PASS: Soak 80 pickup
+PASS: Soak 80 bat hit
+PASS: Soak 80 enter
+PASS: Soak 80 exit
+PASS: Soak 80 death
+SOAK elapsed 551.7s | cycle 80 | nodes 67
+PASS: Soak 81 pickup
+PASS: Soak 81 bat hit
+PASS: Soak 81 enter
+PASS: Soak 81 exit
+PASS: Soak 81 death
+SOAK elapsed 558.7s | cycle 81 | nodes 67
+PASS: Soak 82 pickup
+PASS: Soak 82 bat hit
+PASS: Soak 82 enter
+PASS: Soak 82 exit
+PASS: Soak 82 death
+SOAK elapsed 565.6s | cycle 82 | nodes 67
+PASS: Soak 83 pickup
+PASS: Soak 83 bat hit
+PASS: Soak 83 enter
+PASS: Soak 83 exit
+PASS: Soak 83 death
+SOAK elapsed 572.5s | cycle 83 | nodes 67
+PASS: Soak 84 pickup
+PASS: Soak 84 bat hit
+PASS: Soak 84 enter
+PASS: Soak 84 exit
+PASS: Soak 84 death
+SOAK elapsed 579.4s | cycle 84 | nodes 67
+PASS: Soak 85 pickup
+PASS: Soak 85 bat hit
+PASS: Soak 85 enter
+PASS: Soak 85 exit
+PASS: Soak 85 death
+SOAK elapsed 586.3s | cycle 85 | nodes 67
+PASS: Soak 86 pickup
+PASS: Soak 86 bat hit
+PASS: Soak 86 enter
+PASS: Soak 86 exit
+PASS: Soak 86 death
+SOAK elapsed 593.2s | cycle 86 | nodes 67
+PASS: Soak 87 pickup
+PASS: Soak 87 bat hit
+PASS: Soak 87 enter
+PASS: Soak 87 exit
+PASS: Soak 87 death
+SOAK elapsed 600.1s | cycle 87 | nodes 67
+SOAK COMPLETE: 600.1 real seconds, 87 cycles, 435 assertions

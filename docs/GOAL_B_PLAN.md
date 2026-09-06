@@ -1,0 +1,9 @@
+# Goal B+ implementation plan and audit
+
+The attached user brief authorizes the First Playable District, superseding the historical Goal A stop. Godot 4.7 stable; Compatibility renderer; 1280×720 canvas scaling. Events is the sole autoload. Game composes Player/Camera2D, Arena, compact, practice targets, pickups, RunManager, Feedback, RadioManager and HUD. Typed resources define weapon damage/recovery/ammo/throwing and vehicle acceleration/steering/damage/blast tuning. Collision bit values: 1 scenery, 2 player, 4 targets, 8 vehicles. Radio uses four station resources, original logos, separate Ogg streams, virtual randomized broadcast offsets and vehicle ownership signals. Restart reloads the current scene in the same process.
+
+Preserve the yard scene and shared mechanics as regression fixtures. Add a new district composition, authored layout, grid navigation, actor state machines, observed-crime/Heat system, capped off-screen spawn director, marker components and simplified minimap, Boost resource/manager and ScoreManager. Add a sedan via VehicleData; retain compact tuning. Vehicle-only shortcut gates use bit 16. No asset regeneration. Static city geometry is drawn once; marker/AI updates are bounded.
+
+Sequence: baseline tests → district/vehicles → minimap → civilians/hostile → police/Heat → Boost/score/HUD → direct integration and preservation checks. Foot police only for this pass unless vehicle AI proves stable; roadblocks, civilian traffic, vehicle identity swapping, dawn clock and expanded missions are optional and will be explicitly documented if omitted.
+
+Baseline radio passed 42 checks in a graphical run. First physics run hit a timing-sensitive throw fixture failure; investigation and repeat precede implementation acceptance. Existing tests remain blockers, alongside new district tests for navigation, detection/privacy, mission success/failure, restart and population load.

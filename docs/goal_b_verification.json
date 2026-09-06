@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-09-06T02:43:36-07:00",
+  "engine": "4.7.stable.official.5b4e0cb0f",
+  "gameplay_checks": 228,
+  "suites": [
+    "district_goal_a_acceptance.log",
+    "district_goal_a_edges.log",
+    "district_goal_a_physics.log",
+    "district_final_layout.log",
+    "district_final_integration.log",
+    "district_weapon_car_fixed.log",
+    "district_final_safety.log",
+    "district_drive_shutdown_fixed.log",
+    "district_radio_cleanup.log",
+    "district_visual_verified.log",
+    "district_release_import.log",
+    "district_release_startup.log"
+  ],
+  "source_files_preserved": 17,
+  "authorized_supplied_document_updates": 2,
+  "performance": {
+    "duration_seconds": 10,
+    "hardware": "Apple M2",
+    "fps_observed": 120,
+    "median_frame_ms": 7.82,
+    "p95_frame_ms": 12.97,
+    "npc_nodes": 29
+  },
+  "default_scene": "res://scenes/district.tscn",
+  "historical_yard": "res://scenes/game.tscn"
+}

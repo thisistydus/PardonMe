@@ -1,0 +1,89 @@
+Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org
+TextServer: Added interface "Dummy"
+TextServer: Added interface "ICU / HarfBuzz / Graphite (Built-in)"
+SDL: Init OK!
+Using "default" pen tablet driver...
+
+TextServer: Primary interface set to: "ICU / HarfBuzz / Graphite (Built-in)".
+CORE API HASH: 3472268009
+EDITOR API HASH: 2212757246
+SceneTreeFTI: traversal method DEFAULT
+Loading resource: res://scripts/systems/events.gd remapped: res://scripts/systems/events.gd
+Completed load for: 'res://scripts/systems/events.gd' remapped 'res://scripts/systems/events.gd' at thread -1
+Loaded system CA certificates
+Loading resource: res://tests/district_drive.tscn remapped: res://tests/district_drive.tscn
+Loading resource: res://tests/district_drive.gd remapped: res://tests/district_drive.gd
+Loading resource: res://data/weapons/fists.tres remapped: res://data/weapons/fists.tres
+Loading resource: res://scripts/combat/weapon_data.gd remapped: res://scripts/combat/weapon_data.gd
+Completed load for: 'res://scripts/combat/weapon_data.gd' remapped 'res://scripts/combat/weapon_data.gd' at thread -1
+Completed load for: 'res://data/weapons/fists.tres' remapped 'res://data/weapons/fists.tres' at thread -1
+Loading resource: res://Art/Generated/player_v1.png remapped: res://Art/Generated/player_v1.png
+Loading resource: res://.godot/imported/player_v1.png-476b56f69dd2d177125346a9ed64f662.ctex remapped: res://.godot/imported/player_v1.png-476b56f69dd2d177125346a9ed64f662.ctex
+Completed load for: 'res://Art/Generated/player_v1.png' remapped 'res://Art/Generated/player_v1.png' at thread -1
+Loading resource: res://data/vehicles/compact.tres remapped: res://data/vehicles/compact.tres
+Loading resource: res://scripts/actors/vehicle_data.gd remapped: res://scripts/actors/vehicle_data.gd
+Completed load for: 'res://scripts/actors/vehicle_data.gd' remapped 'res://scripts/actors/vehicle_data.gd' at thread -1
+Completed load for: 'res://data/vehicles/compact.tres' remapped 'res://data/vehicles/compact.tres' at thread -1
+Loading resource: res://Art/Generated/compact_final.png remapped: res://Art/Generated/compact_final.png
+Loading resource: res://.godot/imported/compact_final.png-83567b32c64b8215f13887dd4f42e971.ctex remapped: res://.godot/imported/compact_final.png-83567b32c64b8215f13887dd4f42e971.ctex
+Completed load for: 'res://Art/Generated/compact_final.png' remapped 'res://Art/Generated/compact_final.png' at thread -1
+Loading resource: res://Art/Generated/practice_target_final.png remapped: res://Art/Generated/practice_target_final.png
+Loading resource: res://.godot/imported/practice_target_final.png-c959d35b6a0df1f30abed09a7b37e737.ctex remapped: res://.godot/imported/practice_target_final.png-c959d35b6a0df1f30abed09a7b37e737.ctex
+Completed load for: 'res://Art/Generated/practice_target_final.png' remapped 'res://Art/Generated/practice_target_final.png' at thread -1
+Loading resource: res://data/vehicles/sedan.tres remapped: res://data/vehicles/sedan.tres
+Completed load for: 'res://data/vehicles/sedan.tres' remapped 'res://data/vehicles/sedan.tres' at thread -1
+Loading resource: res://data/vehicles/patrol.tres remapped: res://data/vehicles/patrol.tres
+Completed load for: 'res://data/vehicles/patrol.tres' remapped 'res://data/vehicles/patrol.tres' at thread -1
+Loading resource: res://data/weapons/pistol.tres remapped: res://data/weapons/pistol.tres
+Completed load for: 'res://data/weapons/pistol.tres' remapped 'res://data/weapons/pistol.tres' at thread -1
+Loading resource: res://data/missions/first_boost.tres remapped: res://data/missions/first_boost.tres
+Loading resource: res://scripts/district/boost_data.gd remapped: res://scripts/district/boost_data.gd
+Completed load for: 'res://scripts/district/boost_data.gd' remapped 'res://scripts/district/boost_data.gd' at thread -1
+Completed load for: 'res://data/missions/first_boost.tres' remapped 'res://data/missions/first_boost.tres' at thread -1
+Loading resource: res://data/radio/library.tres remapped: res://data/radio/library.tres
+Loading resource: res://scripts/systems/radio_library.gd remapped: res://scripts/systems/radio_library.gd
+Completed load for: 'res://scripts/systems/radio_library.gd' remapped 'res://scripts/systems/radio_library.gd' at thread -1
+Loading resource: res://data/radio/anvil.tres remapped: res://data/radio/anvil.tres
+Loading resource: res://Art/Logos/TheAnvil.png remapped: res://Art/Logos/TheAnvil.png
+Loading resource: res://.godot/imported/TheAnvil.png-a8c41fc0a6dceaa04e6bc349ee47470a.ctex remapped: res://.godot/imported/TheAnvil.png-a8c41fc0a6dceaa04e6bc349ee47470a.ctex
+Completed load for: 'res://Art/Logos/TheAnvil.png' remapped 'res://Art/Logos/TheAnvil.png' at thread -1
+Loading resource: res://Music/Imported/anvil_warranty_void.ogg remapped: res://Music/Imported/anvil_warranty_void.ogg
+Loading resource: res://.godot/imported/anvil_warranty_void.ogg-0d4a205c02c4fdf3b8cabae35aa5874c.oggvorbisstr remapped: res://.godot/imported/anvil_warranty_void.ogg-0d4a205c02c4fdf3b8cabae35aa5874c.oggvorbisstr
+Completed load for: 'res://Music/Imported/anvil_warranty_void.ogg' remapped 'res://Music/Imported/anvil_warranty_void.ogg' at thread -1
+Completed load for: 'res://data/radio/anvil.tres' remapped 'res://data/radio/anvil.tres' at thread -1
+Loading resource: res://data/radio/backspin.tres remapped: res://data/radio/backspin.tres
+Loading resource: res://Art/Logos/Backspin.png remapped: res://Art/Logos/Backspin.png
+Loading resource: res://.godot/imported/Backspin.png-6565513b2cebda4afd913ab88659d32d.ctex remapped: res://.godot/imported/Backspin.png-6565513b2cebda4afd913ab88659d32d.ctex
+Completed load for: 'res://Art/Logos/Backspin.png' remapped 'res://Art/Logos/Backspin.png' at thread -1
+Loading resource: res://Music/Imported/backspin_ask_for_the_receipt.ogg remapped: res://Music/Imported/backspin_ask_for_the_receipt.ogg
+Loading resource: res://.godot/imported/backspin_ask_for_the_receipt.ogg-23de4e9e0a109d50c3b04586237d0d68.oggvorbisstr remapped: res://.godot/imported/backspin_ask_for_the_receipt.ogg-23de4e9e0a109d50c3b04586237d0d68.oggvorbisstr
+Completed load for: 'res://Music/Imported/backspin_ask_for_the_receipt.ogg' remapped 'res://Music/Imported/backspin_ask_for_the_receipt.ogg' at thread -1
+Completed load for: 'res://data/radio/backspin.tres' remapped 'res://data/radio/backspin.tres' at thread -1
+Loading resource: res://data/radio/kbuck.tres remapped: res://data/radio/kbuck.tres
+Loading resource: res://Art/Logos/K-Buck.png remapped: res://Art/Logos/K-Buck.png
+Loading resource: res://.godot/imported/K-Buck.png-bf267e6291f2c552a7bed4237ed2902b.ctex remapped: res://.godot/imported/K-Buck.png-bf267e6291f2c552a7bed4237ed2902b.ctex
+Completed load for: 'res://Art/Logos/K-Buck.png' remapped 'res://Art/Logos/K-Buck.png' at thread -1
+Loading resource: res://Music/Imported/kbuck_the_devil_cant_drive_my_truck.ogg remapped: res://Music/Imported/kbuck_the_devil_cant_drive_my_truck.ogg
+Loading resource: res://.godot/imported/kbuck_the_devil_cant_drive_my_truck.ogg-96eeaec6dabcf5b8e5e5a91646aaea2b.oggvorbisstr remapped: res://.godot/imported/kbuck_the_devil_cant_drive_my_truck.ogg-96eeaec6dabcf5b8e5e5a91646aaea2b.oggvorbisstr
+Completed load for: 'res://Music/Imported/kbuck_the_devil_cant_drive_my_truck.ogg' remapped 'res://Music/Imported/kbuck_the_devil_cant_drive_my_truck.ogg' at thread -1
+Completed load for: 'res://data/radio/kbuck.tres' remapped 'res://data/radio/kbuck.tres' at thread -1
+Loading resource: res://data/radio/pulse.tres remapped: res://data/radio/pulse.tres
+Loading resource: res://Art/Logos/Pulse.png remapped: res://Art/Logos/Pulse.png
+Loading resource: res://.godot/imported/Pulse.png-84300d6920b6b29494f07df275d7ea42.ctex remapped: res://.godot/imported/Pulse.png-84300d6920b6b29494f07df275d7ea42.ctex
+Completed load for: 'res://Art/Logos/Pulse.png' remapped 'res://Art/Logos/Pulse.png' at thread -1
+Loading resource: res://Music/Imported/pulse_airplane_mode.ogg remapped: res://Music/Imported/pulse_airplane_mode.ogg
+Loading resource: res://.godot/imported/pulse_airplane_mode.ogg-acbc384c35f9fd58bed9054f3edabda3.oggvorbisstr remapped: res://.godot/imported/pulse_airplane_mode.ogg-acbc384c35f9fd58bed9054f3edabda3.oggvorbisstr
+Completed load for: 'res://Music/Imported/pulse_airplane_mode.ogg' remapped 'res://Music/Imported/pulse_airplane_mode.ogg' at thread -1
+Completed load for: 'res://data/radio/pulse.tres' remapped 'res://data/radio/pulse.tres' at thread -1
+Completed load for: 'res://data/radio/library.tres' remapped 'res://data/radio/library.tres' at thread -1
+Completed load for: 'res://tests/district_drive.gd' remapped 'res://tests/district_drive.gd' at thread -1
+Completed load for: 'res://tests/district_drive.tscn' remapped 'res://tests/district_drive.tscn' at thread -1
+Loading resource: res://scenes/district.tscn remapped: res://scenes/district.tscn
+Completed load for: 'res://scenes/district.tscn' remapped 'res://scenes/district.tscn' at thread -1
+Loading resource: res://data/weapons/bat.tres remapped: res://data/weapons/bat.tres
+Completed load for: 'res://data/weapons/bat.tres' remapped 'res://data/weapons/bat.tres' at thread -1
+PASS: Driven Boost starts in actual parked mission target
+DRIVE TRACE start=(2680.0, 805.0) end=(4404.452, 2603.317) waypoints=6 distance=3352 health=100.0 mission=complete
+PASS: Actual driving navigates roads and turns across district to garage
+PASS: Driven delivery completes Boost without teleporting the car
+DISTRICT DRIVE COMPLETE: 3 checks, 0 failures

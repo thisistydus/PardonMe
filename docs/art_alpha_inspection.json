@@ -1,0 +1,50 @@
+{
+  "player_v1.png": {
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      242,
+      241,
+      1060,
+      983
+    ]
+  },
+  "compact_final.png": {
+    "size": [
+      1701,
+      925
+    ],
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      152,
+      108,
+      1555,
+      800
+    ]
+  },
+  "practice_target_final.png": {
+    "size": [
+      1448,
+      1086
+    ],
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      347,
+      166,
+      1142,
+      904
+    ]
+  }
+}

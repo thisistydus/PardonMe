@@ -1,0 +1,35 @@
+Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org
+
+PASS: Seven enterable vehicles placed
+PASS: Sedan uses distinct vehicle data
+PASS: Three authored mission phones
+PASS: Navigation connects yard to garage around blocks
+PASS: Enter parked COMPACT
+PASS: Exit parked vehicle
+PASS: Enter parked COMPACT
+PASS: Exit parked vehicle
+PASS: Enter parked SEDAN
+PASS: Exit parked vehicle
+PASS: Enter parked COMPACT
+PASS: Exit parked vehicle
+PASS: Enter parked COMPACT
+PASS: Exit parked vehicle
+PASS: Enter parked SEDAN
+PASS: Exit parked vehicle
+PASS: Enter parked COMPACT
+PASS: Exit parked vehicle
+PASS: Long road supports full-speed driving across blocks
+PASS: Pedestrian gate blocks a car
+ERROR: FAIL: Pedestrian gate allows on-foot passage
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] verify (res://tests/acceptance.gd:16)
+       [1] start (res://tests/district_layout.gd:39)
+       [2] frames (res://tests/acceptance.gd:24)
+SCRIPT ERROR: Assertion failed: Pedestrian gate allows on-foot passage
+   at: verify (res://tests/acceptance.gd:18)
+   GDScript backtrace (most recent call first):
+       [0] verify (res://tests/acceptance.gd:18)
+       [1] start (res://tests/district_layout.gd:39)
+       [2] frames (res://tests/acceptance.gd:24)
+DISTRICT LAYOUT COMPLETE: 20 checks

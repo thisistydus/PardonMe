@@ -1,0 +1,95 @@
+extends "res://tests/district_integration.gd"
+func fresh_npc(role: String, at: Vector2) -> DistrictNPC:
+	var npc := city.spawn_citizen(at, role)
+	npc.position = at
+	npc.ai_enabled = false
+	return npc
+func start() -> void:
+	game = load("res://scenes/district.tscn").instantiate()
+	get_tree().root.add_child(game)
+	get_tree().current_scene = game
+	refresh_refs()
+	await frames(20)
+	quiet()
+	for role: String in ["civilian", "hostile", "police"]:
+		player.position = Vector2(800, 600)
+		aim(Vector2.RIGHT)
+		var npc := fresh_npc(role, Vector2(945, 600))
+		player.weapons.equip(load("res://data/weapons/pistol.tres"), 0)
+		await frames(4)
+		await tap(&"throw_weapon")
+		await sim(0.3)
+		verify(npc.health == 1 and npc.stun > 0, "Empty pistol throw damages/stuns " + role)
+		npc.queue_free()
+		city.citizens.erase(npc)
+		npc = fresh_npc(role, Vector2(855, 600))
+		player.position = Vector2(800, 600)
+		player.weapons.equip(load("res://data/weapons/bat.tres"))
+		await sim(0.25)
+		await tap(&"attack")
+		verify(npc.downed, "Bat incapacitates " + role)
+		npc = fresh_npc(role, Vector2(960, 600))
+		player.position = Vector2(800, 600)
+		player.weapons.equip(load("res://data/weapons/pistol.tres"))
+		await sim(0.3)
+		await tap(&"attack")
+		await sim(0.3)
+		verify(npc.downed and player.weapons.ammo == 7, "One pistol bullet kills " + role)
+		npc = fresh_npc(role, Vector2(1500, 600))
+		car.position = Vector2(1400, 600)
+		car.rotation = 0
+		car.speed = 500
+		car.velocity = Vector2.RIGHT * 500
+		await frames(3)
+		car.move_with_impacts(Vector2(150, 0))
+		verify(npc.downed and npc.air_time > 0 and car.speed > 400, "Car launches " + role + " while retaining speed")
+		car.speed = 0
+	# Cluster damage through the existing warned car explosion.
+	car.health = car.data.durability
+	car.position = Vector2(2400, 1800)
+	player.position = Vector2(2000, 1800)
+	var first := fresh_npc("civilian", Vector2(2480, 1800))
+	var second := fresh_npc("hostile", Vector2(2400, 1710))
+	await frames(3)
+	player.position = car.position - Vector2(125, 0)
+	aim(Vector2.RIGHT)
+	player.weapons.equip(load("res://data/weapons/pistol.tres"))
+	await sim(0.3)
+	for i: int in 8:
+		await tap(&"attack")
+		await sim(0.35)
+	verify(car.health <= 4 and player.weapons.ammo == 0, "Player can intentionally shoot car until nearly destroyed")
+	player.position = car.position - Vector2(70, 0)
+	player.weapons.equip(load("res://data/weapons/bat.tres"))
+	await sim(0.2)
+	await tap(&"attack")
+	await sim(0.45)
+	await tap(&"attack")
+	verify(car.failure_timer > 2.5 and not first.downed, "District car gives full readable explosion warning")
+	player.position = Vector2(2000, 1800)
+	await sim(3.4)
+	verify(car.disabled and first.downed and second.downed, "Warned explosion damages clustered city actors")
+	verify(player.alive, "Player outside district blast survives")
+	await reset_game()
+	quiet()
+	# Hostile detection is occluded by buildings, then telegraphed attacks work.
+	var hostile := city.citizens[16]
+	hostile.position = Vector2(980, 1100)
+	player.position = Vector2(1530, 1100)
+	hostile.ai_enabled = true
+	await sim(0.5)
+	verify(hostile.state == &"idle", "Hostile cannot detect through building")
+	hostile.position = Vector2(800, 600)
+	player.position = Vector2(1010, 600)
+	await sim(0.35)
+	verify(hostile.state == &"suspicious", "Hostile has readable suspicious interval")
+	await sim(1.8)
+	verify(hostile.telegraph > 0 or hostile.shots_fired > 0, "Hostile telegraphs before firing existing pistol")
+	await sim(0.8)
+	verify(player.wounded and player.alive and hostile.shots_fired == 1, "First hostile bullet wounds with a pause before next shot")
+	await sim(2.0)
+	verify(not player.alive and city.run.ended, "Second hostile bullet kills and opens district results")
+	await reset_game()
+	verify(player.alive and city.citizens.size() == 19, "Death restart recreates population cleanly")
+	print("DISTRICT COMBAT COMPLETE: %d checks, %d failures" % [checks, failures])
+	get_tree().quit(1 if failures > 0 else 0)

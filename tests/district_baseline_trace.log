@@ -1,0 +1,37 @@
+Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org
+
+PASS: Throw immediately restores fists
+PASS: Empty pistol becomes one physical thrown weapon
+BASELINE TRACE (1.0, 0.0) controller true target (950.0, 350.0) health 1
+PASS: Empty pistol throw damages and stuns target
+PASS: Impact ends flight
+PASS: Impact creates exactly one recoverable weapon
+PASS: Thrown pistol preserves empty ammunition
+PASS: E recovers empty thrown pistol without ammo exploit
+PASS: Thrown bat incapacitates target
+PASS: Thrown bat remains recoverable
+PASS: Thrown weapon cannot tunnel through thin cover
+PASS: Wall collision lands weapon on near side with ammo preserved
+PASS: Missed throw settles without losing weapon
+PASS: Fists cannot create a thrown weapon
+PASS: Throw input is ignored while driving
+PASS: Car launches target at high velocity into airborne tumble
+PASS: Car retains forward momentum and completes motion through target
+PASS: Body impact causes only minor vehicle damage
+PASS: Launched dummy visibly flies away from impact
+PASS: Wall behind launched target still blocks and bounces car
+PASS: Lethal damage starts full three-second warning
+PASS: Additional hits cannot reset explosion countdown
+PASS: No premature explosion damage during warning
+PASS: Explosion deals radial target damage
+PASS: Outside blast radius is safe
+PASS: Wreck cannot explode a second time
+PASS: Solid cover shields targets and player from blast
+PASS: Outer blast wounds and pushes player
+PASS: Point-blank blast kills player and ends run
+PASS: Explosion occupant fixture enters car
+PASS: Remaining inside exploding car kills occupant and clears references
+PASS: Exit remains available during explosion countdown
+PASS: Exiting and running beyond radius survives explosion
+PASS: Restart clears blasts, thrown weapons and wreck state
+PHYSICS REVISION COMPLETE: 33 checks passed

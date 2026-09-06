@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="WeaponData" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/combat/weapon_data.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"bat"
+title = "BASEBALL BAT"
+damage = 3
+reach = 86.0
+arc_degrees = 130.0
+cooldown = 0.40
+knockback = 640.0
+throw_damage = 3
+throw_knockback = 600.0

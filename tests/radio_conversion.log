@@ -1,0 +1,1109 @@
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/Users/tydussimonini/Documents/Godot/PardonMe/Music/Warranty Void.m4a':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    encoder         : Lavf60.16.100
+    lyrics          : [Intro]
+                    : [Instrumental]
+                    : [Verse 1]
+                    : You slide in wearing midnight leather
+                    : Keys like a promise in your hand
+                    : I know the bridge is held by weather
+                    : Still I tell you, baby, take command
+                    : Your lipstick on the steering wheel
+                    : My pulse is climbing past the red
+                    : We don't need a map to know the deal
+                    : We need a road and something said
+                    : [Pre-Chorus]
+                    : Check the mirror, check the spark
+                    : Kiss me hard and miss the mark
+                    : If the warning light comes on
+                    : Baby, we'll be long gone
+                    : [Chorus]
+                    : Warranty void, warranty void
+                    : You and me are built to be destroyed
+                    : No return, no second choice
+                    : Turn it up and hear the whole world voice
+                    : Warranty void, warranty void
+                    : You’re the sweetest risk I’ve ever enjoyed
+                    : Bald tires screaming, claim denied
+                    : Put your hands on me and take the ride
+                    : [Verse 2]
+                    : Registration expired in April
+                    : Insurance says the file is closed
+                    : The radiator's running fatal
+                    : But you look too good to be opposed
+                    : There’s a hairline crack beneath the spoiler
+                    : There’s a siren somewhere in the heat
+                    : You say the night belongs to spoilers
+                    : I say the danger makes it sweet
+                    : [Pre-Chorus]
+                    : Check the mirror, check the spark
+                    : Kiss me hard and miss the mark
+                    : If the warning light comes on
+                    : Baby, we'll be long gone
+                    : [Chorus]
+                    : Warranty void, warranty void
+                    : You and me are built to be destroyed
+                    : No return, no second choice
+                    : Turn it up and hear the whole world voice
+                    : Warranty void, warranty void
+                    : You’re the sweetest risk I’ve ever enjoyed
+                    : Bald tires screaming, claim denied
+                    : Put your hands on me and take the ride
+                    : [Breakdown]
+                    : No coverage when the engine blows
+                    : No mercy where the redline goes
+                    : No paperwork can save this flame
+                    : No adjuster wants to sign their name
+                    : If the tires go bald, let ’em sing
+                    : If the hood runs hot, let it swing
+                    : If they ask who caused the wreck tonight
+                    : Tell ’em we were born to cross that line
+                    : [Guitar Solo]
+                    : [Instrumental]
+                    : [Chorus]
+                    : Warranty void, warranty void
+                    : You and me are built to be destroyed
+                    : No return, no second choice
+                    : Turn it up and hear the whole world voice
+                    : Warranty void, warranty void
+                    : You’re the sweetest risk I’ve ever enjoyed
+                    : Bald tires screaming, claim denied
+                    : Put your hands on me and take the ride
+                    : [Final Chorus]
+                    : Warranty void, warranty void
+                    : Raise your fists for the reckless noise
+                    : Missing plates and a burning sky
+                    : If they ask, baby, tell them why
+                    : Warranty void, warranty void
+                    : Every kiss is a dangerous choice
+                    : No registration, no alibi
+                    : Love me fast and let the paperwork die
+                    : [Outro]
+                    : Warranty void!
+                    : Warranty void!
+                    : [Instrumental]
+                    : [End]
+    comment         : made with suno; created=2026-09-04T08:08:50Z; id=d9cfe5ff-01bb-450e-b1b9-d845d56ed280
+  Duration: 00:05:42.80, start: 0.000000, bitrate: 123 kb/s
+  Stream #0:0[0x1](und): Audio: opus (Opus / 0x7375704F), 48000 Hz, stereo, fltp, 120 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](eng): Subtitle: mov_text (tx3g / 0x67337874), 0 kb/s (default)
+      Metadata:
+        handler_name    : SubtitleHandler
+Stream mapping:
+  Stream #0:0 -> #0:0 (opus (native) -> vorbis (libvorbis))
+Output #0, ogg, to '/Users/tydussimonini/Documents/Godot/PardonMe/Music/Imported/anvil_warranty_void.ogg':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    comment         : made with suno; created=2026-09-04T08:08:50Z; id=d9cfe5ff-01bb-450e-b1b9-d845d56ed280
+    lyrics          : [Intro]
+                    : [Instrumental]
+                    : [Verse 1]
+                    : You slide in wearing midnight leather
+                    : Keys like a promise in your hand
+                    : I know the bridge is held by weather
+                    : Still I tell you, baby, take command
+                    : Your lipstick on the steering wheel
+                    : My pulse is climbing past the red
+                    : We don't need a map to know the deal
+                    : We need a road and something said
+                    : [Pre-Chorus]
+                    : Check the mirror, check the spark
+                    : Kiss me hard and miss the mark
+                    : If the warning light comes on
+                    : Baby, we'll be long gone
+                    : [Chorus]
+                    : Warranty void, warranty void
+                    : You and me are built to be destroyed
+                    : No return, no second choice
+                    : Turn it up and hear the whole world voice
+                    : Warranty void, warranty void
+                    : You’re the sweetest risk I’ve ever enjoyed
+                    : Bald tires screaming, claim denied
+                    : Put your hands on me and take the ride
+                    : [Verse 2]
+                    : Registration expired in April
+                    : Insurance says the file is closed
+                    : The radiator's running fatal
+                    : But you look too good to be opposed
+                    : There’s a hairline crack beneath the spoiler
+                    : There’s a siren somewhere in the heat
+                    : You say the night belongs to spoilers
+                    : I say the danger makes it sweet
+                    : [Pre-Chorus]
+                    : Check the mirror, check the spark
+                    : Kiss me hard and miss the mark
+                    : If the warning light comes on
+                    : Baby, we'll be long gone
+                    : [Chorus]
+                    : Warranty void, warranty void
+                    : You and me are built to be destroyed
+                    : No return, no second choice
+                    : Turn it up and hear the whole world voice
+                    : Warranty void, warranty void
+                    : You’re the sweetest risk I’ve ever enjoyed
+                    : Bald tires screaming, claim denied
+                    : Put your hands on me and take the ride
+                    : [Breakdown]
+                    : No coverage when the engine blows
+                    : No mercy where the redline goes
+                    : No paperwork can save this flame
+                    : No adjuster wants to sign their name
+                    : If the tires go bald, let ’em sing
+                    : If the hood runs hot, let it swing
+                    : If they ask who caused the wreck tonight
+                    : Tell ’em we were born to cross that line
+                    : [Guitar Solo]
+                    : [Instrumental]
+                    : [Chorus]
+                    : Warranty void, warranty void
+                    : You and me are built to be destroyed
+                    : No return, no second choice
+                    : Turn it up and hear the whole world voice
+                    : Warranty void, warranty void
+                    : You’re the sweetest risk I’ve ever enjoyed
+                    : Bald tires screaming, claim denied
+                    : Put your hands on me and take the ride
+                    : [Final Chorus]
+                    : Warranty void, warranty void
+                    : Raise your fists for the reckless noise
+                    : Missing plates and a burning sky
+                    : If they ask, baby, tell them why
+                    : Warranty void, warranty void
+                    : Every kiss is a dangerous choice
+                    : No registration, no alibi
+                    : Love me fast and let the paperwork die
+                    : [Outro]
+                    : Warranty void!
+                    : Warranty void!
+                    : [Instrumental]
+                    : [End]
+    encoder         : Lavf61.7.100
+  Stream #0:0(und): Audio: vorbis, 44100 Hz, stereo, fltp (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 libvorbis
+        major_brand     : isom
+        minor_version   : 512
+        compatible_brands: isomiso2mp41
+        DESCRIPTION     : made with suno; created=2026-09-04T08:08:50Z; id=d9cfe5ff-01bb-450e-b1b9-d845d56ed280
+        lyrics          : [Intro]
+                        : [Instrumental]
+                        : [Verse 1]
+                        : You slide in wearing midnight leather
+                        : Keys like a promise in your hand
+                        : I know the bridge is held by weather
+                        : Still I tell you, baby, take command
+                        : Your lipstick on the steering wheel
+                        : My pulse is climbing past the red
+                        : We don't need a map to know the deal
+                        : We need a road and something said
+                        : [Pre-Chorus]
+                        : Check the mirror, check the spark
+                        : Kiss me hard and miss the mark
+                        : If the warning light comes on
+                        : Baby, we'll be long gone
+                        : [Chorus]
+                        : Warranty void, warranty void
+                        : You and me are built to be destroyed
+                        : No return, no second choice
+                        : Turn it up and hear the whole world voice
+                        : Warranty void, warranty void
+                        : You’re the sweetest risk I’ve ever enjoyed
+                        : Bald tires screaming, claim denied
+                        : Put your hands on me and take the ride
+                        : [Verse 2]
+                        : Registration expired in April
+                        : Insurance says the file is closed
+                        : The radiator's running fatal
+                        : But you look too good to be opposed
+                        : There’s a hairline crack beneath the spoiler
+                        : There’s a siren somewhere in the heat
+                        : You say the night belongs to spoilers
+                        : I say the danger makes it sweet
+                        : [Pre-Chorus]
+                        : Check the mirror, check the spark
+                        : Kiss me hard and miss the mark
+                        : If the warning light comes on
+                        : Baby, we'll be long gone
+                        : [Chorus]
+                        : Warranty void, warranty void
+                        : You and me are built to be destroyed
+                        : No return, no second choice
+                        : Turn it up and hear the whole world voice
+                        : Warranty void, warranty void
+                        : You’re the sweetest risk I’ve ever enjoyed
+                        : Bald tires screaming, claim denied
+                        : Put your hands on me and take the ride
+                        : [Breakdown]
+                        : No coverage when the engine blows
+                        : No mercy where the redline goes
+                        : No paperwork can save this flame
+                        : No adjuster wants to sign their name
+                        : If the tires go bald, let ’em sing
+                        : If the hood runs hot, let it swing
+                        : If they ask who caused the wreck tonight
+                        : Tell ’em we were born to cross that line
+                        : [Guitar Solo]
+                        : [Instrumental]
+                        : [Chorus]
+                        : Warranty void, warranty void
+                        : You and me are built to be destroyed
+                        : No return, no second choice
+                        : Turn it up and hear the whole world voice
+                        : Warranty void, warranty void
+                        : You’re the sweetest risk I’ve ever enjoyed
+                        : Bald tires screaming, claim denied
+                        : Put your hands on me and take the ride
+                        : [Final Chorus]
+                        : Warranty void, warranty void
+                        : Raise your fists for the reckless noise
+                        : Missing plates and a burning sky
+                        : If they ask, baby, tell them why
+                        : Warranty void, warranty void
+                        : Every kiss is a dangerous choice
+                        : No registration, no alibi
+                        : Love me fast and let the paperwork die
+                        : [Outro]
+                        : Warranty void!
+                        : Warranty void!
+                        : [Instrumental]
+                        : [End]
+size=    1024KiB time=00:01:02.81 bitrate= 133.6kbits/s speed= 124x    size=    2048KiB time=00:02:06.52 bitrate= 132.6kbits/s speed= 126x    size=    3072KiB time=00:03:10.12 bitrate= 132.4kbits/s speed= 126x    size=    4096KiB time=00:04:13.81 bitrate= 132.2kbits/s speed= 126x    size=    4608KiB time=00:04:54.24 bitrate= 128.3kbits/s speed= 117x    [out#0/ogg @ 0x14e7041d0] video:0KiB audio:5571KiB subtitle:0KiB other streams:0KiB global headers:4KiB muxing overhead: 0.891886%
+size=    5620KiB time=00:05:42.81 bitrate= 134.3kbits/s speed= 117x    
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/Users/tydussimonini/Documents/Godot/PardonMe/Music/Ask for the Receipt.m4a':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    encoder         : Lavf60.16.100
+    lyrics          : [Intro]
+                    : Need the paperwork, please.
+                    : No folklore without footnotes.
+                    : [Hook]
+                    : Ask for the receipt.
+                    : Ask for the receipt.
+                    : Who said it? When? Show me the sheet.
+                    : Ask for the receipt.
+                    : Ask for the receipt.
+                    : Big talk gets small when the numbers meet.
+                    : [Verse 1]
+                    : He said he owned the corner, every brick had his name,
+                    : But the landlord's got a ledger and it don't play the game.
+                    : He said he bought the building, cash folded in a shoe,
+                    : I asked for closing documents—he produced a menu.
+                    : Claimed he ran the block since cassette tapes were new,
+                    : But the barber's dated calendar says 'ninety-two.
+                    : Said he never missed a rent, never borrowed a dime,
+                    : Then a certified letter showed up right on time.
+                    : He had a war story longer than a church basement pew,
+                    : With twelve different witnesses and eleven points of view.
+                    : I stayed polite, took notes, let the mythology speak,
+                    : Then asked who signed the contract—he developed a leak.
+                    : Not a drop on his jacket, not a stain on the floor,
+                    : Just a sudden disappearance through a conveniently locked door.
+                    : Your legend needs a witness, your victory needs a date,
+                    : If the tale is truly heavy, it can carry its weight.
+                    : [Hook]
+                    : Ask for the receipt.
+                    : Ask for the receipt.
+                    : Who said it? When? Show me the sheet.
+                    : Ask for the receipt.
+                    : Ask for the receipt.
+                    : Big talk gets small when the numbers meet.
+                    : [Verse 2]
+                    : He said he shipped a thousand units, platinum by noon,
+                    : But the distributor's fax machine was still in the room.
+                    : Said the label cut a check with a comma and a zero,
+                    : I asked for the tax form—he pointed at a hero.
+                    : Said he had a meeting with a suit from uptown,
+                    : At a hotel with no lobby and a train station crown.
+                    : He remembered every handshake, every cufflink shine,
+                    : But couldn't name the Tuesday, couldn't locate the line.
+                    : I brought timestamps, witness statements, ink that wouldn't fade,
+                    : He brought a cousin's Polaroid of a lemonade.
+                    : Serious as a judge, with a tie clipped to his shirt,
+                    : Explaining how the money vanished due to international dirt.
+                    : Yet his only foreign asset was a jar of imported tea,
+                    : And the customs form described it as “two pounds, green.”
+                    : I don't call him a liar; I audit what he said,
+                    : Truth deserves a filing cabinet, not a rumor in your head.
+                    : If the invoice says delivered, tell me who received,
+                    : If the check was really cashed, show the bank that made you grieve.
+                    : [Hook]
+                    : Ask for the receipt.
+                    : Ask for the receipt.
+                    : Who said it? When? Show me the sheet.
+                    : Ask for the receipt.
+                    : Ask for the receipt.
+                    : Big talk gets small when the numbers meet.
+                    : [Verse 3]
+                    : He said he won the battle with a verse that shook the floor,
+                    : Had the whole room chanting before he touched the door.
+                    : I asked for the promoter, asked the venue, asked the tape,
+                    : He named a parking meter and a laundromat escape.
+                    : Said the crowd was three hundred, maybe four if you count,
+                    : But the fire-code report had a very different amount.
+                    : Said the judge gave him the trophy, gold letters, heavyweight,
+                    : The trophy shop remembered him ordering “participate.”
+                    : He claimed the rival bowed, then retired on the spot,
+                    : The rival's still performing with a freshly printed lot.
+                    : I came with dates and witnesses, he came with confidence,
+                    : Like a man who thinks a volume knob can substitute evidence.
+                    : He cited one encyclopedia, page missing from the spine,
+                    : Then blamed the public library for altering the line.
+                    : Still, I never raised my voice; I sharpened every query,
+                    : A clean record makes a tall tale unnecessary.
+                    : Bring the contract, bring the docket, bring the person who was there,
+                    : Bring the camera with the timestamp and the comb inside your hair.
+                    : Because history isn't handed down by whoever talks the longest,
+                    : The truth can wear a cheap suit and still be the strongest.
+                    : [DJ Breakdown]
+                    : Cut it up—
+                    : Ask—ask—ask—
+                    : For the re—re—receipt!
+                    : Back to the facts.
+                    : [Final Hook]
+                    : Ask for the receipt.
+                    : Ask for the receipt.
+                    : Who said it? When? Show me the sheet.
+                    : Ask for the receipt.
+                    : Ask for the receipt.
+                    : Big talk gets small when the numbers meet.
+                    : Ask for the receipt.
+                    : Ask for the receipt.
+                    : Witness, timestamp, contract complete.
+                    : Ask for the receipt.
+                    : Ask for the receipt.
+                    : Keep your legend honest when you step to the beat.
+    comment         : made with suno; created=2026-09-04T08:26:59Z; id=7393854d-d374-4bbc-8f76-b3439a504a36
+  Duration: 00:04:31.53, start: 0.000000, bitrate: 128 kb/s
+  Stream #0:0[0x1](und): Audio: opus (Opus / 0x7375704F), 48000 Hz, stereo, fltp, 126 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](eng): Subtitle: mov_text (tx3g / 0x67337874), 0 kb/s (default)
+      Metadata:
+        handler_name    : SubtitleHandler
+Stream mapping:
+  Stream #0:0 -> #0:0 (opus (native) -> vorbis (libvorbis))
+Output #0, ogg, to '/Users/tydussimonini/Documents/Godot/PardonMe/Music/Imported/backspin_ask_for_the_receipt.ogg':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    comment         : made with suno; created=2026-09-04T08:26:59Z; id=7393854d-d374-4bbc-8f76-b3439a504a36
+    lyrics          : [Intro]
+                    : Need the paperwork, please.
+                    : No folklore without footnotes.
+                    : [Hook]
+                    : Ask for the receipt.
+                    : Ask for the receipt.
+                    : Who said it? When? Show me the sheet.
+                    : Ask for the receipt.
+                    : Ask for the receipt.
+                    : Big talk gets small when the numbers meet.
+                    : [Verse 1]
+                    : He said he owned the corner, every brick had his name,
+                    : But the landlord's got a ledger and it don't play the game.
+                    : He said he bought the building, cash folded in a shoe,
+                    : I asked for closing documents—he produced a menu.
+                    : Claimed he ran the block since cassette tapes were new,
+                    : But the barber's dated calendar says 'ninety-two.
+                    : Said he never missed a rent, never borrowed a dime,
+                    : Then a certified letter showed up right on time.
+                    : He had a war story longer than a church basement pew,
+                    : With twelve different witnesses and eleven points of view.
+                    : I stayed polite, took notes, let the mythology speak,
+                    : Then asked who signed the contract—he developed a leak.
+                    : Not a drop on his jacket, not a stain on the floor,
+                    : Just a sudden disappearance through a conveniently locked door.
+                    : Your legend needs a witness, your victory needs a date,
+                    : If the tale is truly heavy, it can carry its weight.
+                    : [Hook]
+                    : Ask for the receipt.
+                    : Ask for the receipt.
+                    : Who said it? When? Show me the sheet.
+                    : Ask for the receipt.
+                    : Ask for the receipt.
+                    : Big talk gets small when the numbers meet.
+                    : [Verse 2]
+                    : He said he shipped a thousand units, platinum by noon,
+                    : But the distributor's fax machine was still in the room.
+                    : Said the label cut a check with a comma and a zero,
+                    : I asked for the tax form—he pointed at a hero.
+                    : Said he had a meeting with a suit from uptown,
+                    : At a hotel with no lobby and a train station crown.
+                    : He remembered every handshake, every cufflink shine,
+                    : But couldn't name the Tuesday, couldn't locate the line.
+                    : I brought timestamps, witness statements, ink that wouldn't fade,
+                    : He brought a cousin's Polaroid of a lemonade.
+                    : Serious as a judge, with a tie clipped to his shirt,
+                    : Explaining how the money vanished due to international dirt.
+                    : Yet his only foreign asset was a jar of imported tea,
+                    : And the customs form described it as “two pounds, green.”
+                    : I don't call him a liar; I audit what he said,
+                    : Truth deserves a filing cabinet, not a rumor in your head.
+                    : If the invoice says delivered, tell me who received,
+                    : If the check was really cashed, show the bank that made you grieve.
+                    : [Hook]
+                    : Ask for the receipt.
+                    : Ask for the receipt.
+                    : Who said it? When? Show me the sheet.
+                    : Ask for the receipt.
+                    : Ask for the receipt.
+                    : Big talk gets small when the numbers meet.
+                    : [Verse 3]
+                    : He said he won the battle with a verse that shook the floor,
+                    : Had the whole room chanting before he touched the door.
+                    : I asked for the promoter, asked the venue, asked the tape,
+                    : He named a parking meter and a laundromat escape.
+                    : Said the crowd was three hundred, maybe four if you count,
+                    : But the fire-code report had a very different amount.
+                    : Said the judge gave him the trophy, gold letters, heavyweight,
+                    : The trophy shop remembered him ordering “participate.”
+                    : He claimed the rival bowed, then retired on the spot,
+                    : The rival's still performing with a freshly printed lot.
+                    : I came with dates and witnesses, he came with confidence,
+                    : Like a man who thinks a volume knob can substitute evidence.
+                    : He cited one encyclopedia, page missing from the spine,
+                    : Then blamed the public library for altering the line.
+                    : Still, I never raised my voice; I sharpened every query,
+                    : A clean record makes a tall tale unnecessary.
+                    : Bring the contract, bring the docket, bring the person who was there,
+                    : Bring the camera with the timestamp and the comb inside your hair.
+                    : Because history isn't handed down by whoever talks the longest,
+                    : The truth can wear a cheap suit and still be the strongest.
+                    : [DJ Breakdown]
+                    : Cut it up—
+                    : Ask—ask—ask—
+                    : For the re—re—receipt!
+                    : Back to the facts.
+                    : [Final Hook]
+                    : Ask for the receipt.
+                    : Ask for the receipt.
+                    : Who said it? When? Show me the sheet.
+                    : Ask for the receipt.
+                    : Ask for the receipt.
+                    : Big talk gets small when the numbers meet.
+                    : Ask for the receipt.
+                    : Ask for the receipt.
+                    : Witness, timestamp, contract complete.
+                    : Ask for the receipt.
+                    : Ask for the receipt.
+                    : Keep your legend honest when you step to the beat.
+    encoder         : Lavf61.7.100
+  Stream #0:0(und): Audio: vorbis, 44100 Hz, stereo, fltp (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 libvorbis
+        major_brand     : isom
+        minor_version   : 512
+        compatible_brands: isomiso2mp41
+        DESCRIPTION     : made with suno; created=2026-09-04T08:26:59Z; id=7393854d-d374-4bbc-8f76-b3439a504a36
+        lyrics          : [Intro]
+                        : Need the paperwork, please.
+                        : No folklore without footnotes.
+                        : [Hook]
+                        : Ask for the receipt.
+                        : Ask for the receipt.
+                        : Who said it? When? Show me the sheet.
+                        : Ask for the receipt.
+                        : Ask for the receipt.
+                        : Big talk gets small when the numbers meet.
+                        : [Verse 1]
+                        : He said he owned the corner, every brick had his name,
+                        : But the landlord's got a ledger and it don't play the game.
+                        : He said he bought the building, cash folded in a shoe,
+                        : I asked for closing documents—he produced a menu.
+                        : Claimed he ran the block since cassette tapes were new,
+                        : But the barber's dated calendar says 'ninety-two.
+                        : Said he never missed a rent, never borrowed a dime,
+                        : Then a certified letter showed up right on time.
+                        : He had a war story longer than a church basement pew,
+                        : With twelve different witnesses and eleven points of view.
+                        : I stayed polite, took notes, let the mythology speak,
+                        : Then asked who signed the contract—he developed a leak.
+                        : Not a drop on his jacket, not a stain on the floor,
+                        : Just a sudden disappearance through a conveniently locked door.
+                        : Your legend needs a witness, your victory needs a date,
+                        : If the tale is truly heavy, it can carry its weight.
+                        : [Hook]
+                        : Ask for the receipt.
+                        : Ask for the receipt.
+                        : Who said it? When? Show me the sheet.
+                        : Ask for the receipt.
+                        : Ask for the receipt.
+                        : Big talk gets small when the numbers meet.
+                        : [Verse 2]
+                        : He said he shipped a thousand units, platinum by noon,
+                        : But the distributor's fax machine was still in the room.
+                        : Said the label cut a check with a comma and a zero,
+                        : I asked for the tax form—he pointed at a hero.
+                        : Said he had a meeting with a suit from uptown,
+                        : At a hotel with no lobby and a train station crown.
+                        : He remembered every handshake, every cufflink shine,
+                        : But couldn't name the Tuesday, couldn't locate the line.
+                        : I brought timestamps, witness statements, ink that wouldn't fade,
+                        : He brought a cousin's Polaroid of a lemonade.
+                        : Serious as a judge, with a tie clipped to his shirt,
+                        : Explaining how the money vanished due to international dirt.
+                        : Yet his only foreign asset was a jar of imported tea,
+                        : And the customs form described it as “two pounds, green.”
+                        : I don't call him a liar; I audit what he said,
+                        : Truth deserves a filing cabinet, not a rumor in your head.
+                        : If the invoice says delivered, tell me who received,
+                        : If the check was really cashed, show the bank that made you grieve.
+                        : [Hook]
+                        : Ask for the receipt.
+                        : Ask for the receipt.
+                        : Who said it? When? Show me the sheet.
+                        : Ask for the receipt.
+                        : Ask for the receipt.
+                        : Big talk gets small when the numbers meet.
+                        : [Verse 3]
+                        : He said he won the battle with a verse that shook the floor,
+                        : Had the whole room chanting before he touched the door.
+                        : I asked for the promoter, asked the venue, asked the tape,
+                        : He named a parking meter and a laundromat escape.
+                        : Said the crowd was three hundred, maybe four if you count,
+                        : But the fire-code report had a very different amount.
+                        : Said the judge gave him the trophy, gold letters, heavyweight,
+                        : The trophy shop remembered him ordering “participate.”
+                        : He claimed the rival bowed, then retired on the spot,
+                        : The rival's still performing with a freshly printed lot.
+                        : I came with dates and witnesses, he came with confidence,
+                        : Like a man who thinks a volume knob can substitute evidence.
+                        : He cited one encyclopedia, page missing from the spine,
+                        : Then blamed the public library for altering the line.
+                        : Still, I never raised my voice; I sharpened every query,
+                        : A clean record makes a tall tale unnecessary.
+                        : Bring the contract, bring the docket, bring the person who was there,
+                        : Bring the camera with the timestamp and the comb inside your hair.
+                        : Because history isn't handed down by whoever talks the longest,
+                        : The truth can wear a cheap suit and still be the strongest.
+                        : [DJ Breakdown]
+                        : Cut it up—
+                        : Ask—ask—ask—
+                        : For the re—re—receipt!
+                        : Back to the facts.
+                        : [Final Hook]
+                        : Ask for the receipt.
+                        : Ask for the receipt.
+                        : Who said it? When? Show me the sheet.
+                        : Ask for the receipt.
+                        : Ask for the receipt.
+                        : Big talk gets small when the numbers meet.
+                        : Ask for the receipt.
+                        : Ask for the receipt.
+                        : Witness, timestamp, contract complete.
+                        : Ask for the receipt.
+                        : Ask for the receipt.
+                        : Keep your legend honest when you step to the beat.
+size=     768KiB time=00:01:03.00 bitrate=  99.9kbits/s speed= 125x    size=    1792KiB time=00:02:07.05 bitrate= 115.5kbits/s speed= 126x    size=    2816KiB time=00:03:10.60 bitrate= 121.0kbits/s speed= 126x    size=    4096KiB time=00:04:14.82 bitrate= 131.7kbits/s speed= 126x    [out#0/ogg @ 0x153705710] video:0KiB audio:4480KiB subtitle:0KiB other streams:0KiB global headers:4KiB muxing overhead: 0.965811%
+size=    4523KiB time=00:04:31.05 bitrate= 136.7kbits/s speed= 126x    
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/Users/tydussimonini/Documents/Godot/PardonMe/Music/The Devil Can't Drive My Truck.m4a':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    encoder         : Lavf60.16.100
+    lyrics          : [Verse 1]
+                    : I woke up with the sunrise
+                    : And a receipt for what I’d done
+                    : Dust on my old work boots
+                    : And a prayer I hadn’t sung
+                    : There was a map beneath the coffee
+                    : With my bad years marked in red
+                    : I turned the page toward mercy
+                    : And let the past stay dead
+                    : [Pre-Chorus]
+                    : I heard a voice say, “Turn around”
+                    : But I kept my hand on the door
+                    : There’s a long road out of trouble
+                    : And I’m not who I was before
+                    : [Chorus]
+                    : The Devil can’t drive my truck no more
+                    : I threw his keys in the river by the county shore
+                    : He left scorch marks on the passenger seat
+                    : But grace came riding shotgun, keeping time with me
+                    : I’ve got a new direction, a steadier heart
+                    : A little less thunder when the engine starts
+                    : I thank God for the road I’m headed toward
+                    : The Devil can’t drive my truck no more
+                    : [Verse 2]
+                    : I found his old black hat there
+                    : By the toolbox in the shed
+                    : And a list of every midnight
+                    : That I promised I’d forget
+                    : I scrubbed the smoke from the window
+                    : Till I could see the fields again
+                    : Called my brother from the driveway
+                    : And asked if we could start as friends
+                    : [Pre-Chorus]
+                    : He said, “You sound different, brother”
+                    : I said, “I finally hear the truth”
+                    : A man can spend a lifetime running
+                    : Then turn around and choose
+                    : [Chorus]
+                    : The Devil can’t drive my truck no more
+                    : I threw his keys in the river by the county shore
+                    : He left scorch marks on the passenger seat
+                    : But grace came riding shotgun, keeping time with me
+                    : I’ve got a new direction, a steadier heart
+                    : A little less thunder when the engine starts
+                    : I thank God for the road I’m headed toward
+                    : The Devil can’t drive my truck no more
+                    : [Bridge]
+                    : [Half-time, gospel-influenced]
+                    : No more backseat bargains
+                    : No more hands on the wheel
+                    : No more calling wreckage
+                    : Something I was born to feel
+                    : If the water took those keys away
+                    : Then let it carry off my name
+                    : I’m not asking for an easy road
+                    : Just strength to drive it straight
+                    : [Final Chorus]
+                    : The Devil can’t drive my truck no more
+                    : I threw his keys in the river by the county shore
+                    : He left scorch marks on the passenger seat
+                    : But grace came riding shotgun, keeping time with me
+                    : Now I’m taking the wheel, and I’m taking it slow
+                    : With a choir in the cab and a place to go
+                    : I thank God for the road I’m headed toward
+                    : The Devil can’t drive my truck no more
+                    : No, the Devil can’t drive my truck no more
+                    : [Outro]
+                    : The tires find the gravel
+                    : The morning opens wide
+                    : I’ve got both hands on the wheel now
+                    : And peace beside me for the ride
+    comment         : made with suno; created=2026-09-06T01:23:07Z; id=74a4d8ee-dc56-432f-814b-9aedd931913a
+  Duration: 00:05:18.96, start: 0.000000, bitrate: 129 kb/s
+  Stream #0:0[0x1](und): Audio: opus (Opus / 0x7375704F), 48000 Hz, stereo, fltp, 126 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](eng): Subtitle: mov_text (tx3g / 0x67337874), 0 kb/s (default)
+      Metadata:
+        handler_name    : SubtitleHandler
+Stream mapping:
+  Stream #0:0 -> #0:0 (opus (native) -> vorbis (libvorbis))
+Output #0, ogg, to '/Users/tydussimonini/Documents/Godot/PardonMe/Music/Imported/kbuck_the_devil_cant_drive_my_truck.ogg':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    comment         : made with suno; created=2026-09-06T01:23:07Z; id=74a4d8ee-dc56-432f-814b-9aedd931913a
+    lyrics          : [Verse 1]
+                    : I woke up with the sunrise
+                    : And a receipt for what I’d done
+                    : Dust on my old work boots
+                    : And a prayer I hadn’t sung
+                    : There was a map beneath the coffee
+                    : With my bad years marked in red
+                    : I turned the page toward mercy
+                    : And let the past stay dead
+                    : [Pre-Chorus]
+                    : I heard a voice say, “Turn around”
+                    : But I kept my hand on the door
+                    : There’s a long road out of trouble
+                    : And I’m not who I was before
+                    : [Chorus]
+                    : The Devil can’t drive my truck no more
+                    : I threw his keys in the river by the county shore
+                    : He left scorch marks on the passenger seat
+                    : But grace came riding shotgun, keeping time with me
+                    : I’ve got a new direction, a steadier heart
+                    : A little less thunder when the engine starts
+                    : I thank God for the road I’m headed toward
+                    : The Devil can’t drive my truck no more
+                    : [Verse 2]
+                    : I found his old black hat there
+                    : By the toolbox in the shed
+                    : And a list of every midnight
+                    : That I promised I’d forget
+                    : I scrubbed the smoke from the window
+                    : Till I could see the fields again
+                    : Called my brother from the driveway
+                    : And asked if we could start as friends
+                    : [Pre-Chorus]
+                    : He said, “You sound different, brother”
+                    : I said, “I finally hear the truth”
+                    : A man can spend a lifetime running
+                    : Then turn around and choose
+                    : [Chorus]
+                    : The Devil can’t drive my truck no more
+                    : I threw his keys in the river by the county shore
+                    : He left scorch marks on the passenger seat
+                    : But grace came riding shotgun, keeping time with me
+                    : I’ve got a new direction, a steadier heart
+                    : A little less thunder when the engine starts
+                    : I thank God for the road I’m headed toward
+                    : The Devil can’t drive my truck no more
+                    : [Bridge]
+                    : [Half-time, gospel-influenced]
+                    : No more backseat bargains
+                    : No more hands on the wheel
+                    : No more calling wreckage
+                    : Something I was born to feel
+                    : If the water took those keys away
+                    : Then let it carry off my name
+                    : I’m not asking for an easy road
+                    : Just strength to drive it straight
+                    : [Final Chorus]
+                    : The Devil can’t drive my truck no more
+                    : I threw his keys in the river by the county shore
+                    : He left scorch marks on the passenger seat
+                    : But grace came riding shotgun, keeping time with me
+                    : Now I’m taking the wheel, and I’m taking it slow
+                    : With a choir in the cab and a place to go
+                    : I thank God for the road I’m headed toward
+                    : The Devil can’t drive my truck no more
+                    : No, the Devil can’t drive my truck no more
+                    : [Outro]
+                    : The tires find the gravel
+                    : The morning opens wide
+                    : I’ve got both hands on the wheel now
+                    : And peace beside me for the ride
+    encoder         : Lavf61.7.100
+  Stream #0:0(und): Audio: vorbis, 44100 Hz, stereo, fltp (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 libvorbis
+        major_brand     : isom
+        minor_version   : 512
+        compatible_brands: isomiso2mp41
+        DESCRIPTION     : made with suno; created=2026-09-06T01:23:07Z; id=74a4d8ee-dc56-432f-814b-9aedd931913a
+        lyrics          : [Verse 1]
+                        : I woke up with the sunrise
+                        : And a receipt for what I’d done
+                        : Dust on my old work boots
+                        : And a prayer I hadn’t sung
+                        : There was a map beneath the coffee
+                        : With my bad years marked in red
+                        : I turned the page toward mercy
+                        : And let the past stay dead
+                        : [Pre-Chorus]
+                        : I heard a voice say, “Turn around”
+                        : But I kept my hand on the door
+                        : There’s a long road out of trouble
+                        : And I’m not who I was before
+                        : [Chorus]
+                        : The Devil can’t drive my truck no more
+                        : I threw his keys in the river by the county shore
+                        : He left scorch marks on the passenger seat
+                        : But grace came riding shotgun, keeping time with me
+                        : I’ve got a new direction, a steadier heart
+                        : A little less thunder when the engine starts
+                        : I thank God for the road I’m headed toward
+                        : The Devil can’t drive my truck no more
+                        : [Verse 2]
+                        : I found his old black hat there
+                        : By the toolbox in the shed
+                        : And a list of every midnight
+                        : That I promised I’d forget
+                        : I scrubbed the smoke from the window
+                        : Till I could see the fields again
+                        : Called my brother from the driveway
+                        : And asked if we could start as friends
+                        : [Pre-Chorus]
+                        : He said, “You sound different, brother”
+                        : I said, “I finally hear the truth”
+                        : A man can spend a lifetime running
+                        : Then turn around and choose
+                        : [Chorus]
+                        : The Devil can’t drive my truck no more
+                        : I threw his keys in the river by the county shore
+                        : He left scorch marks on the passenger seat
+                        : But grace came riding shotgun, keeping time with me
+                        : I’ve got a new direction, a steadier heart
+                        : A little less thunder when the engine starts
+                        : I thank God for the road I’m headed toward
+                        : The Devil can’t drive my truck no more
+                        : [Bridge]
+                        : [Half-time, gospel-influenced]
+                        : No more backseat bargains
+                        : No more hands on the wheel
+                        : No more calling wreckage
+                        : Something I was born to feel
+                        : If the water took those keys away
+                        : Then let it carry off my name
+                        : I’m not asking for an easy road
+                        : Just strength to drive it straight
+                        : [Final Chorus]
+                        : The Devil can’t drive my truck no more
+                        : I threw his keys in the river by the county shore
+                        : He left scorch marks on the passenger seat
+                        : But grace came riding shotgun, keeping time with me
+                        : Now I’m taking the wheel, and I’m taking it slow
+                        : With a choir in the cab and a place to go
+                        : I thank God for the road I’m headed toward
+                        : The Devil can’t drive my truck no more
+                        : No, the Devil can’t drive my truck no more
+                        : [Outro]
+                        : The tires find the gravel
+                        : The morning opens wide
+                        : I’ve got both hands on the wheel now
+                        : And peace beside me for the ride
+size=    1024KiB time=00:01:05.49 bitrate= 128.1kbits/s speed= 130x    size=    2048KiB time=00:02:11.78 bitrate= 127.3kbits/s speed= 130x    size=    3072KiB time=00:03:18.45 bitrate= 126.8kbits/s speed= 131x    size=    4352KiB time=00:04:24.78 bitrate= 134.6kbits/s speed= 131x    [out#0/ogg @ 0x129805640] video:0KiB audio:5313KiB subtitle:0KiB other streams:0KiB global headers:4KiB muxing overhead: 0.868910%
+size=    5359KiB time=00:05:18.97 bitrate= 137.6kbits/s speed= 130x    
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/Users/tydussimonini/Documents/Godot/PardonMe/Music/Airplane Mode.m4a':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    encoder         : Lavf60.16.100
+    lyrics          : [Intro]
+                    : I put my phone face down
+                    : Like that could calm me down
+                    : [Verse 1]
+                    : Your name is still a match beneath my thumb
+                    : I know exactly what I shouldn't do
+                    : So I tapped the little plane and watched it come
+                    : A tiny silver promise pulling through
+                    : The room got quiet, but I heard your voice
+                    : In every little engine overhead
+                    : If you were done, you'd make another choice
+                    : You'd leave me something more than seen and read
+                    : [Pre-Chorus]
+                    : So if the sky is keeping you away
+                    : If there's a reason you can't answer me
+                    : Then maybe we're the same kind of afraid
+                    : Just waiting for the other one to see
+                    : [Chorus]
+                    : Love me on airplane mode
+                    : Find me where the lost hearts go
+                    : If you can't call, then you must be close
+                    : Flying through the blue just to get home
+                    : Love me on airplane mode
+                    : No signal, but I think I know
+                    : Your silence isn't letting me go
+                    : You're up there searching from below
+                    : Love me, love me on airplane mode
+                    : Love me, love me on airplane mode
+                    : [Verse 2]
+                    : I checked the window like a hopeful fool
+                    : For one small wing to circle back around
+                    : I made a map of every altitude
+                    : And drew your little heart above my town
+                    : My friends say, "Girl, he's probably asleep"
+                    : But they don't know the way you look at me
+                    : You'd cross an ocean just to hear me breathe
+                    : You'd lose the world to keep from losing me
+                    : [Pre-Chorus]
+                    : So if the sky is keeping you away
+                    : If there's a reason you can't answer me
+                    : Then maybe we're the same kind of afraid
+                    : Just waiting for the other one to see
+                    : [Chorus]
+                    : Love me on airplane mode
+                    : Find me where the lost hearts go
+                    : If you can't call, then you must be close
+                    : Flying through the blue just to get home
+                    : Love me on airplane mode
+                    : No signal, but I think I know
+                    : Your silence isn't letting me go
+                    : You're up there searching from below
+                    : Love me, love me on airplane mode
+                    : [Bridge]
+                    : Maybe you're above the clouds tonight
+                    : Maybe you can see my bedroom light
+                    : Maybe every mile you disappear
+                    : Is one more mile that brings you here
+                    : I won't turn it off, I won't turn it off
+                    : [Final Chorus]
+                    : Love me on airplane mode
+                    : Find me where the lost hearts go
+                    : If you can't call, then you must be close
+                    : Flying through the blue just to get home
+                    : Love me on airplane mode
+                    : No signal, but I think I know
+                    : Your silence isn't letting me go
+                    : You're up there searching from below
+                    : Come down, come down, come down to me
+                    : I know you're somewhere in the atmosphere
+                    : Love me on airplane mode
+                    : I can feel you getting near
+    comment         : made with suno; created=2026-09-04T08:32:09Z; id=dc492231-b997-48ef-90c0-8c4fe5286ba5
+  Duration: 00:04:17.36, start: 0.000000, bitrate: 135 kb/s
+  Stream #0:0[0x1](und): Audio: opus (Opus / 0x7375704F), 48000 Hz, stereo, fltp, 133 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](eng): Subtitle: mov_text (tx3g / 0x67337874), 0 kb/s (default)
+      Metadata:
+        handler_name    : SubtitleHandler
+Stream mapping:
+  Stream #0:0 -> #0:0 (opus (native) -> vorbis (libvorbis))
+Output #0, ogg, to '/Users/tydussimonini/Documents/Godot/PardonMe/Music/Imported/pulse_airplane_mode.ogg':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    comment         : made with suno; created=2026-09-04T08:32:09Z; id=dc492231-b997-48ef-90c0-8c4fe5286ba5
+    lyrics          : [Intro]
+                    : I put my phone face down
+                    : Like that could calm me down
+                    : [Verse 1]
+                    : Your name is still a match beneath my thumb
+                    : I know exactly what I shouldn't do
+                    : So I tapped the little plane and watched it come
+                    : A tiny silver promise pulling through
+                    : The room got quiet, but I heard your voice
+                    : In every little engine overhead
+                    : If you were done, you'd make another choice
+                    : You'd leave me something more than seen and read
+                    : [Pre-Chorus]
+                    : So if the sky is keeping you away
+                    : If there's a reason you can't answer me
+                    : Then maybe we're the same kind of afraid
+                    : Just waiting for the other one to see
+                    : [Chorus]
+                    : Love me on airplane mode
+                    : Find me where the lost hearts go
+                    : If you can't call, then you must be close
+                    : Flying through the blue just to get home
+                    : Love me on airplane mode
+                    : No signal, but I think I know
+                    : Your silence isn't letting me go
+                    : You're up there searching from below
+                    : Love me, love me on airplane mode
+                    : Love me, love me on airplane mode
+                    : [Verse 2]
+                    : I checked the window like a hopeful fool
+                    : For one small wing to circle back around
+                    : I made a map of every altitude
+                    : And drew your little heart above my town
+                    : My friends say, "Girl, he's probably asleep"
+                    : But they don't know the way you look at me
+                    : You'd cross an ocean just to hear me breathe
+                    : You'd lose the world to keep from losing me
+                    : [Pre-Chorus]
+                    : So if the sky is keeping you away
+                    : If there's a reason you can't answer me
+                    : Then maybe we're the same kind of afraid
+                    : Just waiting for the other one to see
+                    : [Chorus]
+                    : Love me on airplane mode
+                    : Find me where the lost hearts go
+                    : If you can't call, then you must be close
+                    : Flying through the blue just to get home
+                    : Love me on airplane mode
+                    : No signal, but I think I know
+                    : Your silence isn't letting me go
+                    : You're up there searching from below
+                    : Love me, love me on airplane mode
+                    : [Bridge]
+                    : Maybe you're above the clouds tonight
+                    : Maybe you can see my bedroom light
+                    : Maybe every mile you disappear
+                    : Is one more mile that brings you here
+                    : I won't turn it off, I won't turn it off
+                    : [Final Chorus]
+                    : Love me on airplane mode
+                    : Find me where the lost hearts go
+                    : If you can't call, then you must be close
+                    : Flying through the blue just to get home
+                    : Love me on airplane mode
+                    : No signal, but I think I know
+                    : Your silence isn't letting me go
+                    : You're up there searching from below
+                    : Come down, come down, come down to me
+                    : I know you're somewhere in the atmosphere
+                    : Love me on airplane mode
+                    : I can feel you getting near
+    encoder         : Lavf61.7.100
+  Stream #0:0(und): Audio: vorbis, 44100 Hz, stereo, fltp (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 libvorbis
+        major_brand     : isom
+        minor_version   : 512
+        compatible_brands: isomiso2mp41
+        DESCRIPTION     : made with suno; created=2026-09-04T08:32:09Z; id=dc492231-b997-48ef-90c0-8c4fe5286ba5
+        lyrics          : [Intro]
+                        : I put my phone face down
+                        : Like that could calm me down
+                        : [Verse 1]
+                        : Your name is still a match beneath my thumb
+                        : I know exactly what I shouldn't do
+                        : So I tapped the little plane and watched it come
+                        : A tiny silver promise pulling through
+                        : The room got quiet, but I heard your voice
+                        : In every little engine overhead
+                        : If you were done, you'd make another choice
+                        : You'd leave me something more than seen and read
+                        : [Pre-Chorus]
+                        : So if the sky is keeping you away
+                        : If there's a reason you can't answer me
+                        : Then maybe we're the same kind of afraid
+                        : Just waiting for the other one to see
+                        : [Chorus]
+                        : Love me on airplane mode
+                        : Find me where the lost hearts go
+                        : If you can't call, then you must be close
+                        : Flying through the blue just to get home
+                        : Love me on airplane mode
+                        : No signal, but I think I know
+                        : Your silence isn't letting me go
+                        : You're up there searching from below
+                        : Love me, love me on airplane mode
+                        : Love me, love me on airplane mode
+                        : [Verse 2]
+                        : I checked the window like a hopeful fool
+                        : For one small wing to circle back around
+                        : I made a map of every altitude
+                        : And drew your little heart above my town
+                        : My friends say, "Girl, he's probably asleep"
+                        : But they don't know the way you look at me
+                        : You'd cross an ocean just to hear me breathe
+                        : You'd lose the world to keep from losing me
+                        : [Pre-Chorus]
+                        : So if the sky is keeping you away
+                        : If there's a reason you can't answer me
+                        : Then maybe we're the same kind of afraid
+                        : Just waiting for the other one to see
+                        : [Chorus]
+                        : Love me on airplane mode
+                        : Find me where the lost hearts go
+                        : If you can't call, then you must be close
+                        : Flying through the blue just to get home
+                        : Love me on airplane mode
+                        : No signal, but I think I know
+                        : Your silence isn't letting me go
+                        : You're up there searching from below
+                        : Love me, love me on airplane mode
+                        : [Bridge]
+                        : Maybe you're above the clouds tonight
+                        : Maybe you can see my bedroom light
+                        : Maybe every mile you disappear
+                        : Is one more mile that brings you here
+                        : I won't turn it off, I won't turn it off
+                        : [Final Chorus]
+                        : Love me on airplane mode
+                        : Find me where the lost hearts go
+                        : If you can't call, then you must be close
+                        : Flying through the blue just to get home
+                        : Love me on airplane mode
+                        : No signal, but I think I know
+                        : Your silence isn't letting me go
+                        : You're up there searching from below
+                        : Come down, come down, come down to me
+                        : I know you're somewhere in the atmosphere
+                        : Love me on airplane mode
+                        : I can feel you getting near
+size=    1024KiB time=00:01:05.24 bitrate= 128.6kbits/s speed= 129x    size=    2048KiB time=00:02:01.21 bitrate= 138.4kbits/s speed= 120x    size=    3072KiB time=00:03:06.08 bitrate= 135.2kbits/s speed= 123x    size=    4352KiB time=00:04:10.43 bitrate= 142.4kbits/s speed= 124x    [out#0/ogg @ 0x135e181d0] video:0KiB audio:4529KiB subtitle:0KiB other streams:0KiB global headers:4KiB muxing overhead: 0.843865%
+size=    4567KiB time=00:04:17.37 bitrate= 145.4kbits/s speed= 124x    

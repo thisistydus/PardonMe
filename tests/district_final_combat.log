@@ -1,0 +1,24 @@
+Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org
+
+PASS: Empty pistol throw damages/stuns civilian
+PASS: Bat incapacitates civilian
+PASS: One pistol bullet kills civilian
+PASS: Car launches civilian while retaining speed
+PASS: Empty pistol throw damages/stuns hostile
+PASS: Bat incapacitates hostile
+PASS: One pistol bullet kills hostile
+PASS: Car launches hostile while retaining speed
+PASS: Empty pistol throw damages/stuns police
+PASS: Bat incapacitates police
+PASS: One pistol bullet kills police
+PASS: Car launches police while retaining speed
+PASS: District car gives full readable explosion warning
+PASS: Warned explosion damages clustered city actors
+PASS: Player outside district blast survives
+PASS: Hostile cannot detect through building
+PASS: Hostile has readable suspicious interval
+PASS: Hostile telegraphs before firing existing pistol
+PASS: First hostile bullet wounds with a pause before next shot
+PASS: Second hostile bullet kills and opens district results
+PASS: Death restart recreates population cleanly
+DISTRICT COMBAT COMPLETE: 21 checks, 0 failures

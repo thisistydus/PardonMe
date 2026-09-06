@@ -1,0 +1,30 @@
+[
+  {
+    "source": "Music/Warranty Void.m4a",
+    "derived": "Music/Imported/anvil_warranty_void.ogg",
+    "codec": "Vorbis",
+    "sample_rate": 44100,
+    "full_decode": "passed"
+  },
+  {
+    "source": "Music/Ask for the Receipt.m4a",
+    "derived": "Music/Imported/backspin_ask_for_the_receipt.ogg",
+    "codec": "Vorbis",
+    "sample_rate": 44100,
+    "full_decode": "passed"
+  },
+  {
+    "source": "Music/The Devil Can't Drive My Truck.m4a",
+    "derived": "Music/Imported/kbuck_the_devil_cant_drive_my_truck.ogg",
+    "codec": "Vorbis",
+    "sample_rate": 44100,
+    "full_decode": "passed"
+  },
+  {
+    "source": "Music/Airplane Mode.m4a",
+    "derived": "Music/Imported/pulse_airplane_mode.ogg",
+    "codec": "Vorbis",
+    "sample_rate": 44100,
+    "full_decode": "passed"
+  }
+]

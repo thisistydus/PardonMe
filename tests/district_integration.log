@@ -1,0 +1,43 @@
+Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org
+
+PASS: Sixteen civilians, one hostile and two ambient police
+PASS: District starts with zero Money and ×1
+PASS: Unseen and unheard crime causes no Heat
+PASS: Civilian becomes alerted to gunfire
+PASS: Reported gunfire creates investigation without identity
+PASS: Unseen player movement does not move reported search position
+PASS: Civilian progresses through panic to flee
+PASS: Panicked civilian navigates away from danger
+PASS: Direct police witness identifies suspect and creates Heat 2
+PASS: Officer alerts then pursues on foot
+PASS: Officer moves toward last observed player position
+PASS: Breaking LOS starts a visible police search
+PASS: Leaving search area unseen clears pursuit after cooldown
+PASS: Escape search never follows hidden player
+PASS: Eligible police spawn is outside immediate player view
+PASS: Eligible police spawn is outside immediate player view
+PASS: Eligible police spawn is outside immediate player view
+PASS: Eligible police spawn is outside immediate player view
+PASS: Eligible police spawn is outside immediate player view
+PASS: Eligible police spawn is outside immediate player view
+PASS: Eligible police spawn is outside immediate player view
+PASS: Eligible police spawn is outside immediate player view
+PASS: Heat has level 4 escalation
+PASS: Heat 4 adds an authored off-screen reinforcement
+PASS: Actual reinforcement spawned beyond expanded camera view
+PASS: E at payphone accepts a Boost job
+PASS: Boost marks correct target on minimap
+PASS: Entering marked vehicle advances Boost
+PASS: Garage becomes active mission destination
+PASS: Radio preserved in mission vehicle
+PASS: Correct stopped vehicle delivered to garage
+PASS: Boost grants $2500 and tier ×2 for live score 5000
+PASS: Completed mission cannot repeat or double-award
+PASS: Restart resets district score, Heat, mission and population
+PASS: Destroyed mission target fails gracefully without reward
+PASS: Retry selects a different target after delay
+PASS: Local car recovery keeps damage
+PASS: Recovery cannot bypass an active pursuit
+PASS: M enlarges north-up map
+PASS: Debug exposes search position/radius and police states
+DISTRICT INTEGRATION COMPLETE: 40 checks, 0 failures

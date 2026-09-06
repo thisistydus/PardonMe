@@ -1,0 +1,22 @@
+Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org
+
+PASS: Empty pistol throw damages/stuns civilian
+PASS: Bat incapacitates civilian
+PASS: One pistol bullet kills civilian
+PASS: Car launches civilian while retaining speed
+PASS: Empty pistol throw damages/stuns hostile
+PASS: Bat incapacitates hostile
+PASS: One pistol bullet kills hostile
+PASS: Car launches hostile while retaining speed
+PASS: Empty pistol throw damages/stuns police
+PASS: Bat incapacitates police
+PASS: One pistol bullet kills police
+PASS: Car launches police while retaining speed
+PASS: Player can intentionally shoot car until nearly destroyed
+ERROR: FAIL: District car gives full readable explosion warning
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] verify (res://tests/acceptance.gd:17)
+       [1] start (res://tests/district_combat.gd:67)
+       [2] tap (res://tests/acceptance.gd:39)
+       [3] frames (res://tests/acceptance.gd:30)

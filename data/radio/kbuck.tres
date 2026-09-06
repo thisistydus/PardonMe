@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RadioStationData" load_steps=4 format=3]
+[ext_resource type="Script" path="res://scripts/systems/radio_station_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://Art/Logos/K-Buck.png" id="2"]
+[ext_resource type="AudioStreamOggVorbis" path="res://Music/Imported/kbuck_the_devil_cant_drive_my_truck.ogg" id="3"]
+[resource]
+script = ExtResource("1")
+title = "K-BUCK"
+track_title = "The Devil Can't Drive My Truck"
+logo = ExtResource("2")
+audio = ExtResource("3")

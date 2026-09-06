@@ -1,0 +1,52 @@
+Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org
+
+PASS: Throw immediately restores fists
+PASS: Empty pistol becomes one physical thrown weapon
+ERROR: FAIL: Empty pistol throw damages and stuns target
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] verify (res://tests/acceptance.gd:16)
+       [1] start (res://tests/physics_revision.gd:20)
+       [2] seconds (res://tests/acceptance.gd:27)
+SCRIPT ERROR: Assertion failed: Empty pistol throw damages and stuns target
+   at: verify (res://tests/acceptance.gd:18)
+   GDScript backtrace (most recent call first):
+       [0] verify (res://tests/acceptance.gd:18)
+       [1] start (res://tests/physics_revision.gd:20)
+       [2] seconds (res://tests/acceptance.gd:27)
+ERROR: FAIL: Impact ends flight
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] verify (res://tests/acceptance.gd:16)
+       [1] start (res://tests/physics_revision.gd:21)
+       [2] seconds (res://tests/acceptance.gd:27)
+SCRIPT ERROR: Assertion failed: Impact ends flight
+   at: verify (res://tests/acceptance.gd:18)
+   GDScript backtrace (most recent call first):
+       [0] verify (res://tests/acceptance.gd:18)
+       [1] start (res://tests/physics_revision.gd:21)
+       [2] seconds (res://tests/acceptance.gd:27)
+ERROR: FAIL: Impact creates exactly one recoverable weapon
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] verify (res://tests/acceptance.gd:16)
+       [1] start (res://tests/physics_revision.gd:22)
+       [2] seconds (res://tests/acceptance.gd:27)
+SCRIPT ERROR: Assertion failed: Impact creates exactly one recoverable weapon
+   at: verify (res://tests/acceptance.gd:18)
+   GDScript backtrace (most recent call first):
+       [0] verify (res://tests/acceptance.gd:18)
+       [1] start (res://tests/physics_revision.gd:22)
+       [2] seconds (res://tests/acceptance.gd:27)
+ERROR: FAIL: Thrown pistol preserves empty ammunition
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] verify (res://tests/acceptance.gd:16)
+       [1] start (res://tests/physics_revision.gd:24)
+       [2] seconds (res://tests/acceptance.gd:27)
+SCRIPT ERROR: Assertion failed: Thrown pistol preserves empty ammunition
+   at: verify (res://tests/acceptance.gd:18)
+   GDScript backtrace (most recent call first):
+       [0] verify (res://tests/acceptance.gd:18)
+       [1] start (res://tests/physics_revision.gd:24)
+       [2] seconds (res://tests/acceptance.gd:27)

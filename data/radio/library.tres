@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RadioLibrary" load_steps=7 format=3]
+[ext_resource type="Script" path="res://scripts/systems/radio_library.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/systems/radio_station_data.gd" id="2"]
+[ext_resource type="Resource" path="res://data/radio/anvil.tres" id="3"]
+[ext_resource type="Resource" path="res://data/radio/backspin.tres" id="4"]
+[ext_resource type="Resource" path="res://data/radio/kbuck.tres" id="5"]
+[ext_resource type="Resource" path="res://data/radio/pulse.tres" id="6"]
+[resource]
+script = ExtResource("1")
+stations = Array[ExtResource("2")]([ExtResource("3"), ExtResource("4"), ExtResource("5"), ExtResource("6")])
