@@ -21,6 +21,17 @@ var rng := RandomNumberGenerator.new()
 var shots_fired: int = 0
 var seated_vehicle: ToyCompact
 var identified: bool = false
+var police_role: StringName = &"search"
+var assigned_target := Vector2.ZERO
+var debug_roles: bool = false
+var move_speed: float = 215
+var reaction: float = 0.6
+var engagement: float = 330
+var discipline: float = 1.8
+var held_weapon: WeaponData
+var ammo: int = 0
+var weapon_dropped: bool = false
+const BALANCE: PressureConfig = preload("res://data/pressure_config.tres")
 const PISTOL: WeaponData = preload("res://data/weapons/pistol.tres")
 
 func _ready() -> void:
@@ -32,10 +43,19 @@ func _ready() -> void:
 		var marker := DistrictMarker.new()
 		marker.kind = &"police"
 		add_child(marker)
+	if role != "civilian":
+		held_weapon = PISTOL
+		ammo = clampi(int(held_weapon.ammunition * BALANCE.npc_magazine_fraction), 0, held_weapon.ammunition)
 	home = global_position
 	destination = home
 	rng.seed = int(home.x * 17 + home.y * 7)
 	think_time = rng.randf_range(0, 0.2)
+	path_timer = rng.randf_range(0, 0.9)
+	move_speed = rng.randf_range(BALANCE.speed_range.x, BALANCE.speed_range.y)
+	reaction = rng.randf_range(BALANCE.reaction_range.x, BALANCE.reaction_range.y)
+	engagement = rng.randf_range(BALANCE.engagement_range.x, BALANCE.engagement_range.y)
+	discipline = rng.randf_range(BALANCE.shot_discipline_range.x, BALANCE.shot_discipline_range.y) if role == "police" else 1.8
+	assigned_target = home
 	Events.crime.connect(hear_danger)
 
 func can_see(point: Vector2, distance: float = 520.0) -> bool:
@@ -128,11 +148,16 @@ func police_decision() -> void:
 		if not identified:
 			identified = true
 			change_state(&"alerted")
-		elif state != &"alerted" or state_time > 0.6:
+		elif state != &"alerted" or state_time > reaction:
 			change_state(&"pursuing")
 		heat.confirm_sighting(player.global_position)
 		last_seen = player.global_position
-		destination = last_seen
+		if police_role == &"pursuer" or (police_role == &"containment" and global_position.distance_to(last_seen) < 250):
+			destination = last_seen
+		elif police_role == &"tactical":
+			destination = last_seen + (global_position - last_seen).normalized() * engagement
+		else:
+			destination = assigned_target
 	elif not heat.identity_known:
 		identified = false
 		destination = heat.search_position
@@ -140,8 +165,7 @@ func police_decision() -> void:
 	else:
 		identified = false
 		change_state(&"searching")
-		if global_position.distance_to(destination) < 45 or destination.distance_to(heat.search_position) > heat.search_radius:
-			destination = navigation.grid.get_point_position(navigation.nearest(heat.search_position + Vector2.RIGHT.rotated(rng.randf_range(0, TAU)) * rng.randf_range(70, heat.search_radius * 0.7)))
+		destination = assigned_target
 
 func walk_path() -> void:
 	if path_timer <= 0:
@@ -161,15 +185,26 @@ func walk_path() -> void:
 		if not navigation.clear_ray(self, global_position, global_position + side * 65):
 			side = -side
 		heading = side
-	var pace: float = 65 if state in [&"wander", &"returning"] else (215 if role == "police" else 175)
-	velocity = heading * pace
+	var pace: float = 65 if state in [&"wander", &"returning"] else (move_speed if role == "police" else 175)
+	var separation := Vector2.ZERO
+	if role == "police":
+		for other: Node in get_tree().get_nodes_in_group("police"):
+			if other == self or other.downed:
+				continue
+			var offset: Vector2 = global_position - other.global_position
+			if offset.length_squared() < 70 * 70 and offset.length_squared() > 1:
+				separation += offset.normalized() * (1 - offset.length() / 70)
+	velocity = (heading + separation.limit_length(1.2)).normalized() * pace
 	if telegraph <= 0:
 		shot_direction = heading
 
 func fire_if_ready(delta: float) -> void:
+	if held_weapon == null or ammo <= 0:
+		telegraph = 0
+		return
 	if role == "police" and (heat == null or heat.level < 2):
 		return
-	if not can_see(player.global_position, 370):
+	if not can_see(player.global_position, engagement + (90 if police_role == &"tactical" else 40)):
 		telegraph = 0
 		shot_timer = 1.8
 		return
@@ -178,20 +213,12 @@ func fire_if_ready(delta: float) -> void:
 		shot_direction = (player.global_position - global_position).normalized()
 		telegraph = 0.7
 	if shot_timer <= 0:
-		var bullet := ToyProjectile.new()
-		bullet.position = global_position
-		bullet.direction = shot_direction
-		bullet.mask = 1 | 2 | 8
-		bullet.speed = 510
-		bullet.damage = PISTOL.damage
-		bullet.player_caused = false
-		bullet.exclusions = [get_rid()]
-		get_tree().current_scene.add_child(bullet)
+		ammo -= 1
+		FirearmShot.fire(get_tree().current_scene, held_weapon, global_position, shot_direction, [get_rid()], false)
 		shots_fired += 1
-		shot_timer = 1.8
+		# Deliberate aim/reset interval; never faster than the shared weapon cadence.
+		shot_timer = maxf(held_weapon.cooldown, discipline)
 		telegraph = 0
-		Events.sound_requested.emit(&"enemy_shot")
-		Events.crime.emit(&"gunfire", global_position, 1.0, 700.0, false)
 
 func hear_danger(_kind: StringName, at: Vector2, _severity: float, audible: float, _player_caused: bool) -> void:
 	if downed or role != "civilian":
@@ -203,16 +230,20 @@ func hear_danger(_kind: StringName, at: Vector2, _severity: float, audible: floa
 			change_state(&"alerted")
 
 func take_hit(amount: int, push: Vector2, bullet: bool = false) -> void:
+	if downed:
+		return
 	super.take_hit(amount, push, bullet)
 	if downed:
+		drop_held_weapon()
 		respawn_time = INF
 		change_state(&"killed")
 	else:
 		danger = global_position - push.normalized() * 100
 		change_state(&"alerted" if role == "civilian" else &"pursuing")
 		if role != "civilian":
-			last_seen = player.global_position
-			memory = 3
+			if can_see(player.global_position):
+				last_seen = player.global_position
+				memory = 3
 
 func _draw() -> void:
 	var color := Color("d0ba8f") if role == "civilian" else (Color("739eaf") if role == "police" else Color("b75a48"))
@@ -220,7 +251,7 @@ func _draw() -> void:
 	draw_set_transform(Vector2(0, -visual_lift()), tumble_angle if air_time > 0 else (PI / 2 if downed else shot_direction.angle()))
 	draw_rect(Rect2(-12, -14, 24, 28), color.darkened(0.5) if downed else color)
 	draw_circle(Vector2(5, 0), 9, Color("ebd4ad"))
-	if role != "civilian":
+	if held_weapon != null:
 		draw_line(Vector2(8, 9), Vector2(31, 9), Color("212623"), 6)
 	draw_set_transform(Vector2.ZERO)
 	if downed:
@@ -230,4 +261,16 @@ func _draw() -> void:
 	if state in [&"alerted", &"panic", &"suspicious"]:
 		draw_string(ThemeDB.fallback_font, Vector2(-3, -28), "!", HORIZONTAL_ALIGNMENT_LEFT, -1, 24, Color("ffd889"))
 	if role == "police":
-		draw_string(ThemeDB.fallback_font, Vector2(-38, -27), String(state).to_upper(), HORIZONTAL_ALIGNMENT_LEFT, -1, 10, Color("d5e0c5"))
+		draw_string(ThemeDB.fallback_font, Vector2(-38, -27), (String(police_role) + "/" + String(state) + " %d" % ammo if debug_roles else String(state)).to_upper(), HORIZONTAL_ALIGNMENT_LEFT, -1, 10, Color("d5e0c5"))
+
+func drop_held_weapon() -> void:
+	if weapon_dropped or held_weapon == null:
+		return
+	weapon_dropped = true
+	var pickup := WeaponPickup.new()
+	pickup.data = held_weapon
+	pickup.ammo = ammo
+	pickup.position = global_position
+	get_tree().current_scene.add_child(pickup)
+	held_weapon = null
+	ammo = 0

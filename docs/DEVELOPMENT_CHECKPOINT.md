@@ -25,3 +25,8 @@ Living docs and GOAL_B_PLAYTEST.md updated to actual B+ state. Still to do: insp
 Default startup is now scenes/district.tscn. All 228 gameplay checks passed. The added direct car-destruction test passed after starting with a fresh-health fixture (the prior vehicle-impact tests had already damaged it). Audio shutdown warning was diagnosed as mixer-held Ogg/WAV playbacks; a 150ms stop/release phase before Quit eliminated it in the driven-delivery shutdown check. Final editor import and normal180-frame startup are clear of errors/warnings. Source preservation rechecked:17 protected supplied files byte-identical; only the two authorized living docs changed.
 
 Full report: GOAL_B_PLAYTEST.md. Four dated B+ screenshots in screenshots/. Original Goal A scene preserved. New district is ready for manual playtest; no further feature work pending within this pass. Optional vehicle pursuit, traffic, roadblocks, dawn clock, expanded missions and vehicle-disguise escape are explicitly deferred. User next milestone: pursuit/escape and systemic vehicle-chaos feel review.
+
+
+## B.5 progress — 2026-09-07T09:47:17.914225-07:00
+
+Baseline 228 checks passed and source ZIP/manifest preserved. Shared weapons (10 checks), scaled search/roles (9), cruisers/roadblock (13), explicit Boost handoff (15) passed. Native text proof added; external MIT Typewriter Label evaluated, not incorporated. Barrels implemented; focused test fixtures being corrected (aim direction and player overlap), full chain verification pending. Final regression, maximum-Heat driven escape, stress/9 screenshots, preservation check and final living-doc updates still outstanding. Do not call B.5 complete. Last imports clean. Current build remains default district.

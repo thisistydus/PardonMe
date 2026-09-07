@@ -15,7 +15,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		return
 	recover(car)
 func recover(car: ToyCompact) -> bool:
-	if game.heat.level > 0 or absf(car.speed) > 30 or car.failure_timer >= 0 or car.disabled:
+	if car.unavailable or car.ai_controlled or game.heat.level > 0 or absf(car.speed) > 30 or car.failure_timer >= 0 or car.disabled:
 		Events.message_requested.emit("RECOVERY / Stop first. Unavailable during Heat or explosion warning.")
 		return false
 	var query := PhysicsShapeQueryParameters2D.new()

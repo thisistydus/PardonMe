@@ -1,0 +1,34 @@
+Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org
+
+PASS: Throw immediately restores fists
+PASS: Empty pistol becomes one physical thrown weapon
+PASS: Empty pistol throw damages and stuns target
+PASS: Impact ends flight
+PASS: Impact creates exactly one recoverable weapon
+PASS: Thrown pistol preserves empty ammunition
+PASS: E recovers empty thrown pistol without ammo exploit
+PASS: Thrown bat incapacitates target
+PASS: Thrown bat remains recoverable
+PASS: Thrown weapon cannot tunnel through thin cover
+PASS: Wall collision lands weapon on near side with ammo preserved
+PASS: Missed throw settles without losing weapon
+PASS: Fists cannot create a thrown weapon
+PASS: Throw input is ignored while driving
+ERROR: FAIL: Car launches target at high velocity into airborne tumble
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] verify (res://tests/acceptance.gd:17)
+       [1] start (res://tests/physics_revision.gd:68)
+       [2] frames (res://tests/acceptance.gd:30)
+ERROR: FAIL: Car retains forward momentum and completes motion through target
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] verify (res://tests/acceptance.gd:17)
+       [1] start (res://tests/physics_revision.gd:69)
+       [2] frames (res://tests/acceptance.gd:30)
+ERROR: FAIL: Body impact causes only minor vehicle damage
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] verify (res://tests/acceptance.gd:17)
+       [1] start (res://tests/physics_revision.gd:70)
+       [2] frames (res://tests/acceptance.gd:30)

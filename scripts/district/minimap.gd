@@ -39,11 +39,20 @@ func _draw() -> void:
 		return
 	draw_rect(Rect2(Vector2.ZERO, size), Color("141e1c"))
 	draw_rect(Rect2(Vector2.ZERO, size), Color("b19b65"), false, 1)
-	draw_string(ThemeDB.fallback_font, Vector2(10, 19), "N ↑ / DISTRICT   [M] MAP", HORIZONTAL_ALIGNMENT_LEFT, -1, 13, Color("e8dabc"))
+	draw_string(ThemeDB.fallback_font, Vector2(10, 19), ("N ↑ / H%d  R%.0f   [M]" % [game.heat.level, game.heat.search_radius] if game.heat.level > 0 else "N ↑ / DISTRICT   [M] MAP"), HORIZONTAL_ALIGNMENT_LEFT, -1, 13, Color("e8dabc"))
 	for road: Rect2 in game.layout.roads:
 		map_box(road, Color("797b63"))
 	for rect: Rect2 in game.layout.solids:
 		map_box(rect, Color("39433b"))
+	if game.heat.level > 0 and game.heat.searching:
+		var circle := PackedVector2Array()
+		for i: int in 64:
+			circle.append(game.heat.search_position + Vector2.RIGHT.rotated(TAU * i / 64) * game.heat.search_radius)
+		var bounds := PackedVector2Array([view.position, Vector2(view.end.x, view.position.y), view.end, Vector2(view.position.x, view.end.y)])
+		for polygon: PackedVector2Array in Geometry2D.intersect_polygons(circle, bounds):
+			var mapped := PackedVector2Array()
+			for point: Vector2 in polygon: mapped.append(map_point(point))
+			draw_colored_polygon(mapped, Color(0.75, 0.18, 0.1, 0.16))
 	for marker: DistrictMarker in markers:
 		if not is_instance_valid(marker) or not marker.active or not view.has_point(marker.point()):
 			continue
@@ -54,6 +63,14 @@ func _draw() -> void:
 			draw_rect(Rect2(point - Vector2(4, 4), Vector2(8, 8)), Color("ceae53"), false, 2)
 		elif marker.kind == &"police" and marker.get_parent().map_visible():
 			draw_circle(point, 3, Color("d46b60"))
+	for brain: PoliceCruiserBrain in game.response.cruisers:
+		if is_instance_valid(brain) and brain.map_visible() and view.has_point(brain.car.global_position):
+			var point := map_point(brain.car.global_position)
+			draw_rect(Rect2(point - Vector2(5, 3), Vector2(10, 6)), Color("d37057"))
+	if game.response.roadblock_visible() and view.has_point(game.response.anchor):
+		var point := map_point(game.response.anchor)
+		draw_line(point - Vector2(6, 6), point + Vector2(6, 6), Color("ffac6b"), 3)
+		draw_line(point - Vector2(6, -6), point + Vector2(6, -6), Color("ffac6b"), 3)
 	if game.heat.level > 0 and game.heat.searching:
 		var previous := Vector2.INF
 		for i: int in 65:

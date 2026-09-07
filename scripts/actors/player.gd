@@ -10,6 +10,7 @@ var impulse: Vector2 = Vector2.ZERO
 var weapons: WeaponController
 var vehicle: ToyCompact
 var stride: float = 0.0
+var control_locked: bool = false
 
 func _ready() -> void:
 	add_to_group("player")
@@ -32,13 +33,19 @@ func _input(event: InputEvent) -> void:
 		controller_aim = true
 
 func _physics_process(delta: float) -> void:
-	if not alive:
+	if not alive or control_locked:
 		return
 	invulnerability = maxf(0.0, invulnerability - delta)
 	if vehicle != null:
 		global_position = vehicle.global_position
 		if Input.is_action_just_pressed("interact"):
-			vehicle.try_exit()
+			var consumed: bool = false
+			for handler: Node in get_tree().get_nodes_in_group("vehicle_interactions"):
+				if handler.try_interact(self):
+					consumed = true
+					break
+			if not consumed:
+				vehicle.try_exit()
 		return
 	var stick := Input.get_vector("aim_left", "aim_right", "aim_up", "aim_down")
 	if controller_aim:

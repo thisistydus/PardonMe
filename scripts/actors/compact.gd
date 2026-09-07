@@ -2,7 +2,14 @@ class_name ToyCompact
 extends CharacterBody2D
 
 @export var data: VehicleData = preload("res://data/vehicles/compact.tres")
+var chain_token: int = 0
 var occupied: bool = false
+var ai_controlled: bool = false
+var ai_throttle: float = 0
+var ai_steering: float = 0
+var ai_brake: bool = false
+var ai_state: String = ""
+var unavailable: bool = false
 var driver: ToyPlayer
 var health: float
 var speed: float = 0.0
@@ -22,7 +29,7 @@ func _ready() -> void:
 	add_to_group("vehicles")
 	add_to_group("damageable")
 	collision_layer = 8
-	collision_mask = 1 | 4 | 8 | 16
+	collision_mask = 1 | 2 | 4 | 8 | 16
 	motion_mode = CharacterBody2D.MOTION_MODE_FLOATING
 	health = data.durability
 	footprint.size = Vector2(86, 44)
@@ -58,7 +65,7 @@ func nearest_door(from: Vector2) -> Vector2:
 	return doors[0] if from.distance_squared_to(doors[0]) < from.distance_squared_to(doors[1]) else doors[1]
 
 func enter(player: ToyPlayer) -> bool:
-	if driver != null or disabled or not player.alive:
+	if driver != null or disabled or unavailable or not player.alive or (ai_controlled and absf(speed) > 45):
 		return false
 	var door := nearest_door(player.global_position)
 	if player.global_position.distance_to(door) > 65:
@@ -66,6 +73,7 @@ func enter(player: ToyPlayer) -> bool:
 	var query := PhysicsRayQueryParameters2D.create(player.global_position, door, 1 | 8, [get_rid()])
 	if not get_world_2d().direct_space_state.intersect_ray(query).is_empty():
 		return false
+	ai_controlled = false
 	driver = player
 	player.vehicle = self
 	player.visible = false
@@ -126,10 +134,14 @@ func _physics_process(delta: float) -> void:
 	var throttle: float = 0.0
 	var steering: float = 0.0
 	var handbrake: bool = false
-	if driver and driver.alive and not disabled:
+	if driver and driver.alive and not disabled and not unavailable:
 		throttle = Input.get_axis("move_down", "move_up")
 		steering = Input.get_axis("move_left", "move_right")
 		handbrake = Input.is_action_pressed("handbrake")
+	elif ai_controlled and not disabled and not unavailable:
+		throttle = ai_throttle
+		steering = ai_steering
+		handbrake = ai_brake
 	var degradation := 0.8 if health < 60 else 1.0
 	if absf(throttle) > 0.05:
 		var target_speed := throttle * (data.max_speed if throttle > 0 else data.reverse_speed) * degradation
@@ -173,7 +185,15 @@ func move_with_impacts(motion: Vector2) -> void:
 			velocity = Vector2.RIGHT.rotated(rotation) * speed
 			motion = collision.get_remainder() * data.target_speed_retention
 			continue
+		if body is ExplosiveBarrel and impact_speed > 70:
+			body.player_responsible = body.player_responsible or driver != null
+			body.take_hit(maxi(1, int(impact_speed / 12)), velocity, false)
+		if body is ToyPlayer and impact_speed > 90:
+			body.take_hit(1, velocity.normalized() * impact_speed, false)
 		if crash_cooldown <= 0 and impact_speed > 100:
+			if body is ToyCompact:
+				body.player_responsible = body.player_responsible or driver != null
+				body.take_hit(int(impact_speed / 12), velocity.normalized() * impact_speed, false)
 			take_hit(int(impact_speed / 15), collision.get_normal() * impact_speed, false)
 			crash_cooldown = 0.3
 			speed *= -0.3
@@ -182,7 +202,7 @@ func move_with_impacts(motion: Vector2) -> void:
 		return
 
 func explode() -> void:
-	if disabled:
+	if disabled or unavailable:
 		return
 	disabled = true
 	Events.crime.emit(&"explosion", global_position, 2.0, 1000.0, player_responsible)
@@ -202,7 +222,7 @@ func explode() -> void:
 	queue_redraw()
 
 func take_hit(amount: int, push: Vector2, bullet: bool = false) -> void:
-	if disabled:
+	if disabled or unavailable:
 		return
 	health = maxf(0, health - float(amount) * (4.0 if bullet else 1.0))
 	Events.impact.emit(global_position, push.normalized(), 0.7)
@@ -253,3 +273,12 @@ func _draw() -> void:
 func stop_engine() -> void:
 	engine_voice.stop()
 	engine_voice.stream = null
+
+func receive_blast(amount: int, push: Vector2, caused: bool, token: int) -> void:
+	player_responsible = player_responsible or caused
+	if chain_token == 0: chain_token = token
+	var was_pending := failure_timer >= 0
+	take_hit(amount, push)
+	if not was_pending and failure_timer >= 0:
+		var balance: PressureConfig = preload("res://data/pressure_config.tres")
+		failure_timer += randf_range(balance.chain_delay_range.x, balance.chain_delay_range.y)

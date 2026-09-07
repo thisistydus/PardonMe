@@ -124,7 +124,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func _process(delta: float) -> void:
 	var health := "WOUNDED / 1 STRIKE LEFT" if player.wounded else "UNHURT / 2 STRIKES"
 	status.text = "%s\nTEST TIME  %02d:%02d     TARGETS DOWN  %d" % [health, int(run.elapsed) / 60, int(run.elapsed) % 60, run.downs]
-	equipment.text = "%s\n%s" % [player.weapons.data.title, "%d / 8 ROUNDS · RMB throw · Q drop" % player.weapons.ammo if player.weapons.data.firearm else "LMB use · RMB throw · Q drop"]
+	equipment.text = "%s\n%s" % [player.weapons.data.title, "%d / %d ROUNDS · RMB throw · Q drop" % [player.weapons.ammo, player.weapons.data.ammunition] if player.weapons.data.firearm else "LMB use · RMB throw · Q drop"]
 	if player.vehicle:
 		context.text = "COMPACT  %s  %d%%  |  SPEED %d\nW gas · S brake/reverse · A D steer · Space brake · E exit" % [car.damage_state(), int(car.health), int(absf(car.speed))]
 	else:

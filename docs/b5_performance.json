@@ -1,0 +1,12 @@
+{
+	"drops": 21,
+	"duration_seconds": 20,
+	"fixture": "Protected observer car; actual AI, physics, audio, renderer. No export claim.",
+	"fleeing_civilians_observed": true,
+	"median_frame_ms": 8.349,
+	"nodes": 345,
+	"p95_frame_ms": 12.261,
+	"peak_police": 22,
+	"peak_projectiles": 5,
+	"samples": 2375
+}

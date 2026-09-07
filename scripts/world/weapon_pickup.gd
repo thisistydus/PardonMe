@@ -3,6 +3,7 @@ extends Node2D
 
 @export var data: WeaponData
 var ammo: int = -1
+var age: float = 0.0
 
 func _ready() -> void:
 	add_to_group("pickups")
@@ -17,5 +18,8 @@ func _draw() -> void:
 		draw_rect(Rect2(-9, 0, 8, 11), Color("dad2b9"))
 	else:
 		draw_line(Vector2(-13, 12), Vector2(14, -13), Color("d4b67c"), 7, true)
-	draw_string(ThemeDB.fallback_font, Vector2(-30, 44), "E  " + ("PISTOL" if data.firearm else "BAT"), HORIZONTAL_ALIGNMENT_LEFT, -1, 13, Color("e4d5ae"))
+	draw_string(ThemeDB.fallback_font, Vector2(-30, 44), "E  " + ("PISTOL %d" % ammo if data.firearm else "BAT"), HORIZONTAL_ALIGNMENT_LEFT, -1, 13, Color("e4d5ae"))
 
+
+func _process(delta: float) -> void:
+	age += delta

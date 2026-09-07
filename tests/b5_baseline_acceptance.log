@@ -1,0 +1,39 @@
+Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org
+
+PASS: WASD moves player
+PASS: Diagonal movement normalized
+PASS: Aim independent of movement
+PASS: Player blocked by cover
+PASS: E picks up bat
+PASS: Drop restores permanent fists
+PASS: Fists strike 1 / three strikes down target
+PASS: Fists strike 2 / three strikes down target
+PASS: Fists strike 3 / three strikes down target
+PASS: Bat incapacitates with strong knockback
+PASS: Hit pause always restores simulation
+PASS: Pistol one-hit kill; held input does not autofire
+PASS: Dropped pistol preserves ammo
+PASS: Swept bullet stops at cover
+PASS: Empty pistol cannot fire or underflow ammo
+PASS: E enters compact immediately
+PASS: Compact accelerates and moves
+PASS: Compact steers through rotation
+PASS: Handbrake stops compact
+PASS: Exit restores on-foot collision and visibility
+PASS: Entry beside wall succeeds at clear door
+PASS: Exit selects unblocked side beside wall
+PASS: Re-entry works
+PASS: High-speed vehicle impact incapacitates target
+PASS: Collision damages compact
+PASS: Critical vehicle gives readable failure delay
+PASS: Player can exit during explosion countdown
+PASS: Vehicle explodes after warning
+PASS: Player survives after leaving blast radius
+PASS: Restart resets actors, damage and counters
+PASS: Pause action pauses simulation
+PASS: Paused player does not move
+PASS: Pause action resumes
+PASS: Live-fire projectile causes first-strike wound
+PASS: Second projectile ends run and shows results
+PASS: Restart from death retains seed and resumes input
+ACCEPTANCE COMPLETE: 36 checks passed

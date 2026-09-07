@@ -1,0 +1,25 @@
+Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org
+OpenGL API 4.1 Metal - 89.4 - Compatibility - Using Device: Apple - Apple M2
+
+PASS: Saved running-build screenshot on_foot_pursuit
+PASS: Saved running-build screenshot police_roles
+PASS: Saved running-build screenshot expanded_search
+PASS: Saved running-build screenshot maximum_heat_minimap
+PASS: Visual cruiser is spawned by actual response system
+PASS: Saved running-build screenshot cruiser_pursuit
+PASS: Visual roadblock uses authored off-screen spawn
+PASS: Saved running-build screenshot roadblock
+PASS: Saved running-build screenshot police_weapon_drop
+PASS: Rendered pickup displays the retained police magazine
+PASS: Saved running-build screenshot police_weapon_pickup
+PASS: Saved running-build screenshot boost_confirm
+PASS: Saved running-build screenshot boost_removal
+PASS: Rendered delivery leaves player on foot with car removed
+PASS: Stress begins with at least twenty active mixed-role police
+PASS: Saved running-build screenshot barrel_vehicle_chain
+PASS: Stress includes barrel/vehicle/vehicle chains with surviving observer
+PASS: Stress includes capped mixed police, concurrent projectiles and fleeing civilians
+PASS: Radio, roadblock and cruiser remain active during stress
+PASS: Saved running-build screenshot stress_debug
+B5 PERFORMANCE {"drops":21,"duration_seconds":20,"fixture":"Protected observer car; actual AI, physics, audio, renderer. No export claim.","fleeing_civilians_observed":true,"median_frame_ms":8.349,"nodes":345,"p95_frame_ms":12.261,"peak_police":22,"peak_projectiles":5,"samples":2375}
+B5 VISUAL COMPLETE: 20 checks, 0 failures

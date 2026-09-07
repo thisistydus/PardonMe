@@ -38,7 +38,7 @@ func _physics_process(delta: float) -> void:
 	if velocity.length() > 2.0:
 		var before := velocity.length()
 		move_and_slide()
-		if not downed and get_slide_collision_count() > 0 and before > 160:
+		if not downed and (stun > 0 or air_time > 0) and get_slide_collision_count() > 0 and before > 160:
 			take_hit(3, Vector2.ZERO, false)
 		velocity = velocity.move_toward(Vector2.ZERO, delta * (260.0 if air_time > 0 else 850.0))
 	if downed:

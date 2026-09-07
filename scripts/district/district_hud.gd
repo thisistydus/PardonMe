@@ -9,7 +9,7 @@ func _ready() -> void:
 	# Retain established radio/pause controls; replace the yard-only information.
 	for child: Node in get_children():
 		if child is Label and child.text == "MUNICIPAL TEST YARD  /  GOAL A":
-			child.text = "FIRST DISTRICT / GOAL B+"
+			child.text = "FIRST DISTRICT / GOAL B.5"
 	status.position = Vector2(390, 27)
 	status.size = Vector2(580, 50)
 	objective_line = text_label(Vector2(28, 110), Vector2(770, 62), 17)
@@ -27,17 +27,19 @@ func _process(delta: float) -> void:
 	super._process(delta)
 	status.text = "$%d × %d = %d\n%s / DISTRICT TIME %02d:%02d" % [game.score.money, game.score.notoriety, game.score.live_score(), "WOUNDED" if player.wounded else "UNHURT", int(run.elapsed) / 60, int(run.elapsed) % 60]
 	objective_line.text = game.mission.objective
-	heat_line.text = "HEAT %d / %s" % [game.heat.level, "SEARCHING — leave gold/red radius" if game.heat.searching else ("PURSUIT" if game.heat.identity_known else ("INVESTIGATION" if game.heat.level > 0 else "CLEAR"))]
+	heat_line.text = "HEAT %d / %s" % [game.heat.level, "SEARCHING — leave red search area" if game.heat.searching else ("PURSUIT" if game.heat.identity_known else ("INVESTIGATION" if game.heat.level > 0 else "CLEAR"))]
 	if player.vehicle:
 		var vehicle := player.vehicle
 		context.text = "%s / %s / %d%% / SPEED %d\nE exit · Space brake · 1–4 radio · 5 off · M map" % [vehicle.data.title, vehicle.damage_state(), int(vehicle.health / vehicle.data.durability * 100), int(absf(vehicle.speed))]
+		if game.mission.delivery_ready(): context.text = "E — DELIVER VEHICLE\nConfirm transfer to surrender the car and collect your reward."
 	else:
 		context.text = "WASD move · Mouse aim · LMB use · E interact · M map\n" + interaction_hint()
 	var states: String = ""
 	for npc: DistrictNPC in game.citizens:
 		if is_instance_valid(npc) and npc.role == "police" and not npc.downed:
-			states += String(npc.state) + " "
-	debug.text = "STATE %s | HEAT %d (%.1f) | SEED %d\nSEARCH %s R%.0f | UNSEEN %.1fs | OUTSIDE %.1f/8s\nIDENTIFIED %s | %s\nPOLICE %s\nMISSION %s | NPCs %d | FPS %d | F6 recovery (Heat 0)" % ["DRIVING" if player.vehicle else "ON FOOT", game.heat.level, game.heat.points, run.seed_value, str(game.heat.search_position.round()), game.heat.search_radius, game.heat.unseen, game.heat.outside_time, str(game.heat.identity_known), game.heat.report, states, String(game.mission.state), game.citizens.size(), Engine.get_frames_per_second()]
+			states += String(npc.police_role).left(1).to_upper() + " "
+	debug.text = "STATE %s | HEAT %d (%.1f) | SEED %d\nSEARCH %s R%.0f | UNSEEN %.1fs | OUTSIDE %.1f/%.0fs\nIDENTIFIED %s | %s\nPOLICE %s\nMISSION %s | NPCs %d | FPS %d | F6 recovery (Heat 0)" % ["DRIVING" if player.vehicle else "ON FOOT", game.heat.level, game.heat.points, run.seed_value, str(game.heat.search_position.round()), game.heat.search_radius, game.heat.unseen, game.heat.outside_time, game.heat.search_duration, str(game.heat.identity_known), game.heat.report, states, String(game.mission.state), game.citizens.size(), Engine.get_frames_per_second()]
+	debug.text += "\n" + game.response.debug_status() + " | CHAINS %d" % game.explosion_tracker.feat_count
 	if panel.visible:
 		result.text = "%s\n$%d × %d = %d\nMissions %d / Peak Heat %d\nSeed %d / District prototype" % ["PERMISSION EXPIRED" if run.ended else "DISTRICT PAUSED", game.score.money, game.score.notoriety, game.score.live_score(), game.score.missions, game.heat.highest, run.seed_value]
 func interaction_hint() -> String:
@@ -45,6 +47,9 @@ func interaction_hint() -> String:
 		if point.available and point.global_position.distance_to(player.global_position) < 65:
 			return "E / ANSWER PAYPHONE"
 	for vehicle: ToyCompact in game.cars:
-		if not vehicle.disabled and vehicle.nearest_door(player.global_position).distance_to(player.global_position) < 65:
+		if not vehicle.disabled and not vehicle.unavailable and vehicle.nearest_door(player.global_position).distance_to(player.global_position) < 65:
 			return "E / ENTER " + vehicle.data.title
+	for pickup: WeaponPickup in get_tree().get_nodes_in_group("pickups"):
+		if pickup.global_position.distance_to(player.global_position) < 65:
+			return "E / PICK UP " + pickup.data.title + (" / %d rounds" % pickup.ammo if pickup.data.firearm else "")
 	return "R restart · Esc pause · F3 debug · F4 shake"

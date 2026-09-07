@@ -13,3 +13,7 @@ extends Resource
 @export var throw_damage: int = 2
 @export var throw_speed: float = 850.0
 @export var throw_knockback: float = 420.0
+
+@export var projectile_speed: float = 1050.0
+@export var projectile_range: float = 1680.0
+@export var shot_sound: StringName = &"pistol"

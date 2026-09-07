@@ -1,0 +1,16 @@
+Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org
+
+PASS: Shared projectile damages environmental barrel
+PASS: Bat strike starts readable barrel fuse
+PASS: Barrel explodes once after warning
+PASS: Thrown weapon damages barrel and lands
+BARREL CAR TRACE position=(623.9885, 631.4006) speed=-98.7 barrel_health=0.0 fuse=0.45 player=(400.0, 985.924)
+PASS: High-speed car impact triggers barrel warning
+PASS: Chain starts on a later fuse rather than same-frame detonation
+PASS: Barrel-to-barrel propagation works
+PASS: Barrel-to-vehicle and vehicle-to-vehicle chains work
+PASS: Vehicle explosion ignites a downstream barrel
+PASS: Attributed multi-object chain reports a debug feat
+PASS: Witnessed attributed explosions generate Heat
+PASS: Chain terminates and transient blast nodes expire
+B5 EXPLOSIONS COMPLETE: 12 checks, 0 failures

@@ -15,3 +15,5 @@ signal crime(kind: StringName, at: Vector2, severity: float, audible_radius: flo
 signal mission_completed(reward: int)
 
 signal shutdown_requested
+
+signal explosion_detonated(chain_token: int, player_caused: bool)

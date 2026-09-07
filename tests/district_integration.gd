@@ -12,6 +12,7 @@ func sim(duration: float) -> void:
 		elapsed += get_physics_process_delta_time()
 func quiet() -> void:
 	city.director.enabled = false
+	city.response.enabled = false
 	for npc: DistrictNPC in city.citizens:
 		npc.ai_enabled = false
 func start() -> void:
@@ -66,7 +67,7 @@ func start() -> void:
 	verify(city.heat.searching and police.state == &"searching", "Breaking LOS starts a visible police search")
 	var frozen_search := city.heat.search_position
 	player.position = Vector2(4400, 3200)
-	await sim(8.5)
+	await sim(city.heat.search_duration + 0.5)
 	verify(city.heat.level == 0 and not city.heat.identity_known, "Leaving search area unseen clears pursuit after cooldown")
 	verify(frozen_search != player.position, "Escape search never follows hidden player")
 	quiet()
@@ -104,6 +105,8 @@ func start() -> void:
 	boost.global_position = city.layout.garage
 	boost.speed = 0
 	await frames(5)
+	await tap(&"interact")
+	await sim(0.8)
 	verify(city.mission.state == &"complete", "Correct stopped vehicle delivered to garage")
 	verify(city.score.money == 2500 and city.score.notoriety == 2 and city.score.live_score() == 5000, "Boost grants $2500 and tier ×2 for live score 5000")
 	city.mission.accept(get_tree().get_nodes_in_group("interactables")[0])

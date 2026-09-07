@@ -1,7 +1,11 @@
 class_name VehicleExplosion
 extends Node2D
 ## One radial damage event, then a short visual effect. Solid cover blocks the blast.
-var source: ToyCompact
+var source: CollisionObject2D
+var object_damage_max: float = 100
+var force_max: float = 1450
+var chain_token: int = 0
+var player_caused: bool = false
 var radius: float = 190.0
 var lethal_radius: float = 90.0
 var age: float = 0.0
@@ -12,6 +16,9 @@ func _ready() -> void:
 	add_to_group("explosions")
 	Events.sound_requested.emit(&"explosion")
 	Events.impact.emit(global_position, Vector2.UP, 2.0)
+	chain_token = source.chain_token if source.chain_token != 0 else source.get_instance_id()
+	player_caused = source.player_responsible
+	Events.explosion_detonated.emit(chain_token, player_caused)
 	apply_damage()
 
 func apply_damage() -> void:
@@ -31,15 +38,15 @@ func apply_damage() -> void:
 			continue
 		var direction := offset.normalized() if distance > 0.1 else Vector2.UP
 		var strength := 1.0 - distance / radius
-		var push := direction * lerpf(450, 1450, strength)
+		var push := direction * lerpf(450, force_max, strength)
 		if target is ToyPlayer:
 			target.take_blast(push, distance <= lethal_radius or target.vehicle == source)
 		elif target is PracticeTarget:
 			target.launch(ceili(lerpf(2, 6, strength)), push)
+		elif target.has_method("receive_blast"):
+			target.receive_blast(ceili(lerpf(20, object_damage_max, strength)), push, player_caused, chain_token)
 		elif target.has_method("take_hit"):
-			if target is ToyCompact and source.player_responsible:
-				target.player_responsible = true
-			target.take_hit(ceili(lerpf(20, 100, strength)), push, false)
+			target.take_hit(ceili(lerpf(20, object_damage_max, strength)), push, false)
 
 func _process(delta: float) -> void:
 	# Let the blast finish visually even when the player's death pauses gameplay.

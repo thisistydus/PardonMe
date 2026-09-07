@@ -27,7 +27,7 @@ func equip(weapon: WeaponData, remaining: int = -1) -> void:
 	recovery = 0.15
 
 func attack() -> void:
-	if recovery > 0.0 or not player.alive or not player.visible:
+	if recovery > 0.0 or not player.alive or not player.visible or player.control_locked:
 		return
 	recovery = data.cooldown
 	swing_direction = player.aim_direction
@@ -36,20 +36,10 @@ func attack() -> void:
 			Events.sound_requested.emit(&"empty")
 			Events.message_requested.emit("EMPTY. Drop it, find another, or use your fists.")
 			return
-		Events.crime.emit(&"gunfire", global_position, 1.5, 700.0, true)
 		ammo -= 1
-		var bullet := ToyProjectile.new()
-		# Start inside the owner's radius; exclude the owner, never nearby cover.
-		bullet.position = global_position
-		bullet.direction = swing_direction
-		bullet.damage = data.damage
-		bullet.force = data.knockback
-		bullet.exclusions = [player.get_rid()]
-		get_tree().current_scene.add_child(bullet)
+		FirearmShot.fire(get_tree().current_scene, data, global_position, swing_direction, [player.get_rid()], true)
 		player.impulse -= swing_direction * 90.0
 		swing_time = 0.09
-		Events.sound_requested.emit(&"pistol")
-		Events.impact.emit(global_position + swing_direction * 26.0, swing_direction, 0.15)
 		return
 	swing_time = 0.16
 	Events.sound_requested.emit(&"swing")

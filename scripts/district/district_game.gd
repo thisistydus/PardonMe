@@ -12,6 +12,9 @@ var minimap: DistrictMinimap
 var mission: DistrictBoost
 var score: DistrictScore
 var heat: DistrictHeat
+var explosion_tracker: ExplosionTracker
+var response: PoliceResponse
+var coordinator: PoliceCoordinator
 var director: DistrictSpawnDirector
 var recovery: DistrictRecovery
 var citizens: Array[DistrictNPC] = []
@@ -41,6 +44,12 @@ func _ready() -> void:
 		cars.append(vehicle)
 	car = cars[0]
 	car.name = "Compact"
+	explosion_tracker = ExplosionTracker.new()
+	add_child(explosion_tracker)
+	for point: Vector2 in [Vector2(1550, 2040), Vector2(1610, 2060), Vector2(1670, 2040), Vector2(1610, 2480), Vector2(3550, 3110), Vector2(3980, 2430)]:
+		var barrel := ExplosiveBarrel.new()
+		barrel.position = point
+		add_child(barrel)
 	radio = ToyRadioManager.new()
 	add_child(radio)
 	for i: int in 3:
@@ -76,9 +85,15 @@ func _ready() -> void:
 	add_child(heat)
 	for at: Vector2 in [Vector2(2440, 1500), Vector2(3970, 2860)]:
 		spawn_citizen(at, "police").heat = heat
+	coordinator = PoliceCoordinator.new()
+	coordinator.game = self
+	add_child(coordinator)
 	director = DistrictSpawnDirector.new()
 	director.game = self
 	add_child(director)
+	response = PoliceResponse.new()
+	response.game = self
+	add_child(response)
 	recovery = DistrictRecovery.new()
 	recovery.game = self
 	add_child(recovery)
@@ -109,6 +124,8 @@ func _process(delta: float) -> void:
 	camera.zoom = camera.zoom.lerp(Vector2.ONE * zoom_target, minf(1, delta * 2))
 	if player.vehicle:
 		hud.car = player.vehicle
+	elif not is_instance_valid(hud.car):
+		hud.car = car
 
 func spawn_citizen(at: Vector2, role: String) -> DistrictNPC:
 	var npc := DistrictNPC.new()
@@ -116,6 +133,7 @@ func spawn_citizen(at: Vector2, role: String) -> DistrictNPC:
 	npc.position = navigation.grid.get_point_position(navigation.nearest(at))
 	npc.player = player
 	npc.navigation = navigation
+	npc.heat = heat
 	add_child(npc)
 	citizens.append(npc)
 	return npc

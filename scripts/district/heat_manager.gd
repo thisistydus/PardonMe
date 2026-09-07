@@ -2,13 +2,16 @@ class_name DistrictHeat
 extends Node
 signal changed(level: int)
 signal escaped
+const BALANCE: PressureConfig = preload("res://data/pressure_config.tres")
 var game: DistrictGame
+var observed_velocity := Vector2.ZERO
+var search_duration: float = 0
 var points: float = 0
 var level: int = 0
 var highest: int = 0
 var identity_known: bool = false
 var search_position := Vector2.ZERO
-var search_radius: float = 440
+var search_radius: float = 0
 var unseen: float = 0
 var outside_time: float = 0
 var report_age: float = 999
@@ -58,6 +61,7 @@ func on_crime(kind: StringName, at: Vector2, severity: float, audible: float, pl
 	Events.sound_requested.emit(&"heat")
 func confirm_sighting(at: Vector2) -> void:
 	identity_known = true
+	observed_velocity = game.player.vehicle.velocity if game.player.vehicle else game.player.velocity
 	search_position = at
 	unseen = 0
 	outside_time = 0
@@ -73,7 +77,8 @@ func update_level() -> void:
 	if next != level:
 		level = next
 		highest = maxi(highest, level)
-		search_radius = 400 + level * 50
+		search_radius = BALANCE.search_radii[level]
+		search_duration = BALANCE.search_durations[level]
 		changed.emit(level)
 func _physics_process(delta: float) -> void:
 	report_age += delta
@@ -88,7 +93,7 @@ func _physics_process(delta: float) -> void:
 	searching = next_search
 	if unseen > 2 and game.player.global_position.distance_to(search_position) > search_radius:
 		outside_time += delta
-		if outside_time > 8:
+		if outside_time > search_duration:
 			points = 0
 			identity_known = false
 			searching = false

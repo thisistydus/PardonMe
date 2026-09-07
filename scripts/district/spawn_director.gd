@@ -1,5 +1,6 @@
 class_name DistrictSpawnDirector
 extends Node
+const BALANCE: PressureConfig = preload("res://data/pressure_config.tres")
 var game: DistrictGame
 var cooldown: float = 3.0
 var spawned_positions: Array[Vector2] = []
@@ -26,7 +27,8 @@ func _physics_process(delta: float) -> void:
 	cooldown -= delta
 	if cooldown > 0:
 		return
-	cooldown = 2.0 if game.heat.level == 4 else 5.0
+	clean_drops()
+	cooldown = BALANCE.reinforcement_delays[game.heat.level]
 	for npc: DistrictNPC in game.citizens.duplicate():
 		if is_instance_valid(npc) and npc.downed and npc.state_time > 25 and offscreen(npc.global_position):
 			game.citizens.erase(npc)
@@ -35,7 +37,7 @@ func _physics_process(delta: float) -> void:
 	for npc: DistrictNPC in game.citizens:
 		if is_instance_valid(npc) and npc.role == "police" and not npc.downed:
 			count += 1
-	var desired: int = [2, 2, 3, 5, 8][game.heat.level]
+	var desired: int = BALANCE.police_budgets[game.heat.level]
 	if game.heat.level > 0 and count < desired:
 		var point := eligible_zone()
 		if point != Vector2.INF:
@@ -51,3 +53,17 @@ func _physics_process(delta: float) -> void:
 				game.citizens.erase(npc)
 				npc.queue_free()
 				count -= 1
+
+func clean_drops() -> void:
+	var drops := get_tree().get_nodes_in_group("pickups")
+	if drops.size() <= BALANCE.drop_soft_cap:
+		return
+	drops.sort_custom(func(a: WeaponPickup, b: WeaponPickup) -> bool: return a.age > b.age)
+	var excess := drops.size() - BALANCE.drop_soft_cap
+	for pickup: WeaponPickup in drops:
+		if excess <= 0:
+			break
+		if pickup.age > BALANCE.drop_min_age and pickup.global_position.distance_to(game.player.global_position) > BALANCE.drop_safe_distance and offscreen(pickup.global_position):
+			pickup.remove_from_group("pickups")
+			pickup.queue_free()
+			excess -= 1

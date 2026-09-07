@@ -60,6 +60,7 @@ func start() -> void:
 	verify(player.weapons.data.id == &"bat" and get_tree().get_nodes_in_group("thrown_weapons").is_empty(), "Throw input is ignored while driving")
 	await reset_game()
 	stage_target(Vector2(600, 450))
+	player.position = Vector2(200, 450) # Keep the observer out of the swept car path.
 	car.position = Vector2(500, 450)
 	await frames(3)
 	car.speed = 500
@@ -72,6 +73,7 @@ func start() -> void:
 	verify(target.position.x > 750 and target.visual_lift() > 20, "Launched dummy visibly flies away from impact")
 	await reset_game()
 	stage_target(Vector2(570, 450))
+	player.position = Vector2(200, 450) # Keep the observer out of the swept car path.
 	car.position = Vector2(500, 450)
 	blocker(Vector2(660, 450), Vector2(10, 100))
 	await frames(3)
@@ -136,3 +138,10 @@ func start() -> void:
 	verify(player.alive and car.health == 100 and get_tree().get_nodes_in_group("explosions").is_empty() and get_tree().get_nodes_in_group("thrown_weapons").is_empty(), "Restart clears blasts, thrown weapons and wreck state")
 	print("PHYSICS REVISION COMPLETE: %d checks passed" % checks)
 	get_tree().quit(0)
+
+# Physics assertions wait for simulated time, not wall time under parallel CPU load.
+func seconds(duration: float) -> void:
+	var elapsed: float = 0
+	while elapsed < duration:
+		await get_tree().physics_frame
+		elapsed += get_physics_process_delta_time()

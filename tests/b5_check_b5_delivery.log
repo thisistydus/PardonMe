@@ -1,0 +1,18 @@
+Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org
+
+PASS: Correct stopped car shows delivery prompt without auto reward
+PASS: Leaving zone before confirming gives no reward
+PASS: Manual exit in delivery area does not complete mission
+PASS: Wrong vehicle cannot confirm delivery
+PASS: E commits a short locked exterior handoff
+PASS: Transferred target rejects entry and recovery
+PASS: Mission map target clears at transfer
+PASS: Delivered car and its collision body are removed
+PASS: Player returns to free play on foot outside garage
+PASS: Nearby police do not duplicate or interrupt single reward
+PASS: Repeated completion callback cannot duplicate reward
+PASS: Target destroyed in garage before confirmation gives no reward
+PASS: Destroyed target replacement remains functional
+PASS: Restart fixture is mid-transfer
+PASS: Restart during handoff clears all transient state
+B5 DELIVERY COMPLETE: 15 checks, 0 failures

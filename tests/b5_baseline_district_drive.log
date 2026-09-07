@@ -1,0 +1,7 @@
+Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org
+
+PASS: Driven Boost starts in actual parked mission target
+DRIVE TRACE start=(2680.0, 805.0) end=(4404.452, 2603.317) waypoints=6 distance=3352 health=100.0 mission=complete
+PASS: Actual driving navigates roads and turns across district to garage
+PASS: Driven delivery completes Boost without teleporting the car
+DISTRICT DRIVE COMPLETE: 3 checks, 0 failures

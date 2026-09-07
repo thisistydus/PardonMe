@@ -1,0 +1,12 @@
+Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org
+
+PASS: Radius and duration increase at Heat 1
+PASS: Radius and duration increase at Heat 2
+PASS: Radius and duration increase at Heat 3
+PASS: Radius and duration increase at Heat 4
+PASS: Twenty officers receive all five roles at Heat 4
+PASS: Role coordinator distributes distinct destinations
+PASS: Coordinator does not follow an unseen live player
+PASS: Minimap reads the authoritative world search radius
+PASS: Tactical assignment retires below Heat 4
+B5 PRESSURE COMPLETE: 9 checks, 0 failures

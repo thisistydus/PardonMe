@@ -1,0 +1,8 @@
+Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org
+
+PASS: Escape begins with real police sight at Heat 4
+ESCAPE DRIVE position=(735.4463, 3239.175) health=93 player_alive=true waypoints=4 last_known=(2353.57, 2658.73) heat=4
+PASS: Player drives an actual escape route with police and responses enabled
+PASS: Maximum Heat clears after real driving, LOS loss and sustained time outside search area
+PASS: Escaping removes the high-Heat roadblock
+B5 ESCAPE COMPLETE: 4 checks, 0 failures

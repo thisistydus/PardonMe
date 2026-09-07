@@ -46,6 +46,8 @@ func start() -> void:
 	Input.action_release("handbrake")
 	print("DRIVE TRACE start=%s end=%s waypoints=%d distance=%.0f health=%.1f mission=%s" % [start_position, car.position, index, traveled, car.health, city.mission.state])
 	verify(index == waypoints.size() and traveled > 2000 and car.health > 0, "Actual driving navigates roads and turns across district to garage")
+	await tap(&"interact")
+	await sim(0.8)
 	verify(city.mission.state == &"complete" and city.score.live_score() == 5000, "Driven delivery completes Boost without teleporting the car")
 	print("DISTRICT DRIVE COMPLETE: %d checks, %d failures" % [checks, failures])
 	await city.run.prepare_shutdown()

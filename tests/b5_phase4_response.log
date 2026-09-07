@@ -1,0 +1,16 @@
+Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org
+
+PASS: Cruiser spawns at authored road access outside camera
+PASS: Cruiser follows open road without hitting buildings
+PASS: Cruiser stays near road center
+PASS: High-Heat authored roadblock spawns
+PASS: Roadblock anchor is authored and outside camera
+PASS: Roadblock has two destructible stealable patrol vehicles
+PASS: Undiscovered distant roadblock stays off minimap
+PASS: Abandoned cruiser can be entered
+PASS: Stealing patrol cruiser raises significant Heat
+PASS: Cruiser uses existing damage warning fuse
+PASS: Police cruiser explodes through shared vehicle behavior
+PASS: Roadblock cleanup removes owned cars/officers and marker
+PASS: No roadblock collision references remain
+B5 RESPONSE COMPLETE: 13 checks, 0 failures

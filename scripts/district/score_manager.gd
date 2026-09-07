@@ -10,7 +10,7 @@ func live_score() -> int:
 	return money * notoriety
 func award(reward: int) -> void:
 	money += reward
-	notoriety = mini(6, notoriety + 1)
+	notoriety = mini(6, notoriety + (preload("res://data/pressure_config.tres") as PressureConfig).boost_notoriety)
 	missions += 1
 	changed.emit()
 	Events.sound_requested.emit(&"reward")
