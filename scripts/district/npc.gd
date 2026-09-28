@@ -31,6 +31,7 @@ var discipline: float = 1.8
 var held_weapon: WeaponData
 var ammo: int = 0
 var weapon_dropped: bool = false
+var last_attacker_player: bool = false
 const BALANCE: PressureConfig = preload("res://data/pressure_config.tres")
 const PISTOL: WeaponData = preload("res://data/weapons/pistol.tres")
 
@@ -214,7 +215,7 @@ func fire_if_ready(delta: float) -> void:
 		telegraph = 0.7
 	if shot_timer <= 0:
 		ammo -= 1
-		FirearmShot.fire(get_tree().current_scene, held_weapon, global_position, shot_direction, [get_rid()], false)
+		FirearmShot.fire(get_tree().current_scene, held_weapon, global_position, shot_direction, [get_rid()], false, "POLICE" if role == "police" else "AN ARMED HOSTILE")
 		shots_fired += 1
 		# Deliberate aim/reset interval; never faster than the shared weapon cadence.
 		shot_timer = maxf(held_weapon.cooldown, discipline)
@@ -229,6 +230,11 @@ func hear_danger(_kind: StringName, at: Vector2, _severity: float, audible: floa
 		if not state in [&"alerted", &"panic"]:
 			change_state(&"alerted")
 
+## Damage sources call this just before take_hit. The latest attacker owns the kill, so a
+## wall-slam after the player's knockback still credits the player.
+func note_attacker(by_player: bool) -> void:
+	last_attacker_player = by_player
+
 func take_hit(amount: int, push: Vector2, bullet: bool = false) -> void:
 	if downed:
 		return
@@ -237,6 +243,7 @@ func take_hit(amount: int, push: Vector2, bullet: bool = false) -> void:
 		drop_held_weapon()
 		respawn_time = INF
 		change_state(&"killed")
+		Events.npc_killed.emit(self, last_attacker_player)
 	else:
 		danger = global_position - push.normalized() * 100
 		change_state(&"alerted" if role == "civilian" else &"pursuing")

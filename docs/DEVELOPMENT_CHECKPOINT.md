@@ -30,3 +30,7 @@ Full report: GOAL_B_PLAYTEST.md. Four dated B+ screenshots in screenshots/. Orig
 ## B.5 progress — 2026-09-07T09:47:17.914225-07:00
 
 Baseline 228 checks passed and source ZIP/manifest preserved. Shared weapons (10 checks), scaled search/roles (9), cruisers/roadblock (13), explicit Boost handoff (15) passed. Native text proof added; external MIT Typewriter Label evaluated, not incorporated. Barrels implemented; focused test fixtures being corrected (aim direction and player overlap), full chain verification pending. Final regression, maximum-Heat driven escape, stress/9 screenshots, preservation check and final living-doc updates still outstanding. Do not call B.5 complete. Last imports clean. Current build remains default district.
+
+## C1 — 2026-09-27
+
+C1 implementation and verification complete; see `GOAL_C1_PLAYTEST.md`. Default scene is unchanged (`scenes/district.tscn`). No further feature work is pending in this pass. Next milestone is a human two-day playtest answering whether one more run is worth it, before C2 vehicles and traffic.

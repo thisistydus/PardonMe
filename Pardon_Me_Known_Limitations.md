@@ -6,6 +6,19 @@ Update each item when implementation changes. Do not silently remove limitations
 
 ---
 
+## Goal C1 "One More Run" update — 2026-09-27
+
+This update supersedes the B+/B.5 statements below where they conflict. Full evidence: `docs/GOAL_C1_PLAYTEST.md`.
+
+- **Resolved: no dawn clock or results.** A physics-stepped `RunClock` maps 720 real seconds (configurable) onto 06:00 → 06:00. It has a final-minute warning, dawn and death endings, and a results screen with the score arithmetic shown line by line, then a one-input clean restart. Two consecutive full-length days were soaked headlessly.
+- **Resolved: one mission.** A shared mission backbone (`DistrictMission` + `MissionBoard`) now runs Boost, **Rob** and **Destroy**, one configuration each, one active at a time. Failures retry; completions retire for the day.
+- **Resolved: no Money economy.** Street cash drops from player-attributed kills; all cash flows through one `add_cash()` interface. Still no carried/secured split, banking or spending.
+- **Resolved in part: knife and shotgun** are implemented through the shared weapon paths. NPCs are not issued shotguns.
+- **Changed:** completing the Boost no longer silences every phone. Final score adds the Kickoff Pack's 25% dawn bonus (configurable, shown separately). Notoriety still caps at ×6.
+- **Still limited:** no human has played C1 and balance is provisional. There are only three job completions per day, and phone-to-job mapping is fixed. Cause of death names only the shooter's role. The Destroy runner is a simple road follower, not traffic AI.
+- **Still deferred:** lighting/day-night visuals, time-specific activity, factions (a reserved empty `faction_id` exists), favours/meta-progression, personal bests, arrest, carried money, C2 vehicles and traffic.
+- **Pre-existing test issue:** `tests/b5_escape` fails 2 of 4 checks on the untouched B.5 code in the current environment (real-time-dependent search timing). It fails identically after C1. Recorded, not masked.
+
 ## Goal B+ verified district update — 2026-09-06
 
 This update supersedes historical Goal A-only statements below; the old entries are retained as development history. The current playable scope is the First Playable District described in `docs/GOAL_B_PLAYTEST.md`.

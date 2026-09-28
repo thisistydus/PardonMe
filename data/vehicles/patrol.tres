@@ -9,3 +9,4 @@ max_speed = 660.0
 steering = 2.7
 durability = 120.0
 police_vehicle = true
+paint = Color(0.5, 0.56, 0.66, 1)

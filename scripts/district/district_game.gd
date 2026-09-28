@@ -19,14 +19,29 @@ var director: DistrictSpawnDirector
 var recovery: DistrictRecovery
 var citizens: Array[DistrictNPC] = []
 var navigation: DistrictNavigation
+var clock: RunClock
+var board: MissionBoard
+var rob: DistrictRob
+var destroy: DistrictDestroy
+var cash: CashDirector
+var phones: Array[DistrictPhone] = []
 
 func _ready() -> void:
 	run = ToyRunManager.new()
 	run.seed_value = (preload("res://data/run_config.tres") as RunConfig).seed_value
+	var tuning: RunTuning = (preload("res://data/run_tuning.tres") as RunTuning).duplicate()
 	for arg: String in OS.get_cmdline_user_args():
 		if arg.begins_with("--seed="):
 			run.seed_value = int(arg.trim_prefix("--seed="))
+		elif arg.begins_with("--run-seconds="):
+			tuning.run_seconds = maxf(1.0, float(arg.trim_prefix("--run-seconds=")))
 	add_child(run)
+	clock = RunClock.new()
+	clock.tuning = tuning
+	clock.run = run
+	add_child(clock)
+	clock.final_warning.connect(on_final_warning)
+	clock.dawn.connect(on_dawn)
 	feedback = ToyFeedback.new()
 	feedback.camera = $Player/Camera2D
 	add_child(feedback)
@@ -61,10 +76,17 @@ func _ready() -> void:
 		pickup.data = load("res://data/weapons/bat.tres" if i == 0 else "res://data/weapons/pistol.tres")
 		pickup.position = Vector2(980 + i * 75, 800)
 		add_child(pickup)
+	# Yard row for comparison, plus one of each out in the district.
+	for entry: Array in [["knife", Vector2(1100, 755)], ["shotgun", Vector2(1170, 755)], ["knife", Vector2(1250, 2010)], ["shotgun", Vector2(3350, 2350)]]:
+		var pickup := WeaponPickup.new()
+		pickup.data = load("res://data/weapons/%s.tres" % entry[0])
+		pickup.position = entry[1]
+		add_child(pickup)
 	for point: Vector2 in layout.phones:
 		var phone := DistrictPhone.new()
 		phone.position = point
 		add_child(phone)
+		phones.append(phone)
 	var garage_marker := Node2D.new()
 	garage_marker.position = layout.garage
 	add_child(garage_marker)
@@ -99,9 +121,22 @@ func _ready() -> void:
 	add_child(recovery)
 	score = DistrictScore.new()
 	add_child(score)
+	cash = CashDirector.new()
+	cash.game = self
+	add_child(cash)
+	board = MissionBoard.new()
+	board.game = self
+	add_child(board)
+	# `mission` stays the Boost for the retained B.5 suites; the board owns all three jobs.
 	mission = DistrictBoost.new()
-	mission.game = self
-	add_child(mission)
+	rob = DistrictRob.new()
+	destroy = DistrictDestroy.new()
+	for job: DistrictMission in [mission, rob, destroy]:
+		board.register(job)
+		add_child(job)
+		if job.definition.phone_index < phones.size():
+			phones[job.definition.phone_index].offer = job
+	board.refresh_phones()
 	var wayfinding := DistrictWayfinding.new()
 	wayfinding.game = self
 	add_child(wayfinding)
@@ -116,7 +151,15 @@ func _ready() -> void:
 	minimap = DistrictMinimap.new()
 	minimap.game = self
 	hud.add_child(minimap)
-	Events.message_requested.emit("FIRST DISTRICT / E at a ringing payphone. The test yard is behind you.")
+	Events.message_requested.emit("DAWN / Your pardon holds until the next dawn. Ringing payphones have work — E to answer.")
+
+func on_final_warning() -> void:
+	Events.sound_requested.emit(&"final_warning")
+	Events.message_requested.emit("FINAL MINUTE / The pardon expires at dawn. Make it count.")
+
+func on_dawn() -> void:
+	Events.sound_requested.emit(&"dawn")
+	run.end_run(&"dawn")
 
 func _process(delta: float) -> void:
 	var camera := $Player/Camera2D as Camera2D

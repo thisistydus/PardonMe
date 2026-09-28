@@ -1,0 +1,23 @@
+Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org
+
+PASS: District starts with no cash and no pickups
+PASS: Player-killed civilian drops one cash pickup
+PASS: Civilian drop value $15 is inside the configured range
+PASS: Cash is not credited at the moment of death
+PASS: Walking over the pickup credits it once through the cash interface
+PASS: Collected pickup is removed
+PASS: No duplicate collection on later frames
+PASS: Uncredited barrel blast kills a bystander
+PASS: Non-player kill drops no cash (requires_player_kill)
+PASS: Player-shot officer drops police-table cash
+PASS: Thrown-weapon kill of a hostile drops hostile-table cash ($198)
+PASS: Driving within the vehicle radius collects cash
+PASS: Vehicle collection credits exactly once
+PASS: Zero/negative cash awards are rejected and counted
+PASS: Pickups never exceed the soft cap of 40
+PASS: Oldest pickups make room first
+PASS: Pickups expire after their lifetime
+PASS: Mission payout adds to the same cash total
+PASS: Pickups are lying around before restart
+PASS: Restart removes abandoned pickups and resets cash
+C1 CASH COMPLETE: 20 checks, 0 failures

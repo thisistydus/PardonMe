@@ -1,0 +1,40 @@
+Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org
+
+PASS: Run length comes from data/run_tuning.tres (default 720 s = 12 min)
+PASS: Run duplicates tuning so command-line/test overrides never edit the shared resource
+PASS: Run opens at dawn, 06:00, MORNING
+PASS: 12-minute day advances two fictional minutes per real second (6 in 3 s)
+PASS: Clock counts simulated physics time
+PASS: Seventeen fictional hours after dawn reads 23:00 NIGHT
+PASS: Availability windows handle wrap-around and whole-day offers
+PASS: Re-basing the clock does not report a crossed hour threshold
+PASS: No final warning before the last configured seconds
+PASS: Final warning fires when the configured final window opens
+PASS: Hour thresholds are reported as the day compresses (13)
+PASS: Final warning fires only once
+PASS: Configured 8-second day ends at dawn once
+PASS: Dawn pauses play and reports one run_ended(dawn)
+PASS: Clock stops at dawn
+PASS: A later death cannot end the run a second time
+PASS: Score: $1000 × 3 = 3000, +25% dawn bonus = 3750
+PASS: Results screen opens on dawn
+PASS: Results show cash, notoriety and final score
+PASS: Results show survival time and the dawn clock
+PASS: Pause panel stays hidden; NEXT DAY has focus for one-input restart
+PASS: R from results starts a fresh, unpaused day
+PASS: Restart clears cash, notoriety, Heat and job counts
+PASS: Restart clears pickups and hides results
+PASS: Restart does not accumulate autoload signal connections
+PASS: Scene node count is stable across restart (223 → 223)
+PASS: Second run can accept a job
+PASS: Second strike kills and ends the run once
+PASS: Job active at death is recorded as failed
+PASS: Death results show the cause
+PASS: Death gets no dawn bonus
+PASS: Zero-cash run explains the zero score instead of hiding it
+PASS: Clock stops after death
+PASS: NEXT DAY button restarts cleanly
+PASS: Boost completes through the mission board in a later run
+PASS: Dawn after a Boost: 2500 × 2 = 5000 + 1250 = 6250
+PASS: Results log lists the completed job
+C1 RUN LOOP COMPLETE: 37 checks, 0 failures

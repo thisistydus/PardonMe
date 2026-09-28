@@ -1,0 +1,18 @@
+Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org
+
+PASS: Escape begins with real police sight at Heat 4
+ESCAPE DRIVE position=(735.4463, 3239.175) health=93 player_alive=true waypoints=4 last_known=(2353.57, 2658.73) heat=4
+PASS: Player drives an actual escape route with police and responses enabled
+ERROR: FAIL: Maximum Heat clears after real driving, LOS loss and sustained time outside search area
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] verify (res://tests/acceptance.gd:17)
+       [1] start (res://tests/b5_escape.gd:45)
+       [2] sim (res://tests/district_integration.gd:12)
+ERROR: FAIL: Escaping removes the high-Heat roadblock
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] verify (res://tests/acceptance.gd:17)
+       [1] start (res://tests/b5_escape.gd:46)
+       [2] sim (res://tests/district_integration.gd:12)
+B5 ESCAPE COMPLETE: 2 checks, 2 failures

@@ -30,5 +30,3 @@ extends Resource
 @export var barrel_force: float = 1250
 @export var barrel_fuse: float = 0.65
 @export var chain_delay_range := Vector2(0.1, 0.35)
-@export var boost_reward: int = 2500
-@export var boost_notoriety: int = 1

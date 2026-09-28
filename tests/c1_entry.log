@@ -1,0 +1,8 @@
+Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org
+
+PASS: --run-seconds=5 shortens the day to 5 s
+PASS: Override leaves data/run_tuning.tres at 720 s
+PASS: Unattended default district reaches dawn
+PASS: Results screen shown
+PASS: Restarted day keeps the command-line length
+C1 ENTRY COMPLETE: 5 checks, 0 failures

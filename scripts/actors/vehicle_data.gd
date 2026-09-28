@@ -14,3 +14,7 @@ extends Resource
 @export var lethal_blast_radius: float = 90.0
 
 @export var police_vehicle: bool = false
+## Multiplied over the shared compact sprite until class-specific art exists.
+@export var paint: Color = Color.WHITE
+## Mission-marked vehicles get a warning roof stripe so they read as targets.
+@export var marked: bool = false

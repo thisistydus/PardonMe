@@ -8,6 +8,7 @@ var view: Rect2
 var map_rect: Rect2
 func _ready() -> void:
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
+	clip_contents = true
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("district_map") and not event.is_echo():
 		enlarged = not enlarged
@@ -79,11 +80,19 @@ func _draw() -> void:
 			if previous != Vector2.INF and map_rect.has_point(previous) and map_rect.has_point(mapped):
 				draw_line(previous, mapped, Color("d37057"), 2)
 			previous = mapped
-	var objective := game.mission.destination()
-	if objective != Vector2.INF:
-		var mapped := map_point(objective).clamp(map_rect.position + Vector2(7, 7), map_rect.end - Vector2(7, 7))
-		draw_circle(mapped, 7, Color("eec76b"), false, 2)
-		draw_line(mapped - Vector2(9, 0), mapped + Vector2(9, 0), Color("eec76b"), 1)
+	for objective: Dictionary in game.board.markers():
+		var world: Vector2 = objective.p
+		if objective.kind == &"escape":
+			var scale := map_rect.size.x / view.size.x
+			var ring_center := map_point(world)
+			draw_arc(ring_center, float(objective.radius) * scale, 0, TAU, 48, Color(0.93, 0.78, 0.42, 0.8), 1.5)
+			continue
+		# Off-map objectives are pinned to the edge so the direction is never lost.
+		var mapped := map_point(world).clamp(map_rect.position + Vector2(7, 7), map_rect.end - Vector2(7, 7))
+		var tone := Color("e0664e") if objective.kind == &"destroy" else Color("eec76b")
+		draw_circle(mapped, 7, tone, false, 2)
+		draw_line(mapped - Vector2(9, 0), mapped + Vector2(9, 0), tone, 1)
+		draw_line(mapped - Vector2(0, 9), mapped + Vector2(0, 9), tone, 1)
 	var facing := game.player.vehicle.rotation if game.player.vehicle else game.player.aim_direction.angle()
 	var center := map_point(game.player.global_position)
 	var arrow := PackedVector2Array()

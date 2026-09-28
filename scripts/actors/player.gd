@@ -11,6 +11,7 @@ var weapons: WeaponController
 var vehicle: ToyCompact
 var stride: float = 0.0
 var control_locked: bool = false
+var death_cause: String = ""
 
 func _ready() -> void:
 	add_to_group("player")
@@ -116,14 +117,14 @@ func throw_weapon() -> void:
 	weapons.equip(WeaponController.FISTS)
 	Events.sound_requested.emit(&"swing")
 
-func take_hit(_amount: int, push: Vector2, _bullet: bool = true) -> void:
+func take_hit(_amount: int, push: Vector2, bullet: bool = true, cause: String = "") -> void:
 	if not alive or invulnerability > 0.0:
 		return
 	impulse = push
 	invulnerability = 0.9
 	Events.impact.emit(global_position, push.normalized(), 1.2)
 	if wounded:
-		die()
+		die(cause if cause != "" else ("SHOT" if bullet else "BLUNT IMPACT"))
 	else:
 		wounded = true
 		Events.sound_requested.emit(&"wounded")
@@ -134,16 +135,17 @@ func take_blast(push: Vector2, lethal: bool) -> void:
 		return
 	if lethal:
 		# A point-blank blast (including the occupant) cannot be tanked with bullet grace.
-		die()
+		die("EXPLOSION WHILE DRIVING" if vehicle != null else "EXPLOSION")
 	else:
-		take_hit(1, push, false)
+		take_hit(1, push, false, "EXPLOSION")
 		if alive:
 			Events.message_requested.emit("BLAST INJURY. Keep clear of wrecks!")
 
-func die() -> void:
+func die(cause: String = "UNKNOWN") -> void:
 	if not alive:
 		return
 	alive = false
+	death_cause = cause
 	visible = false
 	collision_layer = 0
 	collision_mask = 0

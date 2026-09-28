@@ -18,7 +18,7 @@ func _ready() -> void:
 	Events.shutdown_requested.connect(stop_audio)
 	Events.impact.connect(on_impact)
 	Events.sound_requested.connect(play_sound)
-	for kind: StringName in [&"swing", &"bat_hit", &"punch", &"pistol", &"enemy_shot", &"empty", &"wounded", &"death", &"crash", &"enter", &"throw_hit", &"explosion", &"warning", &"police_alert", &"heat", &"search", &"escaped", &"mission", &"reward"]:
+	for kind: StringName in [&"swing", &"bat_hit", &"punch", &"pistol", &"enemy_shot", &"empty", &"wounded", &"death", &"crash", &"enter", &"throw_hit", &"explosion", &"warning", &"police_alert", &"heat", &"search", &"escaped", &"mission", &"reward", &"shotgun", &"stab", &"cash", &"mission_fail", &"final_warning", &"dawn"]:
 		sounds[kind] = make_sound(kind)
 	for i: int in 12:
 		var voice := AudioStreamPlayer.new()
@@ -47,6 +47,12 @@ func make_sound(kind: StringName) -> AudioStreamWAV:
 		&"escaped", &"reward": frequency = 1100; length = 0.4; noise = 0.02
 		&"mission": frequency = 740; length = 0.2; noise = 0.04
 		&"warning": frequency = 920; length = 0.11; noise = 0.04
+		&"shotgun": frequency = 42; length = 0.36; noise = 0.92
+		&"stab": frequency = 620; length = 0.07; noise = 0.75
+		&"cash": frequency = 1500; length = 0.12; noise = 0.02
+		&"mission_fail": frequency = 180; length = 0.5; noise = 0.1
+		&"final_warning": frequency = 520; length = 0.7; noise = 0.02
+		&"dawn": frequency = 880; length = 0.9; noise = 0.01
 	var count := int(22050 * length)
 	var bytes := PackedByteArray()
 	bytes.resize(count * 2)

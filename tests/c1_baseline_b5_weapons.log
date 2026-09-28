@@ -1,0 +1,13 @@
+Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org
+
+PASS: Police firing consumes the actual pistol magazine
+PASS: Police bullet uses shared damage, speed and range
+PASS: Repeated lethal hits produce exactly one police pistol
+PASS: Dropped magazine preserves remaining seven rounds
+PASS: Player picks up the officer's remaining magazine
+PASS: Player can fire and empty that same police pistol
+PASS: Empty police pistol uses existing throw ownership transition
+PASS: Empty officer drops zero ammo, never a fresh magazine
+PASS: Young combat drop survives cleanup
+PASS: Only old distant excess pickups are cleaned to the soft cap
+B5 WEAPONS COMPLETE: 10 checks, 0 failures

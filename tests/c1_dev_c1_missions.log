@@ -1,0 +1,50 @@
+Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org
+
+PASS: Each payphone carries one job: Boost, Rob, Destroy
+PASS: All three phones ring at dawn
+PASS: Idle objective lists the ringing offers
+PASS: Answering the Rob phone starts travel
+PASS: Only one active job: every phone stops ringing
+PASS: Boost cannot start while Rob is active
+PASS: Rob marks the storefront
+PASS: Arriving trips the alarm and spawns two guards
+PASS: Robbery alarm is a witnessed crime that raises Heat
+PASS: Leaving the counter pauses and decays the hold-up (1.02)
+PASS: Completing the hold-up drops the cash bag
+PASS: Standing on the bag collects it
+PASS: Clean, quick escape pays $4450 with both bonuses and +1 Notoriety
+PASS: Mission and bonus cash go through the single cash interface
+PASS: Calling complete() again cannot re-award a finished job
+PASS: Completed Rob retires its phone; the others ring again
+PASS: Rob cleanup hands its guards over to the board
+PASS: Retired guards leave once off-screen
+ROB SUCCESS SECTION OK
+PASS: Destroy places two marked sedans
+PASS: Targets are marked and joined to the vehicle list
+PASS: Player damage makes the barrels player-attributed
+PASS: Player barrel blasts chain into both targets
+PASS: All wrecked through a chain: leave the scene
+PASS: Destroy pays $2800 with chain + multi-wreck bonuses and +2 Notoriety
+PASS: Board counts two attempts, two completions
+DESTROY SUCCESS SECTION OK
+PASS: Rob fails when its timer expires
+PASS: Failed job pays nothing
+PASS: Other jobs ring immediately; failed Rob waits its retry delay
+PASS: Failed Rob rings again after the retry delay
+PASS: Bag is on the ground before pickup
+PASS: A blast that burns the bag fails the robbery
+PASS: Burned bag is cleaned up
+PASS: Counts track two failed Rob attempts
+PASS: Uncredited blast wrecks the target
+PASS: Uncredited destruction fails Destroy without reward
+PASS: Intact target is retired on failure
+PASS: Retired target leaves once off-screen
+PASS: Boost can start straight after a failure
+PASS: Boost target destruction fails through the shared backbone
+PASS: Getting close spooks the runner
+PASS: Runner drives away on the road and escaping fails Destroy
+PASS: Escaped runner is removed
+PASS: Destroy fails when its timer expires
+PASS: Six attempts, six failures recorded in order
+PASS: No reward leaked from any failure
+C1 MISSIONS COMPLETE: 45 checks, 0 failures

@@ -1,53 +1,41 @@
 class_name DistrictBoost
-extends Node
-signal changed
+extends DistrictMission
+## Steal a marked parked car and hand it over at the east garage. B.5 states and handoff preserved.
 const DEFINITION: BoostDefinition = preload("res://data/missions/first_boost.tres")
-const BALANCE: PressureConfig = preload("res://data/pressure_config.tres")
 var eligible: Array[ToyCompact] = []
 var transfer_time: float = 0
-var game: DistrictGame
 var target: ToyCompact
-var state: StringName = &"available"
 var used: Array[int] = []
-var objective: String = "Answer a ringing payphone [E] for a Boost job."
-var retry_timer: float = 0
 var rng := RandomNumberGenerator.new()
+
+func _init() -> void:
+	definition = DEFINITION
+	objective = "Answer a ringing payphone [E] for a Boost job."
+
 func _ready() -> void:
 	add_to_group("vehicle_interactions")
 	for i: int in DEFINITION.eligible_vehicle_indices:
 		if i < game.cars.size(): eligible.append(game.cars[i])
 	rng.seed = game.run.seed_value
-	Events.phone_answered.connect(accept)
 	Events.vehicle_entered.connect(acquired)
 	Events.vehicle_destroyed.connect(destroyed)
-func set_phones(available: bool) -> void:
-	for phone: Node in get_tree().get_nodes_in_group("interactables"):
-		phone.available = available
-		for child: Node in phone.get_children():
-			if child is DistrictMarker:
-				child.active = available
-func accept(_phone: Node2D) -> void:
-	if state != &"available":
-		return
+
+func begin() -> bool:
 	var candidates: Array[ToyCompact] = []
 	for vehicle: ToyCompact in eligible:
 		if is_instance_valid(vehicle) and not vehicle.get_instance_id() in used and not vehicle.disabled and vehicle.failure_timer < 0 and vehicle.driver == null:
 			candidates.append(vehicle)
 	if candidates.is_empty():
-		objective = "NO VIABLE BOOST TARGETS / R starts a fresh district."
+		objective = "NO VIABLE BOOST TARGETS / Every marked car is gone for this run."
 		state = &"exhausted"
-		set_phones(false)
-		changed.emit()
-		return
+		return false
 	var selected := candidates[rng.randi_range(0, candidates.size() - 1)]
 	used.append(selected.get_instance_id())
 	target = selected
 	state = &"steal"
 	objective = "BOOST / Steal the marked " + target.data.title + " [E]"
-	set_phones(false)
-	Events.sound_requested.emit(&"mission")
-	Events.message_requested.emit(DEFINITION.title + " / $%d + one Notoriety tier" % BALANCE.boost_reward)
-	changed.emit()
+	return true
+
 func acquired(vehicle: Node2D) -> void:
 	if vehicle != target or not state in [&"steal", &"deliver"]:
 		return
@@ -56,29 +44,36 @@ func acquired(vehicle: Node2D) -> void:
 	Events.sound_requested.emit(&"mission")
 	Events.message_requested.emit("TARGET ACQUIRED / Garage marked on your map.")
 	changed.emit()
+
 func destroyed(vehicle: Node2D) -> void:
 	if vehicle != target or not state in [&"steal", &"deliver"]:
 		return
-	state = &"failed"
+	fail("BOOST FAILED / Target destroyed and retired.")
+
+func cleanup() -> void:
 	target = null
-	retry_timer = 4
-	objective = "BOOST FAILED / Target destroyed. Another phone offer in four seconds."
-	Events.message_requested.emit(objective)
-	changed.emit()
+
+func retry_message() -> String:
+	return "Answer another payphone [E]. The destroyed target is retired."
+
+func can_time_out() -> bool:
+	return state != &"transferring"
+
 func destination() -> Vector2:
 	if state == &"steal" and is_instance_valid(target):
 		return target.global_position
 	if state == &"deliver" and is_instance_valid(target):
 		return game.layout.garage if game.player.vehicle == target else target.global_position
 	return Vector2.INF
+
+func world_markers() -> Array[Dictionary]:
+	var point := destination()
+	if point == Vector2.INF:
+		return []
+	var delivering := state == &"deliver" and game.player.vehicle == target
+	return [{"p": point, "label": "DELIVER HERE" if delivering else "BOOST TARGET", "kind": &"garage" if delivering else &"car", "radius": 68.0}]
+
 func _process(delta: float) -> void:
-	if state == &"failed":
-		retry_timer -= delta
-		if retry_timer <= 0:
-			state = &"available"
-			objective = "Answer another payphone [E]. The destroyed target is retired."
-			set_phones(true)
-			changed.emit()
 	if state == &"transferring":
 		transfer_time -= delta
 		target.modulate.a = clampf(transfer_time / 0.65, 0, 1)
@@ -122,14 +117,11 @@ func try_interact(actor: ToyPlayer) -> bool:
 
 func finish_delivery() -> void:
 	if state != &"transferring": return
-	state = &"complete"
+	var delivered := target
 	game.hud.car = game.car
-	game.cars.erase(target)
-	eligible.erase(target)
-	target.queue_free()
-	target = null
+	game.cars.erase(delivered)
+	eligible.erase(delivered)
 	game.player.control_locked = false
-	objective = "BOOST COMPLETE / Vehicle surrendered. Free play; R restarts the district."
-	set_phones(false)
-	Events.mission_completed.emit(BALANCE.boost_reward)
-	changed.emit()
+	complete()
+	delivered.queue_free()
+	objective = "BOOST COMPLETE / Vehicle surrendered. Other payphones may still be ringing."

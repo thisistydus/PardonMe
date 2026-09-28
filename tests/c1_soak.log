@@ -1,0 +1,14 @@
+Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org
+
+SOAK DAY result=dawn clock=720.0 real=720.3 nodes_start=223 peak=223 cash=0 jobs=0/0 heat_peak=0 cause=
+PASS: Full-length day 1 ended (dawn)
+PASS: Node count stays bounded through a full day (223 → peak 223)
+PASS: Results screen opened after full day 1
+PASS: Idle day 1 lasted the full default 720 s to dawn
+SOAK DAY result=dawn clock=720.0 real=724.0 nodes_start=223 peak=226 cash=4450 jobs=1/1 heat_peak=1 cause=
+PASS: Full-length day 2 ended (dawn)
+PASS: Node count stays bounded through a full day (223 → peak 226)
+PASS: Results screen opened after full day 2
+PASS: Day 2 took a live job
+C1 SOAK COMPLETE: 8 checks, 0 failures
+EXIT 0

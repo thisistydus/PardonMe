@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="DestroyDefinition" load_steps=3 format=3]
+[ext_resource type="Script" path="res://scripts/district/destroy_data.gd" id="1"]
+[ext_resource type="Resource" path="res://data/vehicles/marked_sedan.tres" id="2"]
+[resource]
+script = ExtResource("1")
+id = &"warehouse_destroy"
+title = "PAPERWORK FIRE"
+kind_label = "DESTROY"
+phone_index = 2
+cash_reward = 1800
+notoriety_reward = 2
+time_limit = 240.0
+retry_delay = 6.0
+target_vehicle = ExtResource("2")
+target_positions = Array[Vector2]([Vector2(4040, 2330), Vector2(3440, 3060)])
+target_rotations = PackedFloat32Array(1.5708, 0.0)
+runner_index = 1
+spook_radius = 380.0
+exit_points = Array[Vector2]([Vector2(250, 3000), Vector2(4550, 3000), Vector2(2400, 3350)])
+escape_distance = 140.0
+leave_radius = 650.0
+chain_bonus = 600
+multi_window = 5.0
+multi_bonus = 400

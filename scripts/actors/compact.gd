@@ -179,6 +179,8 @@ func move_with_impacts(motion: Vector2) -> void:
 			player_responsible = true
 		if body is PracticeTarget and impact_speed > 90:
 			Events.crime.emit(&"harm", body.global_position, 1.5, 180.0, driver != null)
+			if body.has_method("note_attacker"):
+				body.note_attacker(driver != null)
 			body.launch(3 if impact_speed > 230 else 1, velocity.normalized() * clampf(impact_speed * 2.4 + 200, 420, 1650))
 			take_hit(maxi(1, int(impact_speed / 120)), Vector2.ZERO, false)
 			speed *= data.target_speed_retention
@@ -189,7 +191,7 @@ func move_with_impacts(motion: Vector2) -> void:
 			body.player_responsible = body.player_responsible or driver != null
 			body.take_hit(maxi(1, int(impact_speed / 12)), velocity, false)
 		if body is ToyPlayer and impact_speed > 90:
-			body.take_hit(1, velocity.normalized() * impact_speed, false)
+			body.take_hit(1, velocity.normalized() * impact_speed, false, "STRUCK BY A " + data.title)
 		if crash_cooldown <= 0 and impact_speed > 100:
 			if body is ToyCompact:
 				body.player_responsible = body.player_responsible or driver != null
@@ -212,7 +214,7 @@ func explode() -> void:
 	speed = 0
 	velocity = Vector2.ZERO
 	engine_voice.stop()
-	Events.message_requested.emit("COMPACT EXPLODED. Stay clear of the blast!")
+	Events.message_requested.emit(data.title + " EXPLODED. Stay clear of the blast!")
 	var blast := VehicleExplosion.new()
 	blast.source = self
 	blast.radius = data.blast_radius
@@ -250,15 +252,20 @@ func _draw() -> void:
 	if failure_timer >= 0 and not disabled:
 		draw_arc(Vector2.ZERO, data.blast_radius, 0, TAU, 64, Color(0.9, 0.39, 0.17, 0.35 + sin(age * 18) * 0.15), 3, true)
 	draw_rect(Rect2(-46, -21, 94, 49), Color(0, 0, 0, 0.4))
-	var tint := Color(0.37, 0.31, 0.26) if disabled else (Color(0.65, 0.78, 1.0) if data.title == "SEDAN" else Color.WHITE)
+	var tint := Color(0.37, 0.31, 0.26) if disabled else data.paint
 	draw_texture_rect_region(SpriteArt.COMPACT, Rect2(-46, -24, 92, 48), SpriteArt.COMPACT_REGION, tint)
 	if occupied and driver == null:
 		draw_circle(Vector2(-4, 5), 6, Color("e1b984"))
 		draw_string(ThemeDB.fallback_font, Vector2(-38, -35), "OCCUPIED", HORIZONTAL_ALIGNMENT_LEFT, -1, 11, Color("e1c184"))
-	if data.police_vehicle:
-		draw_rect(Rect2(-10, -20, 20, 40), Color("d8ddd5"))
-		draw_rect(Rect2(-5, -19, 10, 13), Color("b83e38"))
-		draw_rect(Rect2(-5, 6, 10, 13), Color("3d78a1"))
+	if data.police_vehicle and not disabled:
+		# Black-and-white livery plus a lightbar that flashes while a crew is driving it.
+		draw_rect(Rect2(-26, -21, 40, 42), Color(0.9, 0.92, 0.88, 0.85))
+		var flashing := ai_controlled and fmod(age, 0.4) < 0.2
+		draw_rect(Rect2(-5, -19, 10, 13), Color("ff5a4a") if flashing else Color("b83e38"))
+		draw_rect(Rect2(-5, 6, 10, 13), Color("7fc2ff") if ai_controlled and not flashing else Color("3d78a1"))
+	if data.marked and not disabled:
+		draw_rect(Rect2(-30, -5, 60, 10), Color("e6bb63"))
+		draw_rect(Rect2(-30, -5, 60, 10), Color("1b1712"), false, 2)
 	if disabled:
 		draw_line(Vector2(-35, -15), Vector2(27, 10), Color("8e4d31"), 4)
 		draw_line(Vector2(-15, 20), Vector2(32, -20), Color("0f1513"), 7)

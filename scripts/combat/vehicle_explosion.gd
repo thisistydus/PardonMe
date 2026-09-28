@@ -39,6 +39,8 @@ func apply_damage() -> void:
 		var direction := offset.normalized() if distance > 0.1 else Vector2.UP
 		var strength := 1.0 - distance / radius
 		var push := direction * lerpf(450, force_max, strength)
+		if target.has_method("note_attacker"):
+			target.note_attacker(player_caused)
 		if target is ToyPlayer:
 			target.take_blast(push, distance <= lethal_radius or target.vehicle == source)
 		elif target is PracticeTarget:

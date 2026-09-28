@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="WeaponData" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/combat/weapon_data.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"knife"
+title = "KNIFE"
+damage = 3
+reach = 56.0
+arc_degrees = 64.0
+cooldown = 0.17
+knockback = 140.0
+throw_damage = 3
+throw_speed = 1150.0
+throw_knockback = 180.0

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="WeaponData" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/combat/weapon_data.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"shotgun"
+title = "SHOTGUN"
+damage = 4
+cooldown = 0.8
+knockback = 580.0
+firearm = true
+ammunition = 4
+throw_damage = 3
+throw_speed = 760.0
+throw_knockback = 520.0
+projectile_speed = 1150.0
+projectile_range = 540.0
+shot_sound = &"shotgun"
+pellets = 7
+spread_degrees = 28.0
+recoil = 240.0
+noise_severity = 2.0
+noise_radius = 950.0

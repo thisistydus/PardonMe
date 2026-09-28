@@ -17,3 +17,11 @@ extends Resource
 @export var projectile_speed: float = 1050.0
 @export var projectile_range: float = 1680.0
 @export var shot_sound: StringName = &"pistol"
+## Pellets per trigger pull; each target takes `damage` at most once per pull.
+@export var pellets: int = 1
+@export var spread_degrees: float = 0.0
+## Shooter push-back per shot.
+@export var recoil: float = 90.0
+## Crime report strength and audible radius of one shot.
+@export var noise_severity: float = 1.5
+@export var noise_radius: float = 700.0

@@ -20,6 +20,8 @@ var result: Label
 var resume: Button
 var restart_button: Button
 var message_time: float = 8.0
+## Subclasses that present their own end-of-run screen hide the shared pause panel once ended.
+var custom_results: bool = false
 
 func text_label(at: Vector2, size: Vector2, font_size: int, parent: Node = self) -> Label:
 	var label := Label.new()
@@ -135,7 +137,7 @@ func _process(delta: float) -> void:
 		message_time -= delta
 	message.visible = message_time > 0
 	var was_visible := panel.visible
-	panel.visible = get_tree().paused
+	panel.visible = get_tree().paused and not (custom_results and run.ended)
 	if panel.visible:
 		resume.visible = not run.ended
 		result.text = "%s\n\nTargets down: %d  /  Time: %02d:%02d\nSeed: %d\nGoal A test — scoring comes later." % ["PERMISSION EXPIRED" if run.ended else "TEST SUSPENDED", run.downs, int(run.elapsed) / 60, int(run.elapsed) % 60, run.seed_value]

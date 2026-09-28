@@ -38,3 +38,9 @@ Next: human playtest of sprite readability, radio volume, throwing and compact i
 Explicit user authorization supersedes the historical Goal A stop. Added the district, minimap, reactive population, witnessed Heat/foot police, local recovery and a resource-driven Boost/score loop while retaining the original yard scene. Phase imports/startup passed; district integration, combat, safety, actual driven delivery and original Goal A regression evidence are recorded in `GOAL_B_PLAYTEST.md` and final logs. A usage limit interrupted work once; the user redeemed a reset and resumed the full scope. Checkpoint is in `DEVELOPMENT_CHECKPOINT.md`.
 
 Optional vehicle AI pursuit, roadblocks, traffic, vehicle disguise, dawn clock and expanded missions remain deferred. Final documentation records actual tested behavior and pending human feel review.
+
+## Goal C1 — One More Run, 2026-09-27
+
+Baseline first: headless import clean; 14/15 retained suites passed (289 checks). `b5_escape` failed 2/4 on untouched B.5 code — a real-time search race, documented in `GOAL_C1_PLAN.md`. Pre-change checkpoint: `docs/checkpoints/2026-09-27_before_C1.zip`.
+
+Implemented a physics-stepped run clock (720 s → 06:00–06:00, configurable), a final-minute warning, dawn/death results, and a one-input restart. Added a shared mission backbone and board; ported the Boost onto it with its states preserved; added Rob and Destroy (one configuration each). Added player-attributed street cash through one cash interface, the knife and a volley-deduplicated shotgun, and a code-drawn readability pass. The retained suites are unchanged in result after C1. New suites, soak, visual captures and exact counts are in `GOAL_C1_PLAYTEST.md`. Stopped for human playtest.

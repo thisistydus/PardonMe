@@ -29,4 +29,4 @@ If an error remains in Godot 4.7, report the exact editor version and the first 
 
 ## Controls and playtest notes
 
-See [the complete district playtest guide](docs/GOAL_B_PLAYTEST.md) for controls, limitations, verification evidence and suggested scenarios. Start with E to pick up a weapon or answer a nearby payphone; M enlarges the map, R restarts, and Esc pauses.
+The current build is **Goal C1 — One More Run**: a 12-minute compressed day (06:00 to the next dawn), three payphone jobs (Boost, Rob, Destroy), street cash, knife and shotgun, and a results screen at dawn or death. See [the C1 playtest guide](docs/GOAL_C1_PLAYTEST.md) for what is playable, tests and limits. Earlier district controls and history are in [the B+ guide](docs/GOAL_B_PLAYTEST.md). Start with E to pick up a weapon or answer a ringing payphone; M enlarges the map, R restarts (or starts the next day from the results screen), and Esc pauses. For a quick loop test, run with `-- --run-seconds=60`.

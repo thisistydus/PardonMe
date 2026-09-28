@@ -1,0 +1,19 @@
+Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org
+
+PASS: Occupied parked car has a seated civilian owner
+PASS: Stealing occupied car ejects owner
+PASS: Owner reacts and reports vehicle theft
+PASS: Patrol vehicle theft alarm raises Heat
+PASS: Remote theft alarm reports vehicle location without visual suspect identification
+PASS: Unknown-suspect officer investigates reported location
+PASS: Unseen inactive/investigating police are hidden on map
+PASS: Participating search officer is eligible for map marker
+PASS: NPC gunfire does not falsely attribute player crime
+PASS: All five Heat levels have defined escalation thresholds
+PASS: All five Heat levels have defined escalation thresholds
+PASS: All five Heat levels have defined escalation thresholds
+PASS: All five Heat levels have defined escalation thresholds
+PASS: NPC walks around building corners to destination
+PASS: Repeated restart restores original district composition
+PASS: Repeated restart restores original district composition
+DISTRICT SAFETY COMPLETE: 16 checks, 0 failures

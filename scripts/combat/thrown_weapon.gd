@@ -33,6 +33,8 @@ func _physics_process(delta: float) -> void:
 		var body := contact.get_collider()
 		if body.has_method("take_hit"):
 			Events.crime.emit(&"harm", body.global_position, 1.0, 100.0, true)
+			if body.has_method("note_attacker"):
+				body.note_attacker(true)
 			body.take_hit(data.throw_damage, direction * data.throw_knockback, false)
 		else:
 			Events.impact.emit(global_position, -direction, 0.4)
@@ -60,7 +62,13 @@ func _draw() -> void:
 	draw_circle(Vector2(3, 7), 10, Color(0, 0, 0, 0.3))
 	draw_line(-direction * 22, -direction * 7, Color(0.9, 0.8, 0.5, 0.45), 3, true)
 	draw_set_transform(Vector2(0, -5), spin)
-	if data.firearm:
+	if data.id == &"shotgun":
+		draw_rect(Rect2(-22, -4, 44, 8), Color("9d9a8c"))
+		draw_rect(Rect2(-22, -5, 14, 10), Color("6b4a2e"))
+	elif data.id == &"knife":
+		draw_line(Vector2(-12, 0), Vector2(-2, 0), Color("2a211a"), 6, true)
+		draw_line(Vector2(-2, 0), Vector2(16, 0), Color("dfe3e0"), 4, true)
+	elif data.firearm:
 		draw_rect(Rect2(-13, -4, 27, 8), Color("e6d9b9"))
 		draw_rect(Rect2(-9, 0, 8, 12), Color("aaa28e"))
 	else:

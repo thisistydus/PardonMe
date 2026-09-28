@@ -9,3 +9,4 @@ max_speed = 670.0
 reverse_speed = 220.0
 steering = 2.3
 durability = 130.0
+paint = Color(0.62, 0.76, 1, 1)

@@ -17,3 +17,8 @@ signal mission_completed(reward: int)
 signal shutdown_requested
 
 signal explosion_detonated(chain_token: int, player_caused: bool)
+
+## C1 run loop. outcome is &"dawn" or &"died".
+signal run_ended(outcome: StringName)
+## A district NPC died; by_player follows the last attacker recorded on that NPC.
+signal npc_killed(npc: Node2D, by_player: bool)

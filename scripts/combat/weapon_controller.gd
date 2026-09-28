@@ -38,11 +38,11 @@ func attack() -> void:
 			return
 		ammo -= 1
 		FirearmShot.fire(get_tree().current_scene, data, global_position, swing_direction, [player.get_rid()], true)
-		player.impulse -= swing_direction * 90.0
+		player.impulse -= swing_direction * data.recoil
 		swing_time = 0.09
 		return
 	swing_time = 0.16
-	Events.sound_requested.emit(&"swing")
+	Events.sound_requested.emit(&"stab" if data.id == &"knife" else &"swing")
 	Events.crime.emit(&"melee", global_position, 0.0, 70.0, true)
 	for node: Node in get_tree().get_nodes_in_group("damageable"):
 		var target := node as Node2D
@@ -56,6 +56,8 @@ func attack() -> void:
 		if not wall.is_empty() and wall.collider != target:
 			continue
 		Events.crime.emit(&"harm", target.global_position, 1.0, 70.0, true)
+		if target.has_method("note_attacker"):
+			target.note_attacker(true)
 		target.take_hit(data.damage, offset.normalized() * data.knockback, false)
 
 func _draw() -> void:
@@ -66,6 +68,16 @@ func _draw() -> void:
 		var tip := Vector2(64, 0).rotated(angle)
 		draw_line(Vector2(13, 12), tip, Color("1a1a16"), 11, true)
 		draw_line(Vector2(13, 12), tip, Color("d5b878"), 7, true)
+	elif data.id == &"knife":
+		# A short forward jab rather than a sweep.
+		var reach := 14.0 + (18.0 * sin(PI * swing_time / 0.16) if swing_time > 0.0 else 0.0)
+		draw_line(Vector2(reach, 9), Vector2(reach + 10, 9), Color("2a211a"), 6, true)
+		draw_line(Vector2(reach + 10, 9), Vector2(reach + 30, 9), Color("dfe3e0"), 4, true)
+	elif data.id == &"shotgun":
+		draw_rect(Rect2(8, -6, 16, 12), Color("6b4a2e"))
+		draw_rect(Rect2(20, -4, 30, 8), Color("9d9a8c"))
+		if swing_time > 0.0:
+			draw_circle(Vector2(54, 0), 13 * swing_time / 0.09, Color("ffd07a"))
 	elif data.firearm:
 		draw_rect(Rect2(12, -5, 23, 9), Color("afa996"))
 		if swing_time > 0.0:
@@ -73,5 +85,5 @@ func _draw() -> void:
 	elif swing_time > 0.0:
 		draw_circle(Vector2(35, 0), 8, Color("e5d7b3"))
 	if swing_time > 0.0 and not data.firearm:
-		draw_arc(Vector2.ZERO, data.reach, -deg_to_rad(data.arc_degrees / 2), deg_to_rad(data.arc_degrees / 2), 24, Color(0.94, 0.82, 0.56, swing_time / 0.16), 6, true)
+		draw_arc(Vector2.ZERO, data.reach, -deg_to_rad(data.arc_degrees / 2), deg_to_rad(data.arc_degrees / 2), 24, Color(0.94, 0.82, 0.56, swing_time / 0.16), 3 if data.id == &"knife" else 6, true)
 

@@ -1,0 +1,24 @@
+Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org
+
+PASS: Seven enterable vehicles placed
+PASS: Sedan uses distinct vehicle data
+PASS: Three authored mission phones
+PASS: Navigation connects yard to garage around blocks
+PASS: Enter parked COMPACT
+PASS: Exit parked vehicle
+PASS: Enter parked COMPACT
+PASS: Exit parked vehicle
+PASS: Enter parked SEDAN
+PASS: Exit parked vehicle
+PASS: Enter parked COMPACT
+PASS: Exit parked vehicle
+PASS: Enter parked COMPACT
+PASS: Exit parked vehicle
+PASS: Enter parked SEDAN
+PASS: Exit parked vehicle
+PASS: Enter parked PATROL COMPACT
+PASS: Exit parked vehicle
+PASS: Long road supports full-speed driving across blocks
+PASS: Pedestrian gate blocks a car
+PASS: Pedestrian gate allows on-foot passage
+DISTRICT LAYOUT COMPLETE: 21 checks

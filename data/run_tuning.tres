@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="RunTuning" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/systems/run_tuning.gd" id="1"]
+[resource]
+script = ExtResource("1")
+run_seconds = 720.0
+dawn_hour = 6.0
+final_warning_seconds = 60.0
+dawn_bonus_fraction = 0.25
+notoriety_cap = 6

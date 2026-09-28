@@ -1,0 +1,17 @@
+Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org
+
+PASS: Bat cannot hit through thin cover
+PASS: Bat reaches target after obstruction removed
+PASS: Bat wide arc hits multiple front targets
+PASS: Bat does not hit behind the player
+PASS: Blocked-exit fixture enters car
+PASS: All obstructed exits are refused
+PASS: Failed exit preserves driving state
+PASS: Exit recovers when one door clears
+PASS: First hit wounds
+PASS: Same-frame second hit is rejected by grace period
+PASS: Hit after grace period kills
+PASS: Debug action toggles overlay
+PASS: Shake action disables camera shake
+PASS: Restart works directly from pause
+EDGE CASES COMPLETE: 14 checks passed

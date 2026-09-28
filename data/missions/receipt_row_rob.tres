@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="RobDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/district/rob_data.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"receipt_row_rob"
+title = "NO RECEIPT NECESSARY"
+kind_label = "ROB"
+phone_index = 1
+cash_reward = 3200
+notoriety_reward = 1
+time_limit = 300.0
+retry_delay = 6.0
+store_position = Vector2(2800, 915)
+alarm_radius = 230.0
+zone_radius = 95.0
+hold_seconds = 3.0
+hold_decay = 0.5
+guard_positions = Array[Vector2]([Vector2(2640, 905), Vector2(2965, 905)])
+escape_radius = 950.0
+low_heat_threshold = 1
+low_heat_bonus = 750
+quick_seconds = 100.0
+quick_bonus = 500

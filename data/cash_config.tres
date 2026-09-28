@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CashConfig" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/district/cash_config.gd" id="1"]
+[resource]
+script = ExtResource("1")
+civilian_chance = 0.55
+civilian_range = Vector2i(15, 60)
+police_chance = 0.35
+police_range = Vector2i(25, 70)
+hostile_chance = 1.0
+hostile_range = Vector2i(120, 220)
+requires_player_kill = true
+lifetime = 90.0
+soft_cap = 40
+collect_radius = 34.0
+vehicle_collect_radius = 64.0

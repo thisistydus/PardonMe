@@ -6,6 +6,7 @@ var quitting: bool = false
 var elapsed: float = 0.0
 var downs: int = 0
 var ended: bool = false
+var result: StringName = &""
 var debug_visible: bool = false
 var seed_value: int = 771104
 
@@ -28,9 +29,14 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif event.is_action_pressed("debug_overlay") and not event.is_echo():
 		debug_visible = not debug_visible
 
-func end_run() -> void:
+## Ends the run exactly once; later death/dawn reports are ignored.
+func end_run(outcome: StringName = &"died") -> void:
+	if ended:
+		return
 	ended = true
+	result = outcome
 	get_tree().paused = true
+	Events.run_ended.emit(outcome)
 
 func restart() -> void:
 	if quitting:

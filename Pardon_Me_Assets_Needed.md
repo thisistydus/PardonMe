@@ -2,6 +2,23 @@
 
 Prioritized by blocking impact for the game-jam baseline. This is a living production file and should be updated whenever an asset is added, replaced, or ruled unnecessary.
 
+## Goal C1 asset status — 2026-09-27
+
+No external asset blocks the C1 playtest. The readability pass used code-drawn treatments only; no image generation was available in this session, and no supplied file was modified.
+
+- **Added as temporary code-drawn treatments:** four-flame Heat meter; payphone booth with ringing arcs and offer label; per-class vehicle paint (sedan blue, patrol dark livery with flashing lightbar, mission-marked red with gold stripe); objective card icons (car, cash bag, crosshair, handset); Destroy crosshair and escape/hold rings; cash bundle and cash bag props; knife and shotgun held/pickup/thrown shapes; results screen panel.
+- **Added synthesized cues:** shotgun, knife stab, cash pickup, mission failure, final-minute warning, dawn chime. They are placeholders like the rest of the synthesized set.
+- **Now the highest-value requests,** replacing the cues and shapes above in order of how often they're seen:
+  1. A distinct overhead **sedan** and **police cruiser** silhouette. Both still reuse the compact sprite under paint.
+  2. **Knife** and **shotgun** world/held/HUD art.
+  3. **Heat flame** icon art (4 states + searching pulse).
+  4. **Payphone** sprite (idle / ringing).
+  5. **Cash bundle** and **cash bag** pickup sprites.
+  6. A **guard/security** character variant for Rob.
+  7. A **storefront** exterior for Receipt Row.
+  8. Authored **shotgun** and **stab** Foley; a **dawn** sting; a **final-minute** cue.
+- **Still needed from earlier lists:** full character animation sets, authored wreck/explosion art, environment kit, a mix and volume controls, and the title screen.
+
 ## Goal B+ asset status — 2026-09-06
 
 The first district is playable using existing source assets and explicit procedural substitutes. Earlier requests below remain unresolved for final production unless marked here.
